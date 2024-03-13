@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.10.0" xml:lang="ru">
+  <compound refid="class_mih_stat_library_1_1_block_data" kind="class"><name>MihStatLibrary::BlockData</name>
+    <member refid="class_mih_stat_library_1_1_block_data_1afc0d09a5e1d0e2436ef56af6ed936fec" kind="variable"><name>_data</name></member>
+    <member refid="class_mih_stat_library_1_1_block_data_1ac58c7c4b2a620eae10be0cf2edb1cf28" kind="variable"><name>_fStream</name></member>
+    <member refid="class_mih_stat_library_1_1_block_data_1ae893146a480c76ab4eedd0330a53a5f2" kind="variable"><name>_fullDataLength</name></member>
+    <member refid="class_mih_stat_library_1_1_block_data_1a92b0532881149234a3dc1db300c8d194" kind="property"><name>Data</name></member>
+    <member refid="class_mih_stat_library_1_1_block_data_1ace100270dc4d78a34af7cb43ebdb2e5e" kind="property"><name>FullDataLength</name></member>
+    <member refid="class_mih_stat_library_1_1_block_data_1a7ea8fcccd3d87fb61b83abb804dbb9f1" kind="function"><name>BlockData</name></member>
+    <member refid="class_mih_stat_library_1_1_block_data_1a003786bd4e8e8439ab7834da5a2f71db" kind="function"><name>BlockData</name></member>
+    <member refid="class_mih_stat_library_1_1_block_data_1a7d95b5bebcf67e021a18318f5b6f45a2" kind="function"><name>BlockData</name></member>
+    <member refid="class_mih_stat_library_1_1_block_data_1a6c28d5097d6c70e49db328fc3bcaf929" kind="function"><name>GetBlockDataFromFile</name></member>
+  </compound>
+  <compound refid="class_mih_stat_library_1_1_tools" kind="class"><name>MihStatLibrary::Tools</name>
+    <member refid="class_mih_stat_library_1_1_tools_1a9e06610a78b4896a6acc8e0806b50ff6" kind="variable"><name>BITS_IN_BYTE</name></member>
+    <member refid="class_mih_stat_library_1_1_tools_1aa397db0e18e16da01ae1f585f047298b" kind="variable"><name>SIZE_BLOCK_BYTES</name></member>
+    <member refid="class_mih_stat_library_1_1_tools_1af2ff512480d6f7b66191187f1e68d9b1" kind="variable"><name>SIZE_BLOCK_BITS</name></member>
+    <member refid="class_mih_stat_library_1_1_tools_1ae85bad88744163886c462d55ec3ca6df" kind="variable"><name>QUANTILE_1_A2</name></member>
+    <member refid="class_mih_stat_library_1_1_tools_1a8978e09fd31fcbf9f80a1bc63bd0e226" kind="variable"><name>ArNumberOne</name></member>
+  </compound>
+  <compound refid="namespace_mih_stat_library" kind="namespace"><name>MihStatLibrary</name>
+  </compound>
+  <compound refid="namespace_system" kind="namespace"><name>System</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections_1_1_generic" kind="namespace"><name>System::Collections::Generic</name>
+  </compound>
+  <compound refid="namespace_system_1_1_linq" kind="namespace"><name>System::Linq</name>
+  </compound>
+  <compound refid="namespace_system_1_1_text" kind="namespace"><name>System::Text</name>
+  </compound>
+  <compound refid="namespace_system_1_1_threading_1_1_tasks" kind="namespace"><name>System::Threading::Tasks</name>
+  </compound>
+  <compound refid="_block_data_8cs" kind="file"><name>BlockData.cs</name>
+  </compound>
+  <compound refid="_tools_8cs" kind="file"><name>Tools.cs</name>
+  </compound>
+</doxygenindex>

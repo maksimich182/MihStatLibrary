@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="ru">
+    <info>
+    <title>MihStatLibrary</title>
+    </info>
+<chapter>
+    <title>Пространства имен</title>
+<xi:include href="namespace_mih_stat_library.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Классы</title>
+    <xi:include href="class_mih_stat_library_1_1_block_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

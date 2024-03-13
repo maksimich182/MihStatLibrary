@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_mih_stat_library_1_1_block_data" xml:lang="en-US">
+<title>MihStatLibrary.BlockData Namespace Reference</title>
+<indexterm><primary>MihStatLibrary.BlockData</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_mih_stat_library_1_1_block_data_1_1_block_data">BlockData</link></para>
+
+<para>Класс для получения данных блоками </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

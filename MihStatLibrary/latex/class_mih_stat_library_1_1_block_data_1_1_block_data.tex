@@ -1,0 +1,108 @@
+\doxysection{Mih\+Stat\+Library.\+Block\+Data.\+Block\+Data Class Reference}
+\label{class_mih_stat_library_1_1_block_data_1_1_block_data}\index{MihStatLibrary.BlockData.BlockData@{MihStatLibrary.BlockData.BlockData}}
+
+
+Класс для получения данных блоками  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Block\+Data} (string file\+Name)
+\begin{DoxyCompactList}\small\item\em Создает экземпляр класса для получения блоков данных из файла по имени \end{DoxyCompactList}\item 
+\textbf{ Block\+Data} (int sz\+Data, int nm\+Xor)
+\begin{DoxyCompactList}\small\item\em Создает экземпляр класса, заполненный случайной последовательностью. Случайная // последовательность получается путем XOR-\/а определенного количества случайных значений. \end{DoxyCompactList}\item 
+\textbf{ Block\+Data} (File\+Stream file\+Name)
+\begin{DoxyCompactList}\small\item\em Создает экземпляр класса для получения блоков данных из файла по экземпляру File\+Stream \end{DoxyCompactList}\item 
+void \textbf{ Get\+Block\+Data\+From\+File} (long sz\+Block)
+\begin{DoxyCompactList}\small\item\em Получение блока данных из файла \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\label{class_mih_stat_library_1_1_block_data_1_1_block_data_ab535e78061ab1ea1d24ca692d8b83667} 
+byte?[$\,$] {\bfseries Data}\hspace{0.3cm}{\ttfamily  [get]}
+\begin{DoxyCompactList}\small\item\em Массив, хранящий полученный блок данных \end{DoxyCompactList}\item 
+\label{class_mih_stat_library_1_1_block_data_1_1_block_data_a1d1e19e09ed8ece4740e6db80ca6fbad} 
+long {\bfseries Full\+Data\+Length}\hspace{0.3cm}{\ttfamily  [get]}
+\begin{DoxyCompactList}\small\item\em Полное количество данных в байтах \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс для получения данных блоками 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\label{class_mih_stat_library_1_1_block_data_1_1_block_data_abaea8388301725968895fe56d4b66681} 
+\index{MihStatLibrary.BlockData.BlockData@{MihStatLibrary.BlockData.BlockData}!BlockData@{BlockData}}
+\index{BlockData@{BlockData}!MihStatLibrary.BlockData.BlockData@{MihStatLibrary.BlockData.BlockData}}
+\doxysubsubsection{BlockData()\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Mih\+Stat\+Library.\+Block\+Data.\+Block\+Data.\+Block\+Data (\begin{DoxyParamCaption}\item[{string}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Создает экземпляр класса для получения блоков данных из файла по имени 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & Полное имя файла\\
+\hline
+\end{DoxyParams}
+\label{class_mih_stat_library_1_1_block_data_1_1_block_data_af46dc72af1dacd0043abca89e25d72f7} 
+\index{MihStatLibrary.BlockData.BlockData@{MihStatLibrary.BlockData.BlockData}!BlockData@{BlockData}}
+\index{BlockData@{BlockData}!MihStatLibrary.BlockData.BlockData@{MihStatLibrary.BlockData.BlockData}}
+\doxysubsubsection{BlockData()\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Mih\+Stat\+Library.\+Block\+Data.\+Block\+Data.\+Block\+Data (\begin{DoxyParamCaption}\item[{int}]{sz\+Data,  }\item[{int}]{nm\+Xor }\end{DoxyParamCaption})}
+
+
+
+Создает экземпляр класса, заполненный случайной последовательностью. Случайная // последовательность получается путем XOR-\/а определенного количества случайных значений. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sz\+Data} & Размер случайной последовательности\\
+\hline
+{\em nm\+Xor} & Количество XOR-\/ов\\
+\hline
+\end{DoxyParams}
+\label{class_mih_stat_library_1_1_block_data_1_1_block_data_ac286aacf956dda0902f4d59d7539f092} 
+\index{MihStatLibrary.BlockData.BlockData@{MihStatLibrary.BlockData.BlockData}!BlockData@{BlockData}}
+\index{BlockData@{BlockData}!MihStatLibrary.BlockData.BlockData@{MihStatLibrary.BlockData.BlockData}}
+\doxysubsubsection{BlockData()\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Mih\+Stat\+Library.\+Block\+Data.\+Block\+Data.\+Block\+Data (\begin{DoxyParamCaption}\item[{File\+Stream}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Создает экземпляр класса для получения блоков данных из файла по экземпляру File\+Stream 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\label{class_mih_stat_library_1_1_block_data_1_1_block_data_a7198e0463d36331edf47431b9f1fe6cc} 
+\index{MihStatLibrary.BlockData.BlockData@{MihStatLibrary.BlockData.BlockData}!GetBlockDataFromFile@{GetBlockDataFromFile}}
+\index{GetBlockDataFromFile@{GetBlockDataFromFile}!MihStatLibrary.BlockData.BlockData@{MihStatLibrary.BlockData.BlockData}}
+\doxysubsubsection{GetBlockDataFromFile()}
+{\footnotesize\ttfamily void Mih\+Stat\+Library.\+Block\+Data.\+Block\+Data.\+Get\+Block\+Data\+From\+File (\begin{DoxyParamCaption}\item[{long}]{sz\+Block }\end{DoxyParamCaption})}
+
+
+
+Получение блока данных из файла 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sz\+Block} & Размер блока данных\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Block\+Data.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,103 @@
+.TH "MihStatLibrary.BlockData.BlockData" 3 "Version 1.0" "MihStatLibrary" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MihStatLibrary.BlockData.BlockData \- Класс для получения данных блоками  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBlockData\fP (string fileName)"
+.br
+.RI "Создает экземпляр класса для получения блоков данных из файла по имени "
+.ti -1c
+.RI "\fBBlockData\fP (int szData, int nmXor)"
+.br
+.RI "Создает экземпляр класса, заполненный случайной последовательностью\&. Случайная // последовательность получается путем XOR-а определенного количества случайных значений\&. "
+.ti -1c
+.RI "\fBBlockData\fP (FileStream fileName)"
+.br
+.RI "Создает экземпляр класса для получения блоков данных из файла по экземпляру FileStream "
+.ti -1c
+.RI "void \fBGetBlockDataFromFile\fP (long szBlock)"
+.br
+.RI "Получение блока данных из файла "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "byte?[] \fBData\fP\fR [get]\fP"
+.br
+.RI "Массив, хранящий полученный блок данных "
+.ti -1c
+.RI "long \fBFullDataLength\fP\fR [get]\fP"
+.br
+.RI "Полное количество данных в байтах "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Класс для получения данных блоками 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "MihStatLibrary\&.BlockData\&.BlockData\&.BlockData (string fileName)"
+
+.PP
+Создает экземпляр класса для получения блоков данных из файла по имени 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfileName\fP Полное имя файла
+.RE
+.PP
+
+.SS "MihStatLibrary\&.BlockData\&.BlockData\&.BlockData (int szData, int nmXor)"
+
+.PP
+Создает экземпляр класса, заполненный случайной последовательностью\&. Случайная // последовательность получается путем XOR-а определенного количества случайных значений\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIszData\fP Размер случайной последовательности
+.br
+\fInmXor\fP Количество XOR-ов
+.RE
+.PP
+
+.SS "MihStatLibrary\&.BlockData\&.BlockData\&.BlockData (FileStream fileName)"
+
+.PP
+Создает экземпляр класса для получения блоков данных из файла по экземпляру FileStream 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfileName\fP 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void MihStatLibrary\&.BlockData\&.BlockData\&.GetBlockDataFromFile (long szBlock)"
+
+.PP
+Получение блока данных из файла 
+.PP
+\fBParameters\fP
+.RS 4
+\fIszBlock\fP Размер блока данных
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MihStatLibrary from the source code\&.

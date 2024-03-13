@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_mih_stat_library_1_1_block_data" xml:lang="ru">
+<title>Класс MihStatLibrary.BlockData</title>
+<indexterm><primary>MihStatLibrary.BlockData</primary></indexterm>
+<para>
+
+<para>Класс для получения данных блоками </para>
+ 
+</para>
+<simplesect>
+    <title>Открытые члены    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_mih_stat_library_1_1_block_data_1a7ea8fcccd3d87fb61b83abb804dbb9f1">BlockData</link> (string fileName)</para>
+
+<para>Создает экземпляр класса для получения блоков данных из файла по имени </para>
+</listitem>
+            <listitem><para><link linkend="_class_mih_stat_library_1_1_block_data_1a003786bd4e8e8439ab7834da5a2f71db">BlockData</link> (int szData, int nmXor)</para>
+
+<para>Создает экземпляр класса, заполненный случайной последовательностью. Случайная // последовательность получается путем XOR-а определенного количества случайных значений. </para>
+</listitem>
+            <listitem><para><link linkend="_class_mih_stat_library_1_1_block_data_1a7d95b5bebcf67e021a18318f5b6f45a2">BlockData</link> (FileStream fileName)</para>
+
+<para>Создает экземпляр класса для получения блоков данных из файла по экземпляру FileStream </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_mih_stat_library_1_1_block_data_1a6c28d5097d6c70e49db328fc3bcaf929">GetBlockDataFromFile</link> (long szBlock)</para>
+
+<para>Получение блока данных из файла </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Свойства    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_mih_stat_library_1_1_block_data_1a92b0532881149234a3dc1db300c8d194"/>byte?[] <emphasis role="strong">Data</emphasis><computeroutput> [get]</computeroutput>
+</para>
+
+<para>Массив, хранящий полученный блок данных </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_mih_stat_library_1_1_block_data_1ace100270dc4d78a34af7cb43ebdb2e5e"/>long <emphasis role="strong">FullDataLength</emphasis><computeroutput> [get]</computeroutput>
+</para>
+
+<para>Полное количество данных в байтах </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+
+<para>Класс для получения данных блоками </para>
+</section>
+<section>
+<title>Конструктор(ы)</title>
+<anchor xml:id="_class_mih_stat_library_1_1_block_data_1a7ea8fcccd3d87fb61b83abb804dbb9f1"/><section>
+    <title>BlockData()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>BlockData</primary><secondary>MihStatLibrary.BlockData</secondary></indexterm>
+<indexterm><primary>MihStatLibrary.BlockData</primary><secondary>BlockData</secondary></indexterm>
+<para><computeroutput>MihStatLibrary.BlockData.BlockData (string fileName)</computeroutput></para><para>
+
+<para>Создает экземпляр класса для получения блоков данных из файла по имени </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>fileName</entry><entry>
+<para>Полное имя файла</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_mih_stat_library_1_1_block_data_1a003786bd4e8e8439ab7834da5a2f71db"/><section>
+    <title>BlockData()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>BlockData</primary><secondary>MihStatLibrary.BlockData</secondary></indexterm>
+<indexterm><primary>MihStatLibrary.BlockData</primary><secondary>BlockData</secondary></indexterm>
+<para><computeroutput>MihStatLibrary.BlockData.BlockData (int szData, int nmXor)</computeroutput></para><para>
+
+<para>Создает экземпляр класса, заполненный случайной последовательностью. Случайная // последовательность получается путем XOR-а определенного количества случайных значений. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>szData</entry><entry>
+<para>Размер случайной последовательности</para>
+</entry>
+                            </row>
+                            <row>
+<entry>nmXor</entry><entry>
+<para>Количество XOR-ов</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_mih_stat_library_1_1_block_data_1a7d95b5bebcf67e021a18318f5b6f45a2"/><section>
+    <title>BlockData()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>BlockData</primary><secondary>MihStatLibrary.BlockData</secondary></indexterm>
+<indexterm><primary>MihStatLibrary.BlockData</primary><secondary>BlockData</secondary></indexterm>
+<para><computeroutput>MihStatLibrary.BlockData.BlockData (FileStream fileName)</computeroutput></para><para>
+
+<para>Создает экземпляр класса для получения блоков данных из файла по экземпляру FileStream </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>fileName</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Методы</title>
+<anchor xml:id="_class_mih_stat_library_1_1_block_data_1a6c28d5097d6c70e49db328fc3bcaf929"/><section>
+    <title>GetBlockDataFromFile()</title>
+<indexterm><primary>GetBlockDataFromFile</primary><secondary>MihStatLibrary.BlockData</secondary></indexterm>
+<indexterm><primary>MihStatLibrary.BlockData</primary><secondary>GetBlockDataFromFile</secondary></indexterm>
+<para><computeroutput>void MihStatLibrary.BlockData.GetBlockDataFromFile (long szBlock)</computeroutput></para><para>
+
+<para>Получение блока данных из файла </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>szBlock</entry><entry>
+<para>Размер блока данных</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Исключения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Exception</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+Объявления и описания членов класса находятся в файле:</para>
+BlockData.cs</section>
+</section>
