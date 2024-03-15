@@ -1,0 +1,74 @@
+.TH "MihStatLibrary.BlockData.BlockDataFileSource" 3 "Version 1.0" "MihStatLibrary" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MihStatLibrary.BlockData.BlockDataFileSource \- Источник получения данных из файла  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Базовые классы:\fBMihStatLibrary\&.BlockData\&.IBlockDataSource\fP\&.
+.SS "Открытые члены"
+
+.in +1c
+.ti -1c
+.RI "\fBBlockDataFileSource\fP (FileStream fileStream)"
+.br
+.RI "Создает экземпляр класса для получения блоков данных из файла по экземпляру FileStream "
+.ti -1c
+.RI "byte[] \fBGetBlockData\fP (int szBlock)"
+.br
+.RI "Получает определенное количество данных из файла "
+.in -1c
+.SH "Подробное описание"
+.PP 
+Источник получения данных из файла 
+.PP
+См\&. определение в файле \fBBlockDataFileSource\&.cs\fP строка \fB12\fP
+.SH "Конструктор(ы)"
+.PP 
+.SS "MihStatLibrary\&.BlockData\&.BlockDataFileSource\&.BlockDataFileSource (FileStream fileStream)"
+
+.PP
+Создает экземпляр класса для получения блоков данных из файла по экземпляру FileStream 
+.PP
+\fBАргументы\fP
+.RS 4
+\fIfileStream\fP Дескриптор файла FileStream
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBBlockDataFileSource\&.cs\fP строка \fB20\fP
+.SH "Методы"
+.PP 
+.SS "byte[] MihStatLibrary\&.BlockData\&.BlockDataFileSource\&.GetBlockData (int szBlock)"
+
+.PP
+Получает определенное количество данных из файла 
+.PP
+\fBАргументы\fP
+.RS 4
+\fIszBlock\fP Размер получаемого блока данных в байтах
+.RE
+.PP
+\fBВозвращает\fP
+.RS 4
+Блок данных
+.RE
+.PP
+\fBИсключения\fP
+.RS 4
+\fIException\fP 
+.RE
+.PP
+
+.PP
+Замещает \fBMihStatLibrary\&.BlockData\&.IBlockDataSource\fP\&.
+.PP
+См\&. определение в файле \fBBlockDataFileSource\&.cs\fP строка \fB31\fP
+
+.SH "Автор"
+.PP 
+Автоматически создано Doxygen для MihStatLibrary из исходного текста\&.

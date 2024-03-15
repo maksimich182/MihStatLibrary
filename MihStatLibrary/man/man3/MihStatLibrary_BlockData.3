@@ -2,102 +2,30 @@
 .ad l
 .nh
 .SH NAME
-MihStatLibrary.BlockData \- Класс для получения данных блоками  
-
+MihStatLibrary.BlockData
 .SH SYNOPSIS
 .br
 .PP
-.SS "Открытые члены"
+.SS "Классы"
 
 .in +1c
 .ti -1c
-.RI "\fBBlockData\fP (string fileName)"
+.RI "class \fBBlockData\fP"
 .br
-.RI "Создает экземпляр класса для получения блоков данных из файла по имени "
+.RI "Класс для получения данных блоками "
 .ti -1c
-.RI "\fBBlockData\fP (int szData, int nmXor)"
+.RI "class \fBBlockDataFileSource\fP"
 .br
-.RI "Создает экземпляр класса, заполненный случайной последовательностью\&. Случайная // последовательность получается путем XOR-а определенного количества случайных значений\&. "
+.RI "Источник получения данных из файла "
 .ti -1c
-.RI "\fBBlockData\fP (FileStream fileName)"
+.RI "class \fBBlockDataRandomSource\fP"
 .br
-.RI "Создает экземпляр класса для получения блоков данных из файла по экземпляру FileStream "
+.RI "Источник получения случайных данных\&. Случайная последовательность получается путем XOR-а определенного количества случайных значений\&. "
 .ti -1c
-.RI "void \fBGetBlockDataFromFile\fP (long szBlock)"
+.RI "interface \fBIBlockDataSource\fP"
 .br
-.RI "Получение блока данных из файла "
+.RI "Интерфейс источника получения блока данных "
 .in -1c
-.SS "Свойства"
-
-.in +1c
-.ti -1c
-.RI "byte?[] \fBData\fP\fR [get]\fP"
-.br
-.RI "Массив, хранящий полученный блок данных "
-.ti -1c
-.RI "long \fBFullDataLength\fP\fR [get]\fP"
-.br
-.RI "Полное количество данных в байтах "
-.in -1c
-.SH "Подробное описание"
-.PP 
-Класс для получения данных блоками 
-.SH "Конструктор(ы)"
-.PP 
-.SS "MihStatLibrary\&.BlockData\&.BlockData (string fileName)"
-
-.PP
-Создает экземпляр класса для получения блоков данных из файла по имени 
-.PP
-\fBАргументы\fP
-.RS 4
-\fIfileName\fP Полное имя файла
-.RE
-.PP
-
-.SS "MihStatLibrary\&.BlockData\&.BlockData (int szData, int nmXor)"
-
-.PP
-Создает экземпляр класса, заполненный случайной последовательностью\&. Случайная // последовательность получается путем XOR-а определенного количества случайных значений\&. 
-.PP
-\fBАргументы\fP
-.RS 4
-\fIszData\fP Размер случайной последовательности
-.br
-\fInmXor\fP Количество XOR-ов
-.RE
-.PP
-
-.SS "MihStatLibrary\&.BlockData\&.BlockData (FileStream fileName)"
-
-.PP
-Создает экземпляр класса для получения блоков данных из файла по экземпляру FileStream 
-.PP
-\fBАргументы\fP
-.RS 4
-\fIfileName\fP 
-.RE
-.PP
-
-.SH "Методы"
-.PP 
-.SS "void MihStatLibrary\&.BlockData\&.GetBlockDataFromFile (long szBlock)"
-
-.PP
-Получение блока данных из файла 
-.PP
-\fBАргументы\fP
-.RS 4
-\fIszBlock\fP Размер блока данных
-.RE
-.PP
-\fBИсключения\fP
-.RS 4
-\fIException\fP 
-.RE
-.PP
-
-
 .SH "Автор"
 .PP 
 Автоматически создано Doxygen для MihStatLibrary из исходного текста\&.

@@ -6,15 +6,33 @@ using System.Threading.Tasks;
 
 namespace MihStatLibrary
 {
+    /// <summary>
+    /// Константы
+    /// </summary>
     internal class Tools
     {
-        static public int BITS_IN_BYTE = 8;
-        static public long SIZE_BLOCK_BYTES = 100000000;
-        static public long SIZE_BLOCK_BITS = BITS_IN_BYTE * SIZE_BLOCK_BYTES;
-        static public double QUANTILE_1_A2 = 2.80703;
+        /// <summary>
+        /// Количество бит в байте
+        /// </summary>
+        static public readonly int BITS_IN_BYTE = 8;
 
+        /// <summary>
+        /// Количество байт в блоке данных
+        /// </summary>
+        static public readonly long SIZE_BLOCK_BYTES = 100000000;
 
-        static public int[] ArNumberOne = { 0, 1, 1, 2, 1, 2, 2, 3, 1, 2, 2, 3, 2, 3,
+        //TO DELETE
+        static public readonly long SIZE_BLOCK_BITS = BITS_IN_BYTE * SIZE_BLOCK_BYTES;
+
+        /// <summary>
+        /// Квантиль
+        /// </summary>
+        static public readonly double QUANTILE_1_A2 = 2.80703;
+
+        /// <summary>
+        /// Массив количества единиц в байтах
+        /// </summary>
+        static public readonly int[] ArNumberOne = { 0, 1, 1, 2, 1, 2, 2, 3, 1, 2, 2, 3, 2, 3,
             3, 4, 1, 2, 2, 3, 2, 3, 3, 4, 2, 3, 3, 4, 3, 4, 4, 5, 1, 2, 2, 3, 2, 3, 3,
             4, 2, 3, 3, 4, 3, 4, 4, 5, 2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6,
             1, 2, 2, 3, 2, 3, 3, 4, 2, 3, 3, 4, 3, 4, 4, 5, 2, 3, 3, 4, 3, 4, 4, 5, 3,

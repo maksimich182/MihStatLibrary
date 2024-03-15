@@ -7,9 +7,5 @@
     <title>Пространства имен</title>
 <xi:include href="namespace_mih_stat_library.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 </chapter>
-<chapter>
-    <title>Классы</title>
-    <xi:include href="class_mih_stat_library_1_1_block_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-</chapter>
 <index/>
 </book>

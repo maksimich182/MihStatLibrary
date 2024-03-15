@@ -5,11 +5,9 @@
 <simplesect>
     <title>Классы    </title>
         <itemizedlist>
-            <listitem><para>class <link linkend="_class_mih_stat_library_1_1_block_data">BlockData</link></para>
-
-<para>Класс для получения данных блоками </para>
-</listitem>
             <listitem><para>class <emphasis role="strong">Tools</emphasis></para>
+
+<para>Константы </para>
 </listitem>
         </itemizedlist>
 </simplesect>

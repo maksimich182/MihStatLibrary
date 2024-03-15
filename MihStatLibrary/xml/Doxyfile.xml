@@ -355,7 +355,7 @@
   <option  id='EXTERNAL_GROUPS' default='yes' type='bool'><value>YES</value></option>
   <option  id='EXTERNAL_PAGES' default='yes' type='bool'><value>YES</value></option>
   <option  id='HIDE_UNDOC_RELATIONS' default='yes' type='bool'><value>YES</value></option>
-  <option  id='HAVE_DOT' default='no' type='bool'><value>YES</value></option>
+  <option  id='HAVE_DOT' default='yes' type='bool'><value>NO</value></option>
   <option  id='DOT_NUM_THREADS' default='yes' type='int'><value>0</value></option>
   <option  id='DOT_COMMON_ATTR' default='yes' type='string'><value><![CDATA["fontname=Helvetica,fontsize=10"]]></value></option>
   <option  id='DOT_EDGE_ATTR' default='yes' type='string'><value><![CDATA["labelfontname=Helvetica,labelfontsize=10"]]></value></option>

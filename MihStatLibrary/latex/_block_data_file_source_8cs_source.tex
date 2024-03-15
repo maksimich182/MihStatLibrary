@@ -1,0 +1,37 @@
+\doxysection{Block\+Data\+File\+Source.\+cs}
+\label{_block_data_file_source_8cs_source}\index{BlockData/BlockDataFileSource.cs@{BlockData/BlockDataFileSource.cs}}
+\textbf{ См. документацию.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{00003\ \textcolor{keyword}{using\ }System.Linq;}
+\DoxyCodeLine{00004\ \textcolor{keyword}{using\ }System.Text;}
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ }System.Threading.Tasks;}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }MihStatLibrary.BlockData}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }BlockDataFileSource\ :\ IBlockDataSource}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ FileStream?\ \_fStream;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ BlockDataFileSource(FileStream\ fileStream)}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \_fStream\ =\ fileStream;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{byte}[]\ GetBlockData(\textcolor{keywordtype}{int}\ szBlock)}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ szFileRemain\ =\ \_fStream!.Length\ -\/\ \_fStream.Position;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (szFileRemain\ ==\ 0)}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(\textcolor{stringliteral}{"{}Попытка\ считывания\ данных\ из\ обработанного\ файла!"{}});}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ correctSzBlock\ =\ szBlock\ <\ szFileRemain\ ?\ szBlock\ :\ szFileRemain;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{byte}[]\ dataBlock\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{byte}[correctSzBlock];}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \_fStream.Read(dataBlock,\ 0,\ dataBlock.Length);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dataBlock;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \}}
+\DoxyCodeLine{00044\ \}}
+
+\end{DoxyCode}

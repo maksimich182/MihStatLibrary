@@ -1,0 +1,69 @@
+.TH "MihStatLibrary.BlockData.BlockDataRandomSource" 3 "Version 1.0" "MihStatLibrary" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MihStatLibrary.BlockData.BlockDataRandomSource \- Источник получения случайных данных\&. Случайная последовательность получается путем XOR-а определенного количества случайных значений\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Базовые классы:\fBMihStatLibrary\&.BlockData\&.IBlockDataSource\fP\&.
+.SS "Открытые члены"
+
+.in +1c
+.ti -1c
+.RI "\fBBlockDataRandomSource\fP (uint nmXor)"
+.br
+.RI "Конструктор, создающий элемент класса BlockDataRandomSource "
+.ti -1c
+.RI "byte[] \fBGetBlockData\fP (int szBlock)"
+.br
+.RI "Создает массив случайных байт, полученных путем XOR-а определенного количества байт из Random "
+.in -1c
+.SH "Подробное описание"
+.PP 
+Источник получения случайных данных\&. Случайная последовательность получается путем XOR-а определенного количества случайных значений\&. 
+.PP
+См\&. определение в файле \fBBlockDataRandomSource\&.cs\fP строка \fB13\fP
+.SH "Конструктор(ы)"
+.PP 
+.SS "MihStatLibrary\&.BlockData\&.BlockDataRandomSource\&.BlockDataRandomSource (uint nmXor)"
+
+.PP
+Конструктор, создающий элемент класса BlockDataRandomSource 
+.PP
+\fBАргументы\fP
+.RS 4
+\fInmXor\fP Количество XOR-ов значений из Random для получения одного байта случайной последовательности
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBBlockDataRandomSource\&.cs\fP строка \fB22\fP
+.SH "Методы"
+.PP 
+.SS "byte[] MihStatLibrary\&.BlockData\&.BlockDataRandomSource\&.GetBlockData (int szBlock)"
+
+.PP
+Создает массив случайных байт, полученных путем XOR-а определенного количества байт из Random 
+.PP
+\fBАргументы\fP
+.RS 4
+\fIszBlock\fP Размер возвращаемого блока данных
+.RE
+.PP
+\fBВозвращает\fP
+.RS 4
+Блок данных
+.RE
+.PP
+
+.PP
+Замещает \fBMihStatLibrary\&.BlockData\&.IBlockDataSource\fP\&.
+.PP
+См\&. определение в файле \fBBlockDataRandomSource\&.cs\fP строка \fB33\fP
+
+.SH "Автор"
+.PP 
+Автоматически создано Doxygen для MihStatLibrary из исходного текста\&.
