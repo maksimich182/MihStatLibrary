@@ -13,13 +13,13 @@ namespace MihStatLibrary.BlockData
     public class BlockDataRandomSource : IBlockDataSource
     {
         private readonly Random _rnd;
-        private readonly uint _nmXor;
+        private readonly int _nmXor;
 
         /// <summary>
         /// Конструктор, создающий элемент класса <see cref="BlockDataRandomSource"/>
         /// </summary>
         /// <param name="nmXor">Количество XOR-ов значений из <see cref="Random"/> для получения одного байта случайной последовательности</param>
-        public BlockDataRandomSource(uint nmXor)
+        public BlockDataRandomSource(int nmXor = 0)
         {
             _rnd = new Random();
             _nmXor = nmXor;

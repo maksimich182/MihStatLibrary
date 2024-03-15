@@ -11,7 +11,7 @@ namespace MihStatLibrary.BlockData
     /// </summary>
     public class BlockDataFileSource : IBlockDataSource
     {
-        private FileStream? _fStream;
+        private FileStream _fStream;
 
         /// <summary>
         /// Создает экземпляр класса для получения блоков данных из файла по экземпляру <see cref="FileStream"/>
@@ -30,7 +30,7 @@ namespace MihStatLibrary.BlockData
         /// <exception cref="Exception"></exception>
         public byte[] GetBlockData(int szBlock)
         {
-            long szFileRemain = _fStream!.Length - _fStream.Position;
+            long szFileRemain = _fStream.Length - _fStream.Position;
             if (szFileRemain == 0)
             {
                 throw new Exception("Попытка считывания данных из обработанного файла!");
