@@ -1,0 +1,85 @@
+.TH "MihStatLibrary.Tools" 3 "Version 1.0" "MihStatLibrary" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MihStatLibrary.Tools \- Константы  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Статические открытые данные"
+
+.in +1c
+.ti -1c
+.RI "static readonly int \fBBITS_IN_BYTE\fP = 8"
+.br
+.RI "Количество бит в байте "
+.ti -1c
+.RI "static readonly int \fBSIZE_BLOCK_BYTES\fP = 100000000"
+.br
+.RI "Количество байт в блоке данных "
+.ti -1c
+.RI "static readonly long \fBSIZE_BLOCK_BITS\fP = \fBBITS_IN_BYTE\fP * \fBSIZE_BLOCK_BYTES\fP"
+.br
+.ti -1c
+.RI "static readonly double \fBQUANTILE_1_A2\fP = 2\&.80703"
+.br
+.RI "Квантиль "
+.ti -1c
+.RI "static readonly int[] \fBArNumberOne\fP"
+.br
+.RI "Массив количества единиц в байтах "
+.in -1c
+.SH "Подробное описание"
+.PP 
+Константы 
+.PP
+См\&. определение в файле \fBTools\&.cs\fP строка \fB12\fP
+.SH "Данные класса"
+.PP 
+.SS "readonly int [] MihStatLibrary\&.Tools\&.ArNumberOne\fR [static]\fP"
+\fBИнициализатор\fP.PP
+.nf
+= { 0, 1, 1, 2, 1, 2, 2, 3, 1, 2, 2, 3, 2, 3,
+            3, 4, 1, 2, 2, 3, 2, 3, 3, 4, 2, 3, 3, 4, 3, 4, 4, 5, 1, 2, 2, 3, 2, 3, 3,
+            4, 2, 3, 3, 4, 3, 4, 4, 5, 2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6,
+            1, 2, 2, 3, 2, 3, 3, 4, 2, 3, 3, 4, 3, 4, 4, 5, 2, 3, 3, 4, 3, 4, 4, 5, 3,
+            4, 4, 5, 4, 5, 5, 6, 2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6, 3, 4,
+            4, 5, 4, 5, 5, 6, 4, 5, 5, 6, 5, 6, 6, 7, 1, 2, 2, 3, 2, 3, 3, 4, 2, 3, 3,
+            4, 3, 4, 4, 5, 2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6, 2, 3, 3, 4,
+            3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6, 3, 4, 4, 5, 4, 5, 5, 6, 4, 5, 5, 6, 5,
+            6, 6, 7, 2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6, 3, 4, 4, 5, 4, 5,
+            5, 6, 4, 5, 5, 6, 5, 6, 6, 7, 3, 4, 4, 5, 4, 5, 5, 6, 4, 5, 5, 6, 5, 6, 6,
+            7, 4, 5, 5, 6, 5, 6, 6, 7, 5, 6, 6, 7, 6, 7, 7, 8 }
+.fi
+
+.PP
+Массив количества единиц в байтах 
+.PP
+См\&. определение в файле \fBTools\&.cs\fP строка \fB35\fP
+.SS "readonly int MihStatLibrary\&.Tools\&.BITS_IN_BYTE = 8\fR [static]\fP"
+
+.PP
+Количество бит в байте 
+.PP
+См\&. определение в файле \fBTools\&.cs\fP строка \fB17\fP
+.SS "readonly double MihStatLibrary\&.Tools\&.QUANTILE_1_A2 = 2\&.80703\fR [static]\fP"
+
+.PP
+Квантиль 
+.PP
+См\&. определение в файле \fBTools\&.cs\fP строка \fB30\fP
+.SS "readonly long MihStatLibrary\&.Tools\&.SIZE_BLOCK_BITS = \fBBITS_IN_BYTE\fP * \fBSIZE_BLOCK_BYTES\fP\fR [static]\fP"
+
+.PP
+См\&. определение в файле \fBTools\&.cs\fP строка \fB25\fP
+.SS "readonly int MihStatLibrary\&.Tools\&.SIZE_BLOCK_BYTES = 100000000\fR [static]\fP"
+
+.PP
+Количество байт в блоке данных 
+.PP
+См\&. определение в файле \fBTools\&.cs\fP строка \fB22\fP
+
+.SH "Автор"
+.PP 
+Автоматически создано Doxygen для MihStatLibrary из исходного текста\&.

@@ -22,7 +22,7 @@ namespace MihStatLibrary
         static public readonly int SIZE_BLOCK_BYTES = 100000000;
 
         //TO DELETE
-        static public readonly long SIZE_BLOCK_BITS = BITS_IN_BYTE * SIZE_BLOCK_BYTES;
+        static public readonly int SIZE_BLOCK_BITS = BITS_IN_BYTE * SIZE_BLOCK_BYTES;
 
         /// <summary>
         /// Квантиль

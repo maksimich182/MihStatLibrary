@@ -1,11 +1,12 @@
 var indexSectionsWithContent =
 {
-  0: ".bdgimst",
-  1: "bi",
+  0: ".abdgimqst",
+  1: "bit",
   2: "m",
   3: ".bimt",
   4: "bg",
-  5: "ds"
+  5: "abqs",
+  6: "ds"
 };
 
 var indexSectionNames =
@@ -15,7 +16,8 @@ var indexSectionNames =
   2: "namespaces",
   3: "files",
   4: "functions",
-  5: "properties"
+  5: "variables",
+  6: "properties"
 };
 
 var indexSectionLabels =
@@ -25,6 +27,7 @@ var indexSectionLabels =
   2: "Пространства имен",
   3: "Файлы",
   4: "Функции",
-  5: "Свойства"
+  5: "Переменные",
+  6: "Свойства"
 };
 

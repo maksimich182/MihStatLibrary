@@ -33,6 +33,7 @@ var menudata={children:[
 {text:"Члены классов",url:"functions.html",children:[
 {text:"Указатель",url:"functions.html"},
 {text:"Функции",url:"functions_func.html"},
+{text:"Переменные",url:"functions_vars.html"},
 {text:"Свойства",url:"functions_prop.html"}]}]},
 {text:"Файлы",url:"files.html",children:[
 {text:"Файлы",url:"files.html"}]}]}
