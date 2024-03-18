@@ -117,6 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="File00000000_131MB" xml:space="preserve">
+    <value>..\..\..\Resources\00000000_131MB</value>
+    <comment>Файл с массивом байт 00000000 размером 131 МБ</comment>
+  </data>
+  <data name="File00001111_131MB" xml:space="preserve">
+    <value>..\..\..\Resources\00001111_131MB</value>
+    <comment>Файл с массивом байт 00001111 размером 131 МБ</comment>
+  </data>
+  <data name="File01010101_131MB" xml:space="preserve">
+    <value>..\..\..\Resources\01010101_131MB</value>
+    <comment>Файл с массивом байт 01010101 размером 131 МБ</comment>
+  </data>
+  <data name="File10101010_131MB" xml:space="preserve">
+    <value>..\..\..\Resources\10101010_131MB</value>
+    <comment>Файл с массивом байт 10101010 размером 131 МБ</comment>
+  </data>
+  <data name="File11110000_131MB" xml:space="preserve">
+    <value>..\..\..\Resources\1110000_131MB</value>
+    <comment>Файл с массивом байт 11110000 размером 131 МБ</comment>
+  </data>
+  <data name="File11110000_1KB" xml:space="preserve">
+    <value>..\..\..\Resources\11110000_1KB</value>
+    <comment>Файл с массивом байт 11110000 размером 1 КБ</comment>
+  </data>
+  <data name="File11110000_1MB" xml:space="preserve">
+    <value>..\..\..\Resources\11110000_1MB</value>
+    <comment>Файл с массивом байт 11110000 размером 1 МБ</comment>
+  </data>
+  <data name="File11110000_5MB" xml:space="preserve">
+    <value>..\..\..\Resources\11110000_5MB</value>
+    <comment>Файл с массивом байт 11110000 размером 5 МБ</comment>
+  </data>
+  <data name="File11111111_131MB" xml:space="preserve">
+    <value>..\..\..\Resources\11111111_131MB</value>
+    <comment>Файл с массивом байт 11111111 размером 131 МБ</comment>
+  </data>
+  <data name="File12345678etc256B" xml:space="preserve">
+    <value>..\..\..\Resources\12345678etc_256B</value>
+    <comment>Файл с числами от 0 до 255 размеров 256 Б</comment>
+  </data>
   <data name="FileRandom128MB" xml:space="preserve">
     <value>..\..\..\Resources\random_128MB</value>
     <comment>Файл со случайной последовательностью размером 128 МБ</comment>

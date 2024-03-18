@@ -29,17 +29,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="RandomFiles.Designer.cs">
+    <Compile Update="DataFiles.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>RandomFiles.resx</DependentUpon>
+      <DependentUpon>DataFiles.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="RandomFiles.resx">
+    <EmbeddedResource Update="DataFiles.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>RandomFiles.Designer.cs</LastGenOutput>
+      <LastGenOutput>DataFiles.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

@@ -59,8 +59,11 @@ namespace MihStatLibrary.Histogram
         /// </summary>
         /// <param name="dimension">Размерность векторов гистограммы</param>
         /// <param name="szShift">Размер смещения</param>
+        /// <exception cref="InvalidShiftException">Попытка задать смещение больше размерности</exception>
         public FreqHistogram(int dimension, int szShift) : this(dimension)
         {
+            if (szShift > dimension)
+                throw new InvalidShiftException("Смещение должно быть меньше размерности!");
             _szShift = szShift;
         }
 
@@ -126,18 +129,22 @@ namespace MihStatLibrary.Histogram
         /// Функция пересчета гистограммы частот в гистограмму с меньшей размерностью векторов. ФУНКЦИЯ РАБОТАЕТ ТОЛЬКО СО СМЕЩЕНИЕМ 1!
         /// </summary>
         /// <param name="destHistogram">Гистограмма, куда будут записаны пересчитанные значения. смещение должно быть равным 1!</param>
+        /// <exception cref="ReduceException">Попытка пересчитать гистограмму на большую размерность или смещения гистограм не равны 1</exception>
         public void Reduce(FreqHistogram destHistogram)
         {
             if (destHistogram.Dimension > this.Dimension)
                 throw new ReduceException("Размерность итоговой гистограммы больше размерности исходной!");
 
             if (destHistogram._szShift != 1 || this._szShift != 1)
-                throw new ReduceException("Значения сдвигов исходной и итоговой гистограммы должны совпадать!");
+                throw new ReduceException("Значения смещений исходной и итоговой гистограммы должны совпадать!");
 
             destHistogram._histogram = new long[1 << destHistogram._dimension];
+
+            int maskOffset = this._dimension - destHistogram._dimension;
+            long reduceMask = destHistogram._mask << maskOffset;
             for (int i = 0; i < this._histogram.Length; i++)
             {
-                destHistogram._histogram[i & destHistogram._mask] += this._histogram[i];
+                destHistogram._histogram[(i & reduceMask) >> maskOffset] += this._histogram[i];
             }
 
             destHistogram._nmVectors = this._nmVectors;
@@ -170,11 +177,17 @@ namespace MihStatLibrary.Histogram
         /// <param name="szBuffer">Количество бит данных в буффере</param>
         private void _calculateData(ref BigInteger dataBuffer, ref int szBuffer)
         {
+            int offsetMask = 0;
+            long maskRemain = 0;
             while (szBuffer >= _dimension)
             {
-                _histogram[(long)dataBuffer & _mask]++;
+                //_histogram[(long)dataBuffer & _mask]++;
+                offsetMask = szBuffer - _dimension;
+                maskRemain = (1 << (offsetMask + (_dimension - _szShift))) - 1;
+                _histogram[(long)((dataBuffer & (_mask << offsetMask)) >> offsetMask)]++;
                 _nmVectors++;
-                dataBuffer >>= _szShift;
+                //dataBuffer >>= _szShift;
+                dataBuffer &= maskRemain; 
                 szBuffer -= _szShift;
             }
         }
@@ -190,13 +203,38 @@ namespace MihStatLibrary.Histogram
         {
             while (szBuffer < _dimension)
             {
-                dataBuffer |= (BigInteger)blockData.Data[countReadElements++] << szBuffer;
+                //dataBuffer |= (BigInteger)blockData.Data[countReadElements++] << szBuffer;
+                dataBuffer = (dataBuffer << Tools.BITS_IN_BYTE) | (BigInteger)blockData.Data[countReadElements++];
                 szBuffer += Tools.BITS_IN_BYTE;
                 if (countReadElements == blockData.Data.Length)
                 {
                     break;
                 }
             }
+        }
+
+        /// <summary>
+        /// Глубокое сравнение двух экземпляров <see cref="FreqHistogram"/>
+        /// </summary>
+        /// <param name="obj">Экземпляр для сравнения</param>
+        /// <returns>Результат сравнения</returns>
+        public override bool Equals(object? obj)
+        {
+            var other = obj as FreqHistogram;
+
+            if(other == null)
+                return false;
+
+            if (_dimension != other._dimension || _szShift != other._szShift || _mask != other._mask
+                || _remain != other._remain || _szRemain != other._szRemain || _nmVectors != other._nmVectors)
+                return false;
+
+            for(int i = 0; i < _histogram.Length; i++)
+            {
+                if (_histogram[i] != other._histogram[i]) return false;
+            }
+
+            return true;
         }
     }
 }

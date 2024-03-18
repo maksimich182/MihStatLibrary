@@ -24,7 +24,7 @@ namespace MihStatLibraryTest
         [TestMethod]
         public void TestGetBlockDataFromFile()
         {
-            FileStream fs = new FileStream(RandomFiles.FileRandom128MB, FileMode.Open);
+            FileStream fs = new FileStream(DataFiles.FileRandom128MB, FileMode.Open);
 
             int indexDataFromFile = 0;
             byte[] dataFromFile = new byte[fs.Length];
