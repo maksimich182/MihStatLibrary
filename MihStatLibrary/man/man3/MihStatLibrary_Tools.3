@@ -7,6 +7,14 @@ MihStatLibrary.Tools \- Константы
 .SH SYNOPSIS
 .br
 .PP
+.SS "Открытые статические члены"
+
+.in +1c
+.ti -1c
+.RI "static int \fBGetPercent\fP (long number, long maxNumber)"
+.br
+.RI "Вычисление процента "
+.in -1c
 .SS "Статические открытые данные"
 
 .in +1c
@@ -19,7 +27,7 @@ MihStatLibrary.Tools \- Константы
 .br
 .RI "Количество байт в блоке данных "
 .ti -1c
-.RI "static readonly long \fBSIZE_BLOCK_BITS\fP = \fBBITS_IN_BYTE\fP * \fBSIZE_BLOCK_BYTES\fP"
+.RI "static readonly int \fBSIZE_BLOCK_BITS\fP = \fBBITS_IN_BYTE\fP * \fBSIZE_BLOCK_BYTES\fP"
 .br
 .ti -1c
 .RI "static readonly double \fBQUANTILE_1_A2\fP = 2\&.80703"
@@ -35,6 +43,28 @@ MihStatLibrary.Tools \- Константы
 Константы 
 .PP
 См\&. определение в файле \fBTools\&.cs\fP строка \fB12\fP
+.SH "Методы"
+.PP 
+.SS "static int MihStatLibrary\&.Tools\&.GetPercent (long number, long maxNumber)\fR [static]\fP"
+
+.PP
+Вычисление процента 
+.PP
+\fBАргументы\fP
+.RS 4
+\fInumber\fP Число
+.br
+\fImaxNumber\fP Максимальное число
+.RE
+.PP
+\fBВозвращает\fP
+.RS 4
+Процент
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBTools\&.cs\fP строка \fB53\fP
 .SH "Данные класса"
 .PP 
 .SS "readonly int [] MihStatLibrary\&.Tools\&.ArNumberOne\fR [static]\fP"
@@ -69,7 +99,7 @@ MihStatLibrary.Tools \- Константы
 Квантиль 
 .PP
 См\&. определение в файле \fBTools\&.cs\fP строка \fB30\fP
-.SS "readonly long MihStatLibrary\&.Tools\&.SIZE_BLOCK_BITS = \fBBITS_IN_BYTE\fP * \fBSIZE_BLOCK_BYTES\fP\fR [static]\fP"
+.SS "readonly int MihStatLibrary\&.Tools\&.SIZE_BLOCK_BITS = \fBBITS_IN_BYTE\fP * \fBSIZE_BLOCK_BYTES\fP\fR [static]\fP"
 
 .PP
 См\&. определение в файле \fBTools\&.cs\fP строка \fB25\fP

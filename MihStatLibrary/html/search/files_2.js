@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['iblockdatasource_2ecs_0',['IBlockDataSource.cs',['../_i_block_data_source_8cs.html',1,'']]]
+  ['freqhistogram_2ecs_0',['FreqHistogram.cs',['../_freq_histogram_8cs.html',1,'']]]
 ];

@@ -1,12 +1,13 @@
 var indexSectionsWithContent =
 {
-  0: ".abdgimqst",
-  1: "bit",
+  0: ".abcdefghimnpqrst",
+  1: "bfirt",
   2: "m",
-  3: ".bimt",
-  4: "bg",
+  3: ".bfhimt",
+  4: "bcefgir",
   5: "abqs",
-  6: "ds"
+  6: "dhns",
+  7: "p"
 };
 
 var indexSectionNames =
@@ -17,7 +18,8 @@ var indexSectionNames =
   3: "files",
   4: "functions",
   5: "variables",
-  6: "properties"
+  6: "properties",
+  7: "events"
 };
 
 var indexSectionLabels =
@@ -28,6 +30,7 @@ var indexSectionLabels =
   3: "Файлы",
   4: "Функции",
   5: "Переменные",
-  6: "Свойства"
+  6: "Свойства",
+  7: "События"
 };
 

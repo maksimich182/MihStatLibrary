@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['getblockdata_0',['GetBlockData',['../class_mih_stat_library_1_1_block_data_1_1_block_data.html#aeb63ef0ec990aaf2ecb15eb91888c7d8',1,'MihStatLibrary.BlockData.BlockData.GetBlockData()'],['../class_mih_stat_library_1_1_block_data_1_1_block_data_file_source.html#a953760e31c7d4d171fae7a12837ac929',1,'MihStatLibrary.BlockData.BlockDataFileSource.GetBlockData()'],['../class_mih_stat_library_1_1_block_data_1_1_block_data_random_source.html#a043bf6bc6f1f2b251a88368c5041395e',1,'MihStatLibrary.BlockData.BlockDataRandomSource.GetBlockData()'],['../interface_mih_stat_library_1_1_block_data_1_1_i_block_data_source.html#a6cef35462a63969da2863f04c570b91e',1,'MihStatLibrary.BlockData.IBlockDataSource.GetBlockData()']]]
+  ['calculate_0',['Calculate',['../class_mih_stat_library_1_1_histogram_1_1_freq_histogram.html#ad4a2219f2c1d826add5cbde059a0591c',1,'MihStatLibrary.Histogram.FreqHistogram.Calculate(BlockData data)'],['../class_mih_stat_library_1_1_histogram_1_1_freq_histogram.html#ae9e863c7583b96c577da6e17dbe16648',1,'MihStatLibrary.Histogram.FreqHistogram.Calculate(string fileName)']]],
+  ['clear_1',['Clear',['../class_mih_stat_library_1_1_histogram_1_1_freq_histogram.html#afd9678cad913332024e5721c63e7616b',1,'MihStatLibrary::Histogram::FreqHistogram']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['szblockdata_0',['SzBlockData',['../class_mih_stat_library_1_1_block_data_1_1_block_data.html#a382abcdfa55fac5a5e87877956c6e0a5',1,'MihStatLibrary::BlockData::BlockData']]]
+  ['histogram_0',['Histogram',['../class_mih_stat_library_1_1_histogram_1_1_freq_histogram.html#aa2ea201158ca2f23f3c75531d3440f15',1,'MihStatLibrary::Histogram::FreqHistogram']]]
 ];

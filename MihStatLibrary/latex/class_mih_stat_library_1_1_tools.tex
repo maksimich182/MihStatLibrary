@@ -1,0 +1,148 @@
+\doxysection{Класс Mih\+Stat\+Library.\+Tools}
+\label{class_mih_stat_library_1_1_tools}\index{MihStatLibrary.Tools@{MihStatLibrary.Tools}}
+
+
+Константы  
+
+
+\doxysubsubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static int \textbf{ Get\+Percent} (long number, long max\+Number)
+\begin{DoxyCompactList}\small\item\em Вычисление процента \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Статические открытые данные}
+\begin{DoxyCompactItemize}
+\item 
+static readonly int \textbf{ BITS\+\_\+\+IN\+\_\+\+BYTE} = 8
+\begin{DoxyCompactList}\small\item\em Количество бит в байте \end{DoxyCompactList}\item 
+static readonly int \textbf{ SIZE\+\_\+\+BLOCK\+\_\+\+BYTES} = 100000000
+\begin{DoxyCompactList}\small\item\em Количество байт в блоке данных \end{DoxyCompactList}\item 
+static readonly int \textbf{ SIZE\+\_\+\+BLOCK\+\_\+\+BITS} = \textbf{ BITS\+\_\+\+IN\+\_\+\+BYTE} $\ast$ \textbf{ SIZE\+\_\+\+BLOCK\+\_\+\+BYTES}
+\item 
+static readonly double \textbf{ QUANTILE\+\_\+1\+\_\+\+A2} = 2.\+80703
+\begin{DoxyCompactList}\small\item\em Квантиль \end{DoxyCompactList}\item 
+static readonly int[$\,$] \textbf{ Ar\+Number\+One}
+\begin{DoxyCompactList}\small\item\em Массив количества единиц в байтах \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Константы 
+
+См. определение в файле \textbf{ Tools.\+cs} строка \textbf{ 12}
+
+
+
+\doxysubsection{Методы}
+\label{class_mih_stat_library_1_1_tools_a20acde215ea24549530596bd37ffae1a} 
+\index{MihStatLibrary.Tools@{MihStatLibrary.Tools}!GetPercent@{GetPercent}}
+\index{GetPercent@{GetPercent}!MihStatLibrary.Tools@{MihStatLibrary.Tools}}
+\doxysubsubsection{GetPercent()}
+{\footnotesize\ttfamily static int Mih\+Stat\+Library.\+Tools.\+Get\+Percent (\begin{DoxyParamCaption}\item[{long}]{number,  }\item[{long}]{max\+Number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Вычисление процента 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em number} & Число\\
+\hline
+{\em max\+Number} & Максимальное число\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Процент
+\end{DoxyReturn}
+
+
+См. определение в файле \textbf{ Tools.\+cs} строка \textbf{ 53}
+
+
+
+\doxysubsection{Данные класса}
+\label{class_mih_stat_library_1_1_tools_a7cb96720178d4646c6bca6b539da63c0} 
+\index{MihStatLibrary.Tools@{MihStatLibrary.Tools}!ArNumberOne@{ArNumberOne}}
+\index{ArNumberOne@{ArNumberOne}!MihStatLibrary.Tools@{MihStatLibrary.Tools}}
+\doxysubsubsection{ArNumberOne}
+{\footnotesize\ttfamily readonly int [$\,$] Mih\+Stat\+Library.\+Tools.\+Ar\+Number\+One\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Инициализатор}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{\ 0,\ 1,\ 1,\ 2,\ 1,\ 2,\ 2,\ 3,\ 1,\ 2,\ 2,\ 3,\ 2,\ 3,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ 3,\ 4,\ 1,\ 2,\ 2,\ 3,\ 2,\ 3,\ 3,\ 4,\ 2,\ 3,\ 3,\ 4,\ 3,\ 4,\ 4,\ 5,\ 1,\ 2,\ 2,\ 3,\ 2,\ 3,\ 3,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ 4,\ 2,\ 3,\ 3,\ 4,\ 3,\ 4,\ 4,\ 5,\ 2,\ 3,\ 3,\ 4,\ 3,\ 4,\ 4,\ 5,\ 3,\ 4,\ 4,\ 5,\ 4,\ 5,\ 5,\ 6,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ 1,\ 2,\ 2,\ 3,\ 2,\ 3,\ 3,\ 4,\ 2,\ 3,\ 3,\ 4,\ 3,\ 4,\ 4,\ 5,\ 2,\ 3,\ 3,\ 4,\ 3,\ 4,\ 4,\ 5,\ 3,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ 4,\ 4,\ 5,\ 4,\ 5,\ 5,\ 6,\ 2,\ 3,\ 3,\ 4,\ 3,\ 4,\ 4,\ 5,\ 3,\ 4,\ 4,\ 5,\ 4,\ 5,\ 5,\ 6,\ 3,\ 4,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ 4,\ 5,\ 4,\ 5,\ 5,\ 6,\ 4,\ 5,\ 5,\ 6,\ 5,\ 6,\ 6,\ 7,\ 1,\ 2,\ 2,\ 3,\ 2,\ 3,\ 3,\ 4,\ 2,\ 3,\ 3,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ 4,\ 3,\ 4,\ 4,\ 5,\ 2,\ 3,\ 3,\ 4,\ 3,\ 4,\ 4,\ 5,\ 3,\ 4,\ 4,\ 5,\ 4,\ 5,\ 5,\ 6,\ 2,\ 3,\ 3,\ 4,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ 3,\ 4,\ 4,\ 5,\ 3,\ 4,\ 4,\ 5,\ 4,\ 5,\ 5,\ 6,\ 3,\ 4,\ 4,\ 5,\ 4,\ 5,\ 5,\ 6,\ 4,\ 5,\ 5,\ 6,\ 5,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ 6,\ 6,\ 7,\ 2,\ 3,\ 3,\ 4,\ 3,\ 4,\ 4,\ 5,\ 3,\ 4,\ 4,\ 5,\ 4,\ 5,\ 5,\ 6,\ 3,\ 4,\ 4,\ 5,\ 4,\ 5,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ 5,\ 6,\ 4,\ 5,\ 5,\ 6,\ 5,\ 6,\ 6,\ 7,\ 3,\ 4,\ 4,\ 5,\ 4,\ 5,\ 5,\ 6,\ 4,\ 5,\ 5,\ 6,\ 5,\ 6,\ 6,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ 7,\ 4,\ 5,\ 5,\ 6,\ 5,\ 6,\ 6,\ 7,\ 5,\ 6,\ 6,\ 7,\ 6,\ 7,\ 7,\ 8\ \}}
+
+\end{DoxyCode}
+
+
+Массив количества единиц в байтах 
+
+
+
+См. определение в файле \textbf{ Tools.\+cs} строка \textbf{ 35}
+
+\label{class_mih_stat_library_1_1_tools_ab5ce1ec2e21fc4e2e73f416c6dbc812d} 
+\index{MihStatLibrary.Tools@{MihStatLibrary.Tools}!BITS\_IN\_BYTE@{BITS\_IN\_BYTE}}
+\index{BITS\_IN\_BYTE@{BITS\_IN\_BYTE}!MihStatLibrary.Tools@{MihStatLibrary.Tools}}
+\doxysubsubsection{BITS\_IN\_BYTE}
+{\footnotesize\ttfamily readonly int Mih\+Stat\+Library.\+Tools.\+BITS\+\_\+\+IN\+\_\+\+BYTE = 8\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Количество бит в байте 
+
+
+
+См. определение в файле \textbf{ Tools.\+cs} строка \textbf{ 17}
+
+\label{class_mih_stat_library_1_1_tools_a6a30c8e1e96659a0e7efd1a232aa54a9} 
+\index{MihStatLibrary.Tools@{MihStatLibrary.Tools}!QUANTILE\_1\_A2@{QUANTILE\_1\_A2}}
+\index{QUANTILE\_1\_A2@{QUANTILE\_1\_A2}!MihStatLibrary.Tools@{MihStatLibrary.Tools}}
+\doxysubsubsection{QUANTILE\_1\_A2}
+{\footnotesize\ttfamily readonly double Mih\+Stat\+Library.\+Tools.\+QUANTILE\+\_\+1\+\_\+\+A2 = 2.\+80703\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Квантиль 
+
+
+
+См. определение в файле \textbf{ Tools.\+cs} строка \textbf{ 30}
+
+\label{class_mih_stat_library_1_1_tools_a81e94b37777111d3c16ce6cffc229067} 
+\index{MihStatLibrary.Tools@{MihStatLibrary.Tools}!SIZE\_BLOCK\_BITS@{SIZE\_BLOCK\_BITS}}
+\index{SIZE\_BLOCK\_BITS@{SIZE\_BLOCK\_BITS}!MihStatLibrary.Tools@{MihStatLibrary.Tools}}
+\doxysubsubsection{SIZE\_BLOCK\_BITS}
+{\footnotesize\ttfamily readonly int Mih\+Stat\+Library.\+Tools.\+SIZE\+\_\+\+BLOCK\+\_\+\+BITS = \textbf{ BITS\+\_\+\+IN\+\_\+\+BYTE} $\ast$ \textbf{ SIZE\+\_\+\+BLOCK\+\_\+\+BYTES}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+См. определение в файле \textbf{ Tools.\+cs} строка \textbf{ 25}
+
+\label{class_mih_stat_library_1_1_tools_af581cc676d4eb1d64e42591ac13171dc} 
+\index{MihStatLibrary.Tools@{MihStatLibrary.Tools}!SIZE\_BLOCK\_BYTES@{SIZE\_BLOCK\_BYTES}}
+\index{SIZE\_BLOCK\_BYTES@{SIZE\_BLOCK\_BYTES}!MihStatLibrary.Tools@{MihStatLibrary.Tools}}
+\doxysubsubsection{SIZE\_BLOCK\_BYTES}
+{\footnotesize\ttfamily readonly int Mih\+Stat\+Library.\+Tools.\+SIZE\+\_\+\+BLOCK\+\_\+\+BYTES = 100000000\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Количество байт в блоке данных 
+
+
+
+См. определение в файле \textbf{ Tools.\+cs} строка \textbf{ 22}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Tools.\+cs}\end{DoxyCompactItemize}

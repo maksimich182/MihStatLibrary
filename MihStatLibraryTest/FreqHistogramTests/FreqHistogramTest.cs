@@ -172,5 +172,26 @@ namespace MihStatLibraryTest.FreqHistogramTests
                 Assert.IsTrue(fqDestCalculation.Equals(fqDestReduce));
             }
         }
+
+        /// <summary>
+        /// Тест вызова событий изменения прогресса и процесса:
+        /// 1. Запускается рассчет гистограммы на файле. Проверяется, были ли вызваны события
+        /// </summary>
+        [TestMethod]
+        public void FreqHistogramEventsTest()
+        {
+            FreqHistogram fqSource = new FreqHistogram(7);
+            
+            bool isProgressEventHandle = false;
+            bool isProcessEventHandle = false;
+
+            fqSource.ProgressChanged += (_, _) =>  isProgressEventHandle = true;
+            fqSource.ProcessChanged += (_, _) => isProcessEventHandle = true;
+
+            fqSource.Calculate(DataFiles.File11110000_1MB);
+
+            Assert.IsTrue(isProgressEventHandle);
+            Assert.IsTrue(isProcessEventHandle);
+        }
     }
 }

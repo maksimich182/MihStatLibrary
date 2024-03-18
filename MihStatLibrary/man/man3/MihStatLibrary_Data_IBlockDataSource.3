@@ -1,0 +1,43 @@
+.TH "MihStatLibrary.Data.IBlockDataSource" 3 "Version 1.0" "MihStatLibrary" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MihStatLibrary.Data.IBlockDataSource \- Интерфейс источника получения блока данных  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Производные классы:\fBMihStatLibrary\&.Data\&.BlockDataFileSource\fP и \fBMihStatLibrary\&.Data\&.BlockDataRandomSource\fP\&.
+.SS "Открытые члены"
+
+.in +1c
+.ti -1c
+.RI "byte[] \fBGetBlockData\fP (int szBlock)"
+.br
+.RI "Заполняет блок данными из источника "
+.in -1c
+.SH "Подробное описание"
+.PP 
+Интерфейс источника получения блока данных 
+.PP
+См\&. определение в файле \fBIBlockDataSource\&.cs\fP строка \fB12\fP
+.SH "Методы"
+.PP 
+.SS "byte[] MihStatLibrary\&.Data\&.IBlockDataSource\&.GetBlockData (int szBlock)"
+
+.PP
+Заполняет блок данными из источника 
+.PP
+\fBАргументы\fP
+.RS 4
+\fIszBlock\fP Размер запрашиваемого блока данных в байтах
+.RE
+.PP
+
+.PP
+Замещается в \fBMihStatLibrary\&.Data\&.BlockDataFileSource\fP и \fBMihStatLibrary\&.Data\&.BlockDataRandomSource\fP\&.
+
+.SH "Автор"
+.PP 
+Автоматически создано Doxygen для MihStatLibrary из исходного текста\&.

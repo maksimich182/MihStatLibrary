@@ -36,7 +36,8 @@ var NAVTREE =
         [ "Указатель", "functions.html", null ],
         [ "Функции", "functions_func.html", null ],
         [ "Переменные", "functions_vars.html", null ],
-        [ "Свойства", "functions_prop.html", null ]
+        [ "Свойства", "functions_prop.html", null ],
+        [ "События", "functions_evnt.html", null ]
       ] ]
     ] ],
     [ "Файлы", "files.html", [

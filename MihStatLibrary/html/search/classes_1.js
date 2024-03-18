@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['iblockdatasource_0',['IBlockDataSource',['../interface_mih_stat_library_1_1_block_data_1_1_i_block_data_source.html',1,'MihStatLibrary::BlockData']]]
+  ['freqhistogram_0',['FreqHistogram',['../class_mih_stat_library_1_1_histogram_1_1_freq_histogram.html',1,'MihStatLibrary::Histogram']]]
 ];

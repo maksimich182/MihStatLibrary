@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['randomfiles_2edesigner_2ecs_0',['RandomFiles.Designer.cs',['../_random_files_8_designer_8cs.html',1,'']]]
+  ['freqhistogramtest_2ecs_0',['FreqHistogramTest.cs',['../_freq_histogram_test_8cs.html',1,'']]]
 ];

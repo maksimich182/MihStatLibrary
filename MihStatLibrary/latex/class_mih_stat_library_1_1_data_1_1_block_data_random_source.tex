@@ -1,0 +1,83 @@
+\doxysection{Класс Mih\+Stat\+Library.\+Data.\+Block\+Data\+Random\+Source}
+\label{class_mih_stat_library_1_1_data_1_1_block_data_random_source}\index{MihStatLibrary.Data.BlockDataRandomSource@{MihStatLibrary.Data.BlockDataRandomSource}}
+
+
+Источник получения случайных данных. Случайная последовательность получается путем XOR-\/а определенного количества случайных значений.  
+
+
+Граф наследования\+:Mih\+Stat\+Library.\+Data.\+Block\+Data\+Random\+Source\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_mih_stat_library_1_1_data_1_1_block_data_random_source}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Block\+Data\+Random\+Source} (int nm\+Xor=0)
+\begin{DoxyCompactList}\small\item\em Конструктор, создающий элемент класса Block\+Data\+Random\+Source \end{DoxyCompactList}\item 
+byte[$\,$] \textbf{ Get\+Block\+Data} (int sz\+Block)
+\begin{DoxyCompactList}\small\item\em Создает массив случайных байт, полученных путем XOR-\/а определенного количества байт из Random \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Источник получения случайных данных. Случайная последовательность получается путем XOR-\/а определенного количества случайных значений. 
+
+См. определение в файле \textbf{ Block\+Data\+Random\+Source.\+cs} строка \textbf{ 13}
+
+
+
+\doxysubsection{Конструктор(ы)}
+\label{class_mih_stat_library_1_1_data_1_1_block_data_random_source_a58bbd174715732423661e2ee7f1dcd9a} 
+\index{MihStatLibrary.Data.BlockDataRandomSource@{MihStatLibrary.Data.BlockDataRandomSource}!BlockDataRandomSource@{BlockDataRandomSource}}
+\index{BlockDataRandomSource@{BlockDataRandomSource}!MihStatLibrary.Data.BlockDataRandomSource@{MihStatLibrary.Data.BlockDataRandomSource}}
+\doxysubsubsection{BlockDataRandomSource()}
+{\footnotesize\ttfamily Mih\+Stat\+Library.\+Data.\+Block\+Data\+Random\+Source.\+Block\+Data\+Random\+Source (\begin{DoxyParamCaption}\item[{int}]{nm\+Xor = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Конструктор, создающий элемент класса Block\+Data\+Random\+Source 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em nm\+Xor} & Количество XOR-\/ов значений из Random для получения одного байта случайной последовательности\\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \textbf{ Block\+Data\+Random\+Source.\+cs} строка \textbf{ 22}
+
+
+
+\doxysubsection{Методы}
+\label{class_mih_stat_library_1_1_data_1_1_block_data_random_source_a7881b8686223925ca1c945ad9b6656a6} 
+\index{MihStatLibrary.Data.BlockDataRandomSource@{MihStatLibrary.Data.BlockDataRandomSource}!GetBlockData@{GetBlockData}}
+\index{GetBlockData@{GetBlockData}!MihStatLibrary.Data.BlockDataRandomSource@{MihStatLibrary.Data.BlockDataRandomSource}}
+\doxysubsubsection{GetBlockData()}
+{\footnotesize\ttfamily byte[$\,$] Mih\+Stat\+Library.\+Data.\+Block\+Data\+Random\+Source.\+Get\+Block\+Data (\begin{DoxyParamCaption}\item[{int}]{sz\+Block }\end{DoxyParamCaption})}
+
+
+
+Создает массив случайных байт, полученных путем XOR-\/а определенного количества байт из Random 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em sz\+Block} & Размер возвращаемого блока данных\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Блок данных
+\end{DoxyReturn}
+
+
+Замещает \textbf{ Mih\+Stat\+Library.\+Data.\+IBlock\+Data\+Source} \doxyref{}{стр.}{interface_mih_stat_library_1_1_data_1_1_i_block_data_source_af2eb27a45edbd4dfc94fc76b6328b4c7}.
+
+
+
+См. определение в файле \textbf{ Block\+Data\+Random\+Source.\+cs} строка \textbf{ 33}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Data/\textbf{ Block\+Data\+Random\+Source.\+cs}\end{DoxyCompactItemize}

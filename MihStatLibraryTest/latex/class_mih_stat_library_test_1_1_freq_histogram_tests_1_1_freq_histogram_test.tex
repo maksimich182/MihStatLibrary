@@ -1,0 +1,143 @@
+\doxysection{Класс Mih\+Stat\+Library\+Test.\+Freq\+Histogram\+Tests.\+Freq\+Histogram\+Test}
+\label{class_mih_stat_library_test_1_1_freq_histogram_tests_1_1_freq_histogram_test}\index{MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest@{MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest}}
+
+
+Тесты класса Freq\+Histogram.  
+
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ Freq\+Histogrem\+Calculate\+From0\+To255\+File\+Test} ()
+\begin{DoxyCompactList}\small\item\em Тест гистограммы частот на файле заполненном байтами со значениями от 0 до 255\+: \end{DoxyCompactList}\item 
+void \textbf{ Freq\+Histogram\+Calculate11111111\+\_\+131\+MBTest} ()
+\begin{DoxyCompactList}\small\item\em Тест гистограммы на файле заполненном байтами 11111111\+: \end{DoxyCompactList}\item 
+void \textbf{ Freq\+Histogram\+Calculate01010101\+\_\+131\+MBShift8\+Dim8\+Test} ()
+\begin{DoxyCompactList}\small\item\em Тест гистограммы на файле заполненном байтами 01010101 (Смещение 8, размерность 8)\+: \end{DoxyCompactList}\item 
+void \textbf{ Freq\+Histogram\+Calculate01010101\+\_\+131\+MBShift3\+Dim5\+Test} ()
+\begin{DoxyCompactList}\small\item\em Тест гистограммы на файле заполненном байтами 01010101 (Смещение 3, размерность 5)\+: \end{DoxyCompactList}\item 
+void \textbf{ Freq\+Histogram\+Invalid\+Shift\+Create\+Test} ()
+\begin{DoxyCompactList}\small\item\em Тест на генерацию исключения Invalid\+Shift\+Exception при некорректоном значении смещения при создании гистограммы\+: \end{DoxyCompactList}\item 
+void \textbf{ Freq\+Histogram\+Reduce\+Exception\+Test} ()
+\begin{DoxyCompactList}\small\item\em Тест на генерацию исключения Reduce\+Exception при некорректоном использовании функции пересчета гистограммы\+: \end{DoxyCompactList}\item 
+void \textbf{ Freq\+Histogram\+Reduce\+Calculation\+Test} ()
+\begin{DoxyCompactList}\small\item\em Тест на пересчет гистограммы на гистограммы меньших размеров\+: \end{DoxyCompactList}\item 
+void \textbf{ Freq\+Histogram\+Events\+Test} ()
+\begin{DoxyCompactList}\small\item\em Тест вызова событий изменения прогресса и процесса\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Тесты класса Freq\+Histogram. 
+
+\doxysubsection{Методы}
+\label{class_mih_stat_library_test_1_1_freq_histogram_tests_1_1_freq_histogram_test_ad7083e5909bfa59de0909685107db717} 
+\index{MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest@{MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest}!FreqHistogramCalculate01010101\_131MBShift3Dim5Test@{FreqHistogramCalculate01010101\_131MBShift3Dim5Test}}
+\index{FreqHistogramCalculate01010101\_131MBShift3Dim5Test@{FreqHistogramCalculate01010101\_131MBShift3Dim5Test}!MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest@{MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest}}
+\doxysubsubsection{FreqHistogramCalculate01010101\_131MBShift3Dim5Test()}
+{\footnotesize\ttfamily void Mih\+Stat\+Library\+Test.\+Freq\+Histogram\+Tests.\+Freq\+Histogram\+Test.\+Freq\+Histogram\+Calculate01010101\+\_\+131\+MBShift3\+Dim5\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тест гистограммы на файле заполненном байтами 01010101 (Смещение 3, размерность 5)\+: 
+
+
+\begin{DoxyEnumerate}
+\item Количество посчитанных векторов равно округленному вниз значению деления размера файла в битах на смещение минус округленное вниз деление размерности на смещение
+\item Все значения (кроме 01010 и 10101) равны 0, значение 01010 равно половине количества посчитанных векторов, значение 10101 равно значению 01010 
+\end{DoxyEnumerate}\label{class_mih_stat_library_test_1_1_freq_histogram_tests_1_1_freq_histogram_test_af13073cc7655fe49fccc298855b9c7e0} 
+\index{MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest@{MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest}!FreqHistogramCalculate01010101\_131MBShift8Dim8Test@{FreqHistogramCalculate01010101\_131MBShift8Dim8Test}}
+\index{FreqHistogramCalculate01010101\_131MBShift8Dim8Test@{FreqHistogramCalculate01010101\_131MBShift8Dim8Test}!MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest@{MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest}}
+\doxysubsubsection{FreqHistogramCalculate01010101\_131MBShift8Dim8Test()}
+{\footnotesize\ttfamily void Mih\+Stat\+Library\+Test.\+Freq\+Histogram\+Tests.\+Freq\+Histogram\+Test.\+Freq\+Histogram\+Calculate01010101\+\_\+131\+MBShift8\+Dim8\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тест гистограммы на файле заполненном байтами 01010101 (Смещение 8, размерность 8)\+: 
+
+
+\begin{DoxyEnumerate}
+\item Все значения (кроме 01010101) равны 0, значение 01010101 равно размеру файла в байтах 
+\end{DoxyEnumerate}\label{class_mih_stat_library_test_1_1_freq_histogram_tests_1_1_freq_histogram_test_a404c20a64f17370f3291b5c8851170c9} 
+\index{MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest@{MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest}!FreqHistogramCalculate11111111\_131MBTest@{FreqHistogramCalculate11111111\_131MBTest}}
+\index{FreqHistogramCalculate11111111\_131MBTest@{FreqHistogramCalculate11111111\_131MBTest}!MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest@{MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest}}
+\doxysubsubsection{FreqHistogramCalculate11111111\_131MBTest()}
+{\footnotesize\ttfamily void Mih\+Stat\+Library\+Test.\+Freq\+Histogram\+Tests.\+Freq\+Histogram\+Test.\+Freq\+Histogram\+Calculate11111111\+\_\+131\+MBTest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тест гистограммы на файле заполненном байтами 11111111\+: 
+
+
+\begin{DoxyEnumerate}
+\item Смещение 8, размерность 8, все значения (кроме последнего) равны 0, последнее равно размеру файла в байтах 
+\end{DoxyEnumerate}\label{class_mih_stat_library_test_1_1_freq_histogram_tests_1_1_freq_histogram_test_aed15cf680724592a3d6ef37dfc07a50d} 
+\index{MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest@{MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest}!FreqHistogramEventsTest@{FreqHistogramEventsTest}}
+\index{FreqHistogramEventsTest@{FreqHistogramEventsTest}!MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest@{MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest}}
+\doxysubsubsection{FreqHistogramEventsTest()}
+{\footnotesize\ttfamily void Mih\+Stat\+Library\+Test.\+Freq\+Histogram\+Tests.\+Freq\+Histogram\+Test.\+Freq\+Histogram\+Events\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тест вызова событий изменения прогресса и процесса\+: 
+
+
+\begin{DoxyEnumerate}
+\item Запускается рассчет гистограммы на файле. Проверяется, были ли вызваны события 
+\end{DoxyEnumerate}\label{class_mih_stat_library_test_1_1_freq_histogram_tests_1_1_freq_histogram_test_a483e3ce15f5343d42fc7be2abb6c9733} 
+\index{MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest@{MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest}!FreqHistogramInvalidShiftCreateTest@{FreqHistogramInvalidShiftCreateTest}}
+\index{FreqHistogramInvalidShiftCreateTest@{FreqHistogramInvalidShiftCreateTest}!MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest@{MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest}}
+\doxysubsubsection{FreqHistogramInvalidShiftCreateTest()}
+{\footnotesize\ttfamily void Mih\+Stat\+Library\+Test.\+Freq\+Histogram\+Tests.\+Freq\+Histogram\+Test.\+Freq\+Histogram\+Invalid\+Shift\+Create\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тест на генерацию исключения Invalid\+Shift\+Exception при некорректоном значении смещения при создании гистограммы\+: 
+
+
+\begin{DoxyEnumerate}
+\item Попытка создания гистограммы с размерностью 5 и смещением 7 
+\end{DoxyEnumerate}\label{class_mih_stat_library_test_1_1_freq_histogram_tests_1_1_freq_histogram_test_a2f5b0da3e40c7ad28b9a7ab6f92e9027} 
+\index{MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest@{MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest}!FreqHistogramReduceCalculationTest@{FreqHistogramReduceCalculationTest}}
+\index{FreqHistogramReduceCalculationTest@{FreqHistogramReduceCalculationTest}!MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest@{MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest}}
+\doxysubsubsection{FreqHistogramReduceCalculationTest()}
+{\footnotesize\ttfamily void Mih\+Stat\+Library\+Test.\+Freq\+Histogram\+Tests.\+Freq\+Histogram\+Test.\+Freq\+Histogram\+Reduce\+Calculation\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тест на пересчет гистограммы на гистограммы меньших размеров\+: 
+
+
+\begin{DoxyEnumerate}
+\item Тесты с файлом с байтами 11110000 размером 5 МБ. Пересчет гистограммы на размерности от 1 до 22 и сравнения с гистограммами, посчитанными на файле 
+\end{DoxyEnumerate}\label{class_mih_stat_library_test_1_1_freq_histogram_tests_1_1_freq_histogram_test_a94fe5272d91c48b77fbda3bf68f0bad8} 
+\index{MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest@{MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest}!FreqHistogramReduceExceptionTest@{FreqHistogramReduceExceptionTest}}
+\index{FreqHistogramReduceExceptionTest@{FreqHistogramReduceExceptionTest}!MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest@{MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest}}
+\doxysubsubsection{FreqHistogramReduceExceptionTest()}
+{\footnotesize\ttfamily void Mih\+Stat\+Library\+Test.\+Freq\+Histogram\+Tests.\+Freq\+Histogram\+Test.\+Freq\+Histogram\+Reduce\+Exception\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тест на генерацию исключения Reduce\+Exception при некорректоном использовании функции пересчета гистограммы\+: 
+
+
+\begin{DoxyEnumerate}
+\item Тесты над файлом с байтами 11110000 размером 1 МБ 1.\+1. Создание и обсчет матрицы размерностью 6 и смещением 3, попытка пересчитать на матрицу размерностью 7 и смещением 3 1.\+2. Создание и обсчет матрицы размерностью 6 и смещением 1, попытка пересчитать на матрицу размерностью 7 и смещением 3 1.\+3. Попытка пересчитать матрицу размерностью 6 и смещением 1 на матрицу размерностью 7 и смещением 1 1.\+4. Попытка пересчитать матрицу размерностью 6 и смещением 1 на матрицу размерностью 7 и смещением 1 
+\end{DoxyEnumerate}\label{class_mih_stat_library_test_1_1_freq_histogram_tests_1_1_freq_histogram_test_af30bf11a7a8bbefd0d7e1d2a7ba1073e} 
+\index{MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest@{MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest}!FreqHistogremCalculateFrom0To255FileTest@{FreqHistogremCalculateFrom0To255FileTest}}
+\index{FreqHistogremCalculateFrom0To255FileTest@{FreqHistogremCalculateFrom0To255FileTest}!MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest@{MihStatLibraryTest.FreqHistogramTests.FreqHistogramTest}}
+\doxysubsubsection{FreqHistogremCalculateFrom0To255FileTest()}
+{\footnotesize\ttfamily void Mih\+Stat\+Library\+Test.\+Freq\+Histogram\+Tests.\+Freq\+Histogram\+Test.\+Freq\+Histogrem\+Calculate\+From0\+To255\+File\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тест гистограммы частот на файле заполненном байтами со значениями от 0 до 255\+: 
+
+
+\begin{DoxyEnumerate}
+\item Тестирование на размерности 8 1.\+1. В гистограмме все значения равны 1 1.\+2. В гистограмме обсчиталось 256 последовательностей
+\item Тестирование на размерности 13 2.\+1. В гистограмме обсчиталось 157 значений 
+\end{DoxyEnumerate}
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Freq\+Histogram\+Tests/\textbf{ Freq\+Histogram\+Test.\+cs}\end{DoxyCompactItemize}

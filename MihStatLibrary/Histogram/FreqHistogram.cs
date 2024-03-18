@@ -27,12 +27,12 @@ namespace MihStatLibrary.Histogram
         /// <summary>
         /// Событие изменения процесса обсчитывания
         /// </summary>
-        event EventHandler<string>? ProcessChanged = null;
+        public event EventHandler<string>? ProcessChanged = null;
 
         /// <summary>
         /// Событие изменения прогресса обсчитывания
         /// </summary>
-        event EventHandler<int>? ProgressChanged = null;
+        public event EventHandler<int>? ProgressChanged = null;
 
         /// <summary>
         /// Гистограмма частот
