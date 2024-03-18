@@ -37,7 +37,7 @@ namespace MihStatLibrary
         static public double Calculate(FreqHistogram freqHistogram)
         {
             double result = 0;
-            for (int i = 0; i < freqHistogram.NmVectors; i++)
+            for (int i = 0; i < freqHistogram.Histogram.Length; i++)
             {
                 result += freqHistogram.Histogram[i] * Calculate(i);
             }
