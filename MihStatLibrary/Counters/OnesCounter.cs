@@ -7,7 +7,7 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MihStatLibrary
+namespace MihStatLibrary.Counters
 {
     /// <summary>
 	/// Класс подсчета количества единичных бит
@@ -22,7 +22,7 @@ namespace MihStatLibrary
         static public double Calculate(BlockData blockData)
         {
             double result = 0;
-            foreach(var element in blockData.Data)
+            foreach (var element in blockData.Data)
             {
                 result += Tools.ArNumberOne[element];
             }
@@ -30,12 +30,16 @@ namespace MihStatLibrary
         }
 
         /// <summary>
-        /// Рассчет количества "1" в гистограмме частот
+        /// Рассчет количества "1" в гистограмме частот. СМЕЩЕНИЕ ГИСТОГРАММЫ ДОЛЖНО БЫТЬ РАЗНО РАЗМЕРНОСТИ!
         /// </summary>
-        /// <param name="freqHistogram">Гистограмма частот</param>
-        /// <returns>Количество единичнывх бит</returns>
+        /// <param name="freqHistogram">Гистограмма частот. СМЕЩЕНИЕ ГИСТОГРАММЫ ДОЛЖНО БЫТЬ РАЗНО РАЗМЕРНОСТИ!</param>
+        /// <returns>Количество единичных бит</returns>
+        /// <exception cref="OnesCounterException">Попытка посчитать количество единичных бит на гистограмме с разными значениями смещения и размерности</exception>
         static public double Calculate(FreqHistogram freqHistogram)
         {
+            if (freqHistogram.Dimension != freqHistogram.SzShift)
+                throw new OnesCounterException("Смещение гистограммы должно быть равно размерности!");
+
             double result = 0;
             for (int i = 0; i < freqHistogram.Histogram.Length; i++)
             {

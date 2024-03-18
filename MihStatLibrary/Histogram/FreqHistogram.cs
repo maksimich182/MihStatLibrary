@@ -49,6 +49,11 @@ namespace MihStatLibrary.Histogram
         /// </summary>
         public long NmVectors { get { return _nmVectors; } }
 
+        /// <summary>
+        /// Смещение гистограммы частот
+        /// </summary>
+        public int SzShift { get { return _szShift; } }
+
 
         /// <summary>
         /// Конструктор класса гистограммы частот без зацепления

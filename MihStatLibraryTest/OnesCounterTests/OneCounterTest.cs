@@ -1,4 +1,5 @@
 ﻿using MihStatLibrary;
+using MihStatLibrary.Counters;
 using MihStatLibrary.Data;
 using MihStatLibrary.Histogram;
 using System;
