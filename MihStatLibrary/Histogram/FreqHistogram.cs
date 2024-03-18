@@ -1,6 +1,7 @@
 ﻿using MihStatLibrary.Data;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Numerics;
 using System.Text;
@@ -22,6 +23,16 @@ namespace MihStatLibrary.Histogram
         private BigInteger _remain;
         private int _szRemain;
         private long _nmVectors;
+
+        /// <summary>
+        /// Событие изменения процесса обсчитывания
+        /// </summary>
+        event EventHandler<string>? ProcessChanged = null;
+
+        /// <summary>
+        /// Событие изменения прогресса обсчитывания
+        /// </summary>
+        event EventHandler<int>? ProgressChanged = null;
 
         /// <summary>
         /// Гистограмма частот
@@ -88,6 +99,8 @@ namespace MihStatLibrary.Histogram
             {
                 _getDataForCalculate(data, ref dataBuffer, ref szBuffer, ref countReadElements);
                 _calculateData(ref dataBuffer, ref szBuffer);
+                if (this.ProgressChanged != null)
+                    this.ProgressChanged(this, Tools.GetPercent(countReadElements, data.SzBlockData));
             }
 
             _remain = dataBuffer;
@@ -119,7 +132,8 @@ namespace MihStatLibrary.Histogram
             {
                 blockData.GetBlockData(Tools.SIZE_BLOCK_BYTES);
                 Calculate(blockData);
-                Console.WriteLine($"Гистограмма частот: {i + 1} из {nmBlocks}"); //TODO event
+                if(this.ProcessChanged != null)
+                    this.ProcessChanged(this, $"Гистограмма частот: {i + 1} из {nmBlocks}");
             }
             dataStream.Close();
 
@@ -235,6 +249,15 @@ namespace MihStatLibrary.Histogram
             }
 
             return true;
+        }
+
+        /// <summary>
+        /// Вычисление hash объекта <see cref="FreqHistogram"/>
+        /// </summary>
+        /// <returns>Hash объекта <see cref="FreqHistogram"/></returns>
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
     }
 }

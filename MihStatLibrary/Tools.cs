@@ -43,5 +43,16 @@ namespace MihStatLibrary
             6, 6, 7, 2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6, 3, 4, 4, 5, 4, 5,
             5, 6, 4, 5, 5, 6, 5, 6, 6, 7, 3, 4, 4, 5, 4, 5, 5, 6, 4, 5, 5, 6, 5, 6, 6,
             7, 4, 5, 5, 6, 5, 6, 6, 7, 5, 6, 6, 7, 6, 7, 7, 8 };
+
+        /// <summary>
+        /// Вычисление процента
+        /// </summary>
+        /// <param name="number">Число</param>
+        /// <param name="maxNumber">Максимальное число</param>
+        /// <returns>Процент</returns>
+        public static int GetPercent(long number, long maxNumber)
+        {
+            return (int)((double)number / maxNumber) * 100;
+        }
     }
 }
