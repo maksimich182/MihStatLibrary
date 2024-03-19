@@ -1,5 +1,5 @@
 ﻿using MihStatLibrary;
-using MihStatLibrary.Counters;
+using MihStatLibrary.Calculators;
 using MihStatLibrary.Data;
 using MihStatLibrary.Histogram;
 using System;
@@ -15,7 +15,7 @@ namespace MihStatLibraryTest.OnesCounterTests
     /// Тесты класса OneCounter
     /// </summary>
     [TestClass]
-    public class OneCounterTest
+    public class OnesCalculatorTest
     {
         /// <summary>
         /// Тест на вычисление количества единичных бит в блоке данных:
@@ -29,7 +29,7 @@ namespace MihStatLibraryTest.OnesCounterTests
             FileStream dataStream = new FileStream(DataFiles.File00001111_131MB, FileMode.Open);
             BlockData blockData = new BlockData(new BlockDataFileSource(dataStream));
             blockData.GetBlockData(szBlock);
-            Assert.AreEqual(szBlock * 4, OnesCounter.Calculate(blockData));
+            Assert.AreEqual(szBlock * 4, OnesCalculator.Calculate(blockData));
         }
 
         /// <summary>
@@ -43,7 +43,7 @@ namespace MihStatLibraryTest.OnesCounterTests
         {
             FreqHistogram fq = new FreqHistogram(16);
             fq.Calculate(DataFiles.File01010101_131MB);
-            Assert.AreEqual(OnesCounter.Calculate(fq), (new FileInfo(DataFiles.File01010101_131MB).Length * Tools.BITS_IN_BYTE) / 2);
+            Assert.AreEqual(OnesCalculator.Calculate(fq), (new FileInfo(DataFiles.File01010101_131MB).Length * Tools.BITS_IN_BYTE) / 2);
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace MihStatLibraryTest.OnesCounterTests
         {
             FreqHistogram fq = new FreqHistogram(16, 3);
             fq.Calculate(DataFiles.File11110000_5MB);
-            Assert.ThrowsException<OnesCounterException>(() => OnesCounter.Calculate(fq));
+            Assert.ThrowsException<OnesCounterException>(() => OnesCalculator.Calculate(fq));
         }
 
         /// <summary>
@@ -71,8 +71,8 @@ namespace MihStatLibraryTest.OnesCounterTests
         public void CalculateOneInBigIntegerTest()
         {
             BigInteger data = BigInteger.Parse("987345834572187234912834");
-            Assert.AreEqual(OnesCounter.Calculate(data), 37);
-            Assert.AreEqual(OnesCounter.Calculate(data, 30), 11);
+            Assert.AreEqual(OnesCalculator.Calculate(data), 37);
+            Assert.AreEqual(OnesCalculator.Calculate(data, 30), 11);
         }
     }
 }

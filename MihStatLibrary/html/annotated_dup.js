@@ -1,6 +1,9 @@
 var annotated_dup =
 [
     [ "MihStatLibrary", "namespace_mih_stat_library.html", [
+      [ "Counters", "namespace_mih_stat_library_1_1_counters.html", [
+        [ "OnesCounterException", "class_mih_stat_library_1_1_counters_1_1_ones_counter_exception.html", "class_mih_stat_library_1_1_counters_1_1_ones_counter_exception" ]
+      ] ],
       [ "Data", "namespace_mih_stat_library_1_1_data.html", [
         [ "BlockData", "class_mih_stat_library_1_1_data_1_1_block_data.html", "class_mih_stat_library_1_1_data_1_1_block_data" ],
         [ "BlockDataFileSource", "class_mih_stat_library_1_1_data_1_1_block_data_file_source.html", "class_mih_stat_library_1_1_data_1_1_block_data_file_source" ],

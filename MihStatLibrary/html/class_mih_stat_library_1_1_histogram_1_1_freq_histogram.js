@@ -12,6 +12,7 @@ var class_mih_stat_library_1_1_histogram_1_1_freq_histogram =
     [ "Dimension", "class_mih_stat_library_1_1_histogram_1_1_freq_histogram.html#aae86ac7ef3d7a6f0d3cdbed1da2750a5", null ],
     [ "Histogram", "class_mih_stat_library_1_1_histogram_1_1_freq_histogram.html#aa2ea201158ca2f23f3c75531d3440f15", null ],
     [ "NmVectors", "class_mih_stat_library_1_1_histogram_1_1_freq_histogram.html#ab3de436a51d27a210e6b39ac1684b142", null ],
+    [ "SzShift", "class_mih_stat_library_1_1_histogram_1_1_freq_histogram.html#a4ecfe33c02d47d1696e5b8c73041330b", null ],
     [ "ProcessChanged", "class_mih_stat_library_1_1_histogram_1_1_freq_histogram.html#abfc75e2ceeee37e299713922c1eb1460", null ],
     [ "ProgressChanged", "class_mih_stat_library_1_1_histogram_1_1_freq_histogram.html#a2442e005b384a6c2b3dd2defd12fc004", null ]
 ];

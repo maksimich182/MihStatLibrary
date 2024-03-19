@@ -34,7 +34,9 @@ long[$\,$] \textbf{ Histogram}\hspace{0.3cm}{\ttfamily  [get]}
 int \textbf{ Dimension}\hspace{0.3cm}{\ttfamily  [get]}
 \begin{DoxyCompactList}\small\item\em Размерность гистограммы частот \end{DoxyCompactList}\item 
 long \textbf{ Nm\+Vectors}\hspace{0.3cm}{\ttfamily  [get]}
-\begin{DoxyCompactList}\small\item\em Количество учтенных последовательностей \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Количество учтенных последовательностей \end{DoxyCompactList}\item 
+int \textbf{ Sz\+Shift}\hspace{0.3cm}{\ttfamily  [get]}
+\begin{DoxyCompactList}\small\item\em Смещение гистограммы частот \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{События}
 \begin{DoxyCompactItemize}
 \item 
@@ -69,7 +71,7 @@ Event\+Handler$<$ int $>$? \textbf{ Progress\+Changed} = null
 \end{DoxyParams}
 
 
-См. определение в файле \textbf{ Freq\+Histogram.\+cs} строка \textbf{ 57}
+См. определение в файле \textbf{ Freq\+Histogram.\+cs} строка \textbf{ 62}
 
 \label{class_mih_stat_library_1_1_histogram_1_1_freq_histogram_a69e58640bad9c882120b52992dc8d798} 
 \index{MihStatLibrary.Histogram.FreqHistogram@{MihStatLibrary.Histogram.FreqHistogram}!FreqHistogram@{FreqHistogram}}
@@ -95,7 +97,7 @@ Event\+Handler$<$ int $>$? \textbf{ Progress\+Changed} = null
 \end{DoxyExceptions}
 
 
-См. определение в файле \textbf{ Freq\+Histogram.\+cs} строка \textbf{ 74}
+См. определение в файле \textbf{ Freq\+Histogram.\+cs} строка \textbf{ 79}
 
 
 
@@ -117,7 +119,7 @@ Event\+Handler$<$ int $>$? \textbf{ Progress\+Changed} = null
 \end{DoxyParams}
 
 
-См. определение в файле \textbf{ Freq\+Histogram.\+cs} строка \textbf{ 85}
+См. определение в файле \textbf{ Freq\+Histogram.\+cs} строка \textbf{ 90}
 
 \label{class_mih_stat_library_1_1_histogram_1_1_freq_histogram_ae9e863c7583b96c577da6e17dbe16648} 
 \index{MihStatLibrary.Histogram.FreqHistogram@{MihStatLibrary.Histogram.FreqHistogram}!Calculate@{Calculate}}
@@ -136,7 +138,7 @@ Event\+Handler$<$ int $>$? \textbf{ Progress\+Changed} = null
 \end{DoxyParams}
 
 
-См. определение в файле \textbf{ Freq\+Histogram.\+cs} строка \textbf{ 125}
+См. определение в файле \textbf{ Freq\+Histogram.\+cs} строка \textbf{ 130}
 
 \label{class_mih_stat_library_1_1_histogram_1_1_freq_histogram_afd9678cad913332024e5721c63e7616b} 
 \index{MihStatLibrary.Histogram.FreqHistogram@{MihStatLibrary.Histogram.FreqHistogram}!Clear@{Clear}}
@@ -150,7 +152,7 @@ Event\+Handler$<$ int $>$? \textbf{ Progress\+Changed} = null
 
 
 
-См. определение в файле \textbf{ Freq\+Histogram.\+cs} строка \textbf{ 113}
+См. определение в файле \textbf{ Freq\+Histogram.\+cs} строка \textbf{ 118}
 
 \label{class_mih_stat_library_1_1_histogram_1_1_freq_histogram_ac59ef9c1852c07e13ae69bb2a1988f0d} 
 \index{MihStatLibrary.Histogram.FreqHistogram@{MihStatLibrary.Histogram.FreqHistogram}!Equals@{Equals}}
@@ -172,7 +174,7 @@ Event\+Handler$<$ int $>$? \textbf{ Progress\+Changed} = null
 \end{DoxyReturn}
 
 
-См. определение в файле \textbf{ Freq\+Histogram.\+cs} строка \textbf{ 235}
+См. определение в файле \textbf{ Freq\+Histogram.\+cs} строка \textbf{ 240}
 
 \label{class_mih_stat_library_1_1_histogram_1_1_freq_histogram_a47401b3f8485422d2ff5f4826132a725} 
 \index{MihStatLibrary.Histogram.FreqHistogram@{MihStatLibrary.Histogram.FreqHistogram}!GetHashCode@{GetHashCode}}
@@ -189,7 +191,7 @@ Hash объекта Freq\+Histogram
 \end{DoxyReturn}
 
 
-См. определение в файле \textbf{ Freq\+Histogram.\+cs} строка \textbf{ 258}
+См. определение в файле \textbf{ Freq\+Histogram.\+cs} строка \textbf{ 263}
 
 \label{class_mih_stat_library_1_1_histogram_1_1_freq_histogram_a852b0cc946ff89982baebb31c85756b7} 
 \index{MihStatLibrary.Histogram.FreqHistogram@{MihStatLibrary.Histogram.FreqHistogram}!Reduce@{Reduce}}
@@ -213,7 +215,7 @@ Hash объекта Freq\+Histogram
 \end{DoxyExceptions}
 
 
-См. определение в файле \textbf{ Freq\+Histogram.\+cs} строка \textbf{ 147}
+См. определение в файле \textbf{ Freq\+Histogram.\+cs} строка \textbf{ 152}
 
 \label{class_mih_stat_library_1_1_histogram_1_1_freq_histogram_a506f0326acffe276a64c0a0d99db785f} 
 \index{MihStatLibrary.Histogram.FreqHistogram@{MihStatLibrary.Histogram.FreqHistogram}!Reduce@{Reduce}}
@@ -235,7 +237,7 @@ Hash объекта Freq\+Histogram
 \end{DoxyReturn}
 
 
-См. определение в файле \textbf{ Freq\+Histogram.\+cs} строка \textbf{ 179}
+См. определение в файле \textbf{ Freq\+Histogram.\+cs} строка \textbf{ 184}
 
 
 
@@ -281,6 +283,20 @@ Hash объекта Freq\+Histogram
 
 
 См. определение в файле \textbf{ Freq\+Histogram.\+cs} строка \textbf{ 50}
+
+\label{class_mih_stat_library_1_1_histogram_1_1_freq_histogram_a4ecfe33c02d47d1696e5b8c73041330b} 
+\index{MihStatLibrary.Histogram.FreqHistogram@{MihStatLibrary.Histogram.FreqHistogram}!SzShift@{SzShift}}
+\index{SzShift@{SzShift}!MihStatLibrary.Histogram.FreqHistogram@{MihStatLibrary.Histogram.FreqHistogram}}
+\doxysubsubsection{SzShift}
+{\footnotesize\ttfamily int Mih\+Stat\+Library.\+Histogram.\+Freq\+Histogram.\+Sz\+Shift\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Смещение гистограммы частот 
+
+
+
+См. определение в файле \textbf{ Freq\+Histogram.\+cs} строка \textbf{ 55}
 
 
 

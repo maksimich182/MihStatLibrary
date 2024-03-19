@@ -7,12 +7,12 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MihStatLibrary.Counters
+namespace MihStatLibrary.Calculators
 {
     /// <summary>
 	/// Класс подсчета количества единичных бит
 	/// </summary>
-	public static class OnesCounter
+	public static class OnesCalculator
     {
         /// <summary>
         /// Рассчет количества "1" в блоке данных

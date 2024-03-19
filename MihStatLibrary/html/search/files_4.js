@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['iblockdatasource_2ecs_0',['IBlockDataSource.cs',['../_i_block_data_source_8cs.html',1,'']]]
+  ['histogramexceptions_2ecs_0',['HistogramExceptions.cs',['../_histogram_exceptions_8cs.html',1,'']]]
 ];

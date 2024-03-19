@@ -2,6 +2,7 @@ var hierarchy =
 [
     [ "MihStatLibrary.Data.BlockData", "class_mih_stat_library_1_1_data_1_1_block_data.html", null ],
     [ "Exception", null, [
+      [ "MihStatLibrary.Counters.OnesCounterException", "class_mih_stat_library_1_1_counters_1_1_ones_counter_exception.html", null ],
       [ "MihStatLibrary.Histogram.InvalidShiftException", "class_mih_stat_library_1_1_histogram_1_1_invalid_shift_exception.html", null ],
       [ "MihStatLibrary.Histogram.ReduceException", "class_mih_stat_library_1_1_histogram_1_1_reduce_exception.html", null ]
     ] ],

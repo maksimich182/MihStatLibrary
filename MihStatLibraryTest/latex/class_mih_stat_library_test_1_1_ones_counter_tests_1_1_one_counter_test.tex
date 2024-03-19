@@ -1,0 +1,82 @@
+\doxysection{Класс Mih\+Stat\+Library\+Test.\+Ones\+Counter\+Tests.\+One\+Counter\+Test}
+\label{class_mih_stat_library_test_1_1_ones_counter_tests_1_1_one_counter_test}\index{MihStatLibraryTest.OnesCounterTests.OneCounterTest@{MihStatLibraryTest.OnesCounterTests.OneCounterTest}}
+
+
+Тесты класса One\+Counter.  
+
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ Calculate\+One\+In\+Block\+Data\+Test} ()
+\begin{DoxyCompactList}\small\item\em Тест на вычисление количества единичных бит в блоке данных\+: \end{DoxyCompactList}\item 
+void \textbf{ Calculate\+One\+In\+Freq\+Histogram\+Test} ()
+\begin{DoxyCompactList}\small\item\em Тест на вычисление количества единичных бит в гистограмме частот\+: \end{DoxyCompactList}\item 
+void \textbf{ Calculate\+One\+In\+Freq\+Histogram\+With\+Different\+Shift\+And\+Dim\+Test} ()
+\begin{DoxyCompactList}\small\item\em Тест на исключение при вычислении количества единичных бит в гистограмме частот с разными смещением и размерностью\+: \end{DoxyCompactList}\item 
+void \textbf{ Calculate\+One\+In\+Big\+Integer\+Test} ()
+\begin{DoxyCompactList}\small\item\em Тест на вычисление количества единичных бит данных из Big\+Integer\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Тесты класса One\+Counter. 
+
+\doxysubsection{Методы}
+\label{class_mih_stat_library_test_1_1_ones_counter_tests_1_1_one_counter_test_a7f627692a4ec41ac8145f920992a1989} 
+\index{MihStatLibraryTest.OnesCounterTests.OneCounterTest@{MihStatLibraryTest.OnesCounterTests.OneCounterTest}!CalculateOneInBigIntegerTest@{CalculateOneInBigIntegerTest}}
+\index{CalculateOneInBigIntegerTest@{CalculateOneInBigIntegerTest}!MihStatLibraryTest.OnesCounterTests.OneCounterTest@{MihStatLibraryTest.OnesCounterTests.OneCounterTest}}
+\doxysubsubsection{CalculateOneInBigIntegerTest()}
+{\footnotesize\ttfamily void Mih\+Stat\+Library\+Test.\+Ones\+Counter\+Tests.\+One\+Counter\+Test.\+Calculate\+One\+In\+Big\+Integer\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тест на вычисление количества единичных бит данных из Big\+Integer\+: 
+
+
+\begin{DoxyEnumerate}
+\item Сравнивается количество единичных бит в числе 987345834572187234912834 = 1101\+\_\+0001\+\_\+0001\+\_\+0100\+\_\+0001\+\_\+1111\+\_\+1111\+\_\+1100\+\_\+0011\+\_\+0000\+\_\+1111\+\_\+1001\+\_\+0111\+\_\+0000\+\_\+0011\+\_\+0010\+\_\+1100\+\_\+1010\+\_\+0100\+\_\+0010 с 37 (посчитанно вручную)
+\item Сравнивается количество единичных бит в первых 30 битах в числа 987345834572187234912834 = 1101\+\_\+0001\+\_\+0001\+\_\+0100\+\_\+0001\+\_\+1111\+\_\+1111\+\_\+1100\+\_\+0011\+\_\+0000\+\_\+1111\+\_\+1001\+\_\+0111\+\_\+0000\+\_\+0011\+\_\+0010\+\_\+1100\+\_\+1010\+\_\+0100\+\_\+0010 с 37 (посчитанно вручную) 
+\end{DoxyEnumerate}\label{class_mih_stat_library_test_1_1_ones_counter_tests_1_1_one_counter_test_aff03cedc72b8235074c8f9aa0aaa6708} 
+\index{MihStatLibraryTest.OnesCounterTests.OneCounterTest@{MihStatLibraryTest.OnesCounterTests.OneCounterTest}!CalculateOneInBlockDataTest@{CalculateOneInBlockDataTest}}
+\index{CalculateOneInBlockDataTest@{CalculateOneInBlockDataTest}!MihStatLibraryTest.OnesCounterTests.OneCounterTest@{MihStatLibraryTest.OnesCounterTests.OneCounterTest}}
+\doxysubsubsection{CalculateOneInBlockDataTest()}
+{\footnotesize\ttfamily void Mih\+Stat\+Library\+Test.\+Ones\+Counter\+Tests.\+One\+Counter\+Test.\+Calculate\+One\+In\+Block\+Data\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тест на вычисление количества единичных бит в блоке данных\+: 
+
+
+\begin{DoxyEnumerate}
+\item Сравнивается количество высчитанных бит в блоке данных размером 100.\+000.\+000 байт из файла, содержащего байты 00001111 с количеством байт в блоке, умноженным на 4 (количество единичных бит в каждом байте) 
+\end{DoxyEnumerate}\label{class_mih_stat_library_test_1_1_ones_counter_tests_1_1_one_counter_test_a72a97134067c262be96275ee4c073484} 
+\index{MihStatLibraryTest.OnesCounterTests.OneCounterTest@{MihStatLibraryTest.OnesCounterTests.OneCounterTest}!CalculateOneInFreqHistogramTest@{CalculateOneInFreqHistogramTest}}
+\index{CalculateOneInFreqHistogramTest@{CalculateOneInFreqHistogramTest}!MihStatLibraryTest.OnesCounterTests.OneCounterTest@{MihStatLibraryTest.OnesCounterTests.OneCounterTest}}
+\doxysubsubsection{CalculateOneInFreqHistogramTest()}
+{\footnotesize\ttfamily void Mih\+Stat\+Library\+Test.\+Ones\+Counter\+Tests.\+One\+Counter\+Test.\+Calculate\+One\+In\+Freq\+Histogram\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тест на вычисление количества единичных бит в гистограмме частот\+: 
+
+
+\begin{DoxyEnumerate}
+\item Сравнивается количество единичных бит в гистограмме частот размерностью 16 (чтоб не осталось необсчитанных хвостов), посчитанной на файле, содержащем 131 МБ байт 010100101 с размером файла в битах, поделенном на 2 (в каждом байте половина бит единичные) 
+\end{DoxyEnumerate}\label{class_mih_stat_library_test_1_1_ones_counter_tests_1_1_one_counter_test_a6150a4662335ac1bd8b6501e3033a11c} 
+\index{MihStatLibraryTest.OnesCounterTests.OneCounterTest@{MihStatLibraryTest.OnesCounterTests.OneCounterTest}!CalculateOneInFreqHistogramWithDifferentShiftAndDimTest@{CalculateOneInFreqHistogramWithDifferentShiftAndDimTest}}
+\index{CalculateOneInFreqHistogramWithDifferentShiftAndDimTest@{CalculateOneInFreqHistogramWithDifferentShiftAndDimTest}!MihStatLibraryTest.OnesCounterTests.OneCounterTest@{MihStatLibraryTest.OnesCounterTests.OneCounterTest}}
+\doxysubsubsection{CalculateOneInFreqHistogramWithDifferentShiftAndDimTest()}
+{\footnotesize\ttfamily void Mih\+Stat\+Library\+Test.\+Ones\+Counter\+Tests.\+One\+Counter\+Test.\+Calculate\+One\+In\+Freq\+Histogram\+With\+Different\+Shift\+And\+Dim\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тест на исключение при вычислении количества единичных бит в гистограмме частот с разными смещением и размерностью\+: 
+
+
+\begin{DoxyEnumerate}
+\item Проверяется возникновение исключения при попытке посчитать количество единичных бит на гистограмме частот с разными значениями смещения и размерности 
+\end{DoxyEnumerate}
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Ones\+Counter\+Tests/\textbf{ One\+Counter\+Test.\+cs}\end{DoxyCompactItemize}

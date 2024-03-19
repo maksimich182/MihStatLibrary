@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['freqhistogram_2ecs_0',['FreqHistogram.cs',['../_freq_histogram_8cs.html',1,'']]]
+  ['countersexceptions_2ecs_0',['CountersExceptions.cs',['../_counters_exceptions_8cs.html',1,'']]]
 ];

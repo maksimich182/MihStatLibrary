@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['processchanged_0',['ProcessChanged',['../class_mih_stat_library_1_1_histogram_1_1_freq_histogram.html#abfc75e2ceeee37e299713922c1eb1460',1,'MihStatLibrary::Histogram::FreqHistogram']]],
-  ['progresschanged_1',['ProgressChanged',['../class_mih_stat_library_1_1_histogram_1_1_freq_histogram.html#a2442e005b384a6c2b3dd2defd12fc004',1,'MihStatLibrary::Histogram::FreqHistogram']]]
+  ['onescounter_2ecs_0',['OnesCounter.cs',['../_ones_counter_8cs.html',1,'']]],
+  ['onescounterexception_1',['OnesCounterException',['../class_mih_stat_library_1_1_counters_1_1_ones_counter_exception.html',1,'MihStatLibrary.Counters.OnesCounterException'],['../class_mih_stat_library_1_1_counters_1_1_ones_counter_exception.html#a779879b67e6b416a5b7ef6bd102d9aae',1,'MihStatLibrary.Counters.OnesCounterException.OnesCounterException()']]]
 ];

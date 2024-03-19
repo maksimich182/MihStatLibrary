@@ -62,6 +62,10 @@ MihStatLibrary.Histogram.FreqHistogram \- Класс истограммы час
 .RI "long \fBNmVectors\fP\fR [get]\fP"
 .br
 .RI "Количество учтенных последовательностей "
+.ti -1c
+.RI "int \fBSzShift\fP\fR [get]\fP"
+.br
+.RI "Смещение гистограммы частот "
 .in -1c
 .SS "События"
 
@@ -94,7 +98,7 @@ MihStatLibrary.Histogram.FreqHistogram \- Класс истограммы час
 .PP
 
 .PP
-См\&. определение в файле \fBFreqHistogram\&.cs\fP строка \fB57\fP
+См\&. определение в файле \fBFreqHistogram\&.cs\fP строка \fB62\fP
 .SS "MihStatLibrary\&.Histogram\&.FreqHistogram\&.FreqHistogram (int dimension, int szShift)"
 
 .PP
@@ -114,7 +118,7 @@ MihStatLibrary.Histogram.FreqHistogram \- Класс истограммы час
 .PP
 
 .PP
-См\&. определение в файле \fBFreqHistogram\&.cs\fP строка \fB74\fP
+См\&. определение в файле \fBFreqHistogram\&.cs\fP строка \fB79\fP
 .SH "Методы"
 .PP 
 .SS "void MihStatLibrary\&.Histogram\&.FreqHistogram\&.Calculate (\fBBlockData\fP data)"
@@ -129,7 +133,7 @@ MihStatLibrary.Histogram.FreqHistogram \- Класс истограммы час
 .PP
 
 .PP
-См\&. определение в файле \fBFreqHistogram\&.cs\fP строка \fB85\fP
+См\&. определение в файле \fBFreqHistogram\&.cs\fP строка \fB90\fP
 .SS "void MihStatLibrary\&.Histogram\&.FreqHistogram\&.Calculate (string fileName)"
 
 .PP
@@ -142,13 +146,13 @@ MihStatLibrary.Histogram.FreqHistogram \- Класс истограммы час
 .PP
 
 .PP
-См\&. определение в файле \fBFreqHistogram\&.cs\fP строка \fB125\fP
+См\&. определение в файле \fBFreqHistogram\&.cs\fP строка \fB130\fP
 .SS "void MihStatLibrary\&.Histogram\&.FreqHistogram\&.Clear ()"
 
 .PP
 Обнуление гистограммы частот 
 .PP
-См\&. определение в файле \fBFreqHistogram\&.cs\fP строка \fB113\fP
+См\&. определение в файле \fBFreqHistogram\&.cs\fP строка \fB118\fP
 .SS "override bool MihStatLibrary\&.Histogram\&.FreqHistogram\&.Equals (object? obj)"
 
 .PP
@@ -166,7 +170,7 @@ MihStatLibrary.Histogram.FreqHistogram \- Класс истограммы час
 .PP
 
 .PP
-См\&. определение в файле \fBFreqHistogram\&.cs\fP строка \fB235\fP
+См\&. определение в файле \fBFreqHistogram\&.cs\fP строка \fB240\fP
 .SS "override int MihStatLibrary\&.Histogram\&.FreqHistogram\&.GetHashCode ()"
 
 .PP
@@ -179,7 +183,7 @@ Hash объекта FreqHistogram
 .PP
 
 .PP
-См\&. определение в файле \fBFreqHistogram\&.cs\fP строка \fB258\fP
+См\&. определение в файле \fBFreqHistogram\&.cs\fP строка \fB263\fP
 .SS "void MihStatLibrary\&.Histogram\&.FreqHistogram\&.Reduce (\fBFreqHistogram\fP destHistogram)"
 
 .PP
@@ -197,7 +201,7 @@ Hash объекта FreqHistogram
 .PP
 
 .PP
-См\&. определение в файле \fBFreqHistogram\&.cs\fP строка \fB147\fP
+См\&. определение в файле \fBFreqHistogram\&.cs\fP строка \fB152\fP
 .SS "\fBFreqHistogram\fP MihStatLibrary\&.Histogram\&.FreqHistogram\&.Reduce (int pDestDimension)"
 
 .PP
@@ -215,7 +219,7 @@ Hash объекта FreqHistogram
 .PP
 
 .PP
-См\&. определение в файле \fBFreqHistogram\&.cs\fP строка \fB179\fP
+См\&. определение в файле \fBFreqHistogram\&.cs\fP строка \fB184\fP
 .SH "Полный список свойств"
 .PP 
 .SS "int MihStatLibrary\&.Histogram\&.FreqHistogram\&.Dimension\fR [get]\fP"
@@ -236,6 +240,12 @@ Hash объекта FreqHistogram
 Количество учтенных последовательностей 
 .PP
 См\&. определение в файле \fBFreqHistogram\&.cs\fP строка \fB50\fP
+.SS "int MihStatLibrary\&.Histogram\&.FreqHistogram\&.SzShift\fR [get]\fP"
+
+.PP
+Смещение гистограммы частот 
+.PP
+См\&. определение в файле \fBFreqHistogram\&.cs\fP строка \fB55\fP
 .SH "Cобытия"
 .PP 
 .SS "EventHandler<string>? MihStatLibrary\&.Histogram\&.FreqHistogram\&.ProcessChanged = null"

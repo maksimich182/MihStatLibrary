@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MihStatLibrary.Counters
+namespace MihStatLibrary.Calculators
 {
     /// <summary>
     /// Исключение, возникающее при попытке посчитать количество единиц на гистограмме частот со смещением отличным от размерности
