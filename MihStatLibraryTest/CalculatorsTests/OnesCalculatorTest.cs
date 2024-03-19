@@ -9,10 +9,10 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MihStatLibraryTest.OnesCounterTests
+namespace MihStatLibraryTest.OnesCalculatorTests
 {
     /// <summary>
-    /// Тесты класса OneCounter
+    /// Тесты класса OnesCalculator
     /// </summary>
     [TestClass]
     public class OnesCalculatorTest
@@ -55,7 +55,7 @@ namespace MihStatLibraryTest.OnesCounterTests
         {
             FreqHistogram fq = new FreqHistogram(16, 3);
             fq.Calculate(DataFiles.File11110000_5MB);
-            Assert.ThrowsException<OnesCounterException>(() => OnesCalculator.Calculate(fq));
+            Assert.ThrowsException<ProbabilityCalculatorException>(() => OnesCalculator.Calculate(fq));
         }
 
         /// <summary>

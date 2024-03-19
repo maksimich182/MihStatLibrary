@@ -34,11 +34,11 @@ namespace MihStatLibrary.Calculators
         /// </summary>
         /// <param name="freqHistogram">Гистограмма частот. СМЕЩЕНИЕ ГИСТОГРАММЫ ДОЛЖНО БЫТЬ РАЗНО РАЗМЕРНОСТИ!</param>
         /// <returns>Количество единичных бит</returns>
-        /// <exception cref="OnesCounterException">Попытка посчитать количество единичных бит на гистограмме с разными значениями смещения и размерности</exception>
+        /// <exception cref="ProbabilityCalculatorException">Попытка посчитать количество единичных бит на гистограмме с разными значениями смещения и размерности</exception>
         static public double Calculate(FreqHistogram freqHistogram)
         {
             if (freqHistogram.Dimension != freqHistogram.SzShift)
-                throw new OnesCounterException("Смещение гистограммы должно быть равно размерности!");
+                throw new ProbabilityCalculatorException("Смещение гистограммы должно быть равно размерности!");
 
             double result = 0;
             for (int i = 0; i < freqHistogram.Histogram.Length; i++)
