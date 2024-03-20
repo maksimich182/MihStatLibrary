@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['countersexceptions_2ecs_0',['CountersExceptions.cs',['../_counters_exceptions_8cs.html',1,'']]]
+  ['calculatorsexceptions_2ecs_0',['CalculatorsExceptions.cs',['../_calculators_exceptions_8cs.html',1,'']]]
 ];

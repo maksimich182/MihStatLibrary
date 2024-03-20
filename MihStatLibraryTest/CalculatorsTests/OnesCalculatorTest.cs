@@ -74,5 +74,18 @@ namespace MihStatLibraryTest.OnesCalculatorTests
             Assert.AreEqual(OnesCalculator.Calculate(data), 37);
             Assert.AreEqual(OnesCalculator.Calculate(data, 30), 11);
         }
+
+        /// <summary>
+        /// Тест на вычисление количества единичных бит в файле:
+        /// 1. Вычисление количества единичных бит в файле размером 131 МБ из байт 01010101.
+        /// Сравниваются полученное значение умноженное на 2 с размером файла в битах
+        /// </summary>
+        [TestMethod]
+        public void CalculateOneFile01010101_131MBTest()
+        {
+            long nmOnes = OnesCalculator.Calculate(DataFiles.File01010101_131MB);
+            
+            Assert.AreEqual(nmOnes * 2, new FileInfo(DataFiles.File01010101_131MB).Length * Tools.BITS_IN_BYTE);
+        }
     }
 }

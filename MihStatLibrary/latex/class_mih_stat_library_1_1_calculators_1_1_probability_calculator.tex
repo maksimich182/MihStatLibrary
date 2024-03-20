@@ -1,0 +1,150 @@
+\doxysection{Класс Mih\+Stat\+Library.\+Calculators.\+Probability\+Calculator}
+\label{class_mih_stat_library_1_1_calculators_1_1_probability_calculator}\index{MihStatLibrary.Calculators.ProbabilityCalculator@{MihStatLibrary.Calculators.ProbabilityCalculator}}
+
+
+Класс Вычислителя вероятностей бит 1 и 0 в данных  
+
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Probability\+Calculator} ()
+\begin{DoxyCompactList}\small\item\em Конструктор класса вычислителя вероятностей бит 1 и 0 в данных \end{DoxyCompactList}\item 
+async void \textbf{ Calculate\+Async} (string file\+Name)
+\begin{DoxyCompactList}\small\item\em Ассинхронная функция рассчета вероятностей 1 и 0 в файле \end{DoxyCompactList}\item 
+void \textbf{ Calculate} (string file\+Name)
+\begin{DoxyCompactList}\small\item\em Функция рассчета вероятностей 1 и 0 в файле \end{DoxyCompactList}\item 
+void \textbf{ Calculate} (\textbf{ Freq\+Histogram} freq\+Histogram)
+\begin{DoxyCompactList}\small\item\em Функция рассчета вероятностей 1 и 0 по гистограмме частот. СМЕЩЕНИЕ ДОЛЖНО БЫТЬ РАВНО РАЗМЕРНОСТИ! ЕСЛИ РАЗМЕР ФАЙЛА В БИТАХ НЕ КРАТЕН РАЗМЕРНОСТИ ГИСТОГРАММЫ ЧАСТОТ, БИТЫ, НЕ ОБСЧИТАННЫЕ ГИСТОГРАММОЙ, НЕ УЧИТЫВАЮТСЯ! \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Свойства}
+\begin{DoxyCompactItemize}
+\item 
+double \textbf{ Probability\+One}\hspace{0.3cm}{\ttfamily  [get]}
+\begin{DoxyCompactList}\small\item\em Вероятность бита 1 в данных \end{DoxyCompactList}\item 
+double \textbf{ Probability\+Zero}\hspace{0.3cm}{\ttfamily  [get]}
+\begin{DoxyCompactList}\small\item\em Вероятность бита 0 в данных \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс Вычислителя вероятностей бит 1 и 0 в данных 
+
+См. определение в файле \textbf{ Probability\+Calculator.\+cs} строка \textbf{ 15}
+
+
+
+\doxysubsection{Конструктор(ы)}
+\label{class_mih_stat_library_1_1_calculators_1_1_probability_calculator_a90a23df45221016f78313e132ef50d34} 
+\index{MihStatLibrary.Calculators.ProbabilityCalculator@{MihStatLibrary.Calculators.ProbabilityCalculator}!ProbabilityCalculator@{ProbabilityCalculator}}
+\index{ProbabilityCalculator@{ProbabilityCalculator}!MihStatLibrary.Calculators.ProbabilityCalculator@{MihStatLibrary.Calculators.ProbabilityCalculator}}
+\doxysubsubsection{ProbabilityCalculator()}
+{\footnotesize\ttfamily Mih\+Stat\+Library.\+Calculators.\+Probability\+Calculator.\+Probability\+Calculator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Конструктор класса вычислителя вероятностей бит 1 и 0 в данных 
+
+
+
+См. определение в файле \textbf{ Probability\+Calculator.\+cs} строка \textbf{ 33}
+
+
+
+\doxysubsection{Методы}
+\label{class_mih_stat_library_1_1_calculators_1_1_probability_calculator_a7623d659bb740993aede782d502e51bf} 
+\index{MihStatLibrary.Calculators.ProbabilityCalculator@{MihStatLibrary.Calculators.ProbabilityCalculator}!Calculate@{Calculate}}
+\index{Calculate@{Calculate}!MihStatLibrary.Calculators.ProbabilityCalculator@{MihStatLibrary.Calculators.ProbabilityCalculator}}
+\doxysubsubsection{Calculate()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Mih\+Stat\+Library.\+Calculators.\+Probability\+Calculator.\+Calculate (\begin{DoxyParamCaption}\item[{\textbf{ Freq\+Histogram}}]{freq\+Histogram }\end{DoxyParamCaption})}
+
+
+
+Функция рассчета вероятностей 1 и 0 по гистограмме частот. СМЕЩЕНИЕ ДОЛЖНО БЫТЬ РАВНО РАЗМЕРНОСТИ! ЕСЛИ РАЗМЕР ФАЙЛА В БИТАХ НЕ КРАТЕН РАЗМЕРНОСТИ ГИСТОГРАММЫ ЧАСТОТ, БИТЫ, НЕ ОБСЧИТАННЫЕ ГИСТОГРАММОЙ, НЕ УЧИТЫВАЮТСЯ! 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em freq\+Histogram} & Гистограмма частот. СМЕЩЕНИЕ ДОЛЖНО БЫТЬ РАВНО РАЗМЕРНОСТИ!\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em Probability\+Calculator\+Exception} & Попытка посчитать количество единиц на гистограмме с разным значением размерности и смещения\\
+\hline
+\end{DoxyExceptions}
+
+
+См. определение в файле \textbf{ Probability\+Calculator.\+cs} строка \textbf{ 118}
+
+\label{class_mih_stat_library_1_1_calculators_1_1_probability_calculator_abb0a2eee7355c1429fa06035b752dbb0} 
+\index{MihStatLibrary.Calculators.ProbabilityCalculator@{MihStatLibrary.Calculators.ProbabilityCalculator}!Calculate@{Calculate}}
+\index{Calculate@{Calculate}!MihStatLibrary.Calculators.ProbabilityCalculator@{MihStatLibrary.Calculators.ProbabilityCalculator}}
+\doxysubsubsection{Calculate()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Mih\+Stat\+Library.\+Calculators.\+Probability\+Calculator.\+Calculate (\begin{DoxyParamCaption}\item[{string}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Функция рассчета вероятностей 1 и 0 в файле 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em file\+Name} & Имя файла\\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \textbf{ Probability\+Calculator.\+cs} строка \textbf{ 97}
+
+\label{class_mih_stat_library_1_1_calculators_1_1_probability_calculator_a29574c83e76ff0b5afd860524c5e45fb} 
+\index{MihStatLibrary.Calculators.ProbabilityCalculator@{MihStatLibrary.Calculators.ProbabilityCalculator}!CalculateAsync@{CalculateAsync}}
+\index{CalculateAsync@{CalculateAsync}!MihStatLibrary.Calculators.ProbabilityCalculator@{MihStatLibrary.Calculators.ProbabilityCalculator}}
+\doxysubsubsection{CalculateAsync()}
+{\footnotesize\ttfamily async void Mih\+Stat\+Library.\+Calculators.\+Probability\+Calculator.\+Calculate\+Async (\begin{DoxyParamCaption}\item[{string}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Ассинхронная функция рассчета вероятностей 1 и 0 в файле 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em file\+Name} & Имя файла\\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \textbf{ Probability\+Calculator.\+cs} строка \textbf{ 69}
+
+
+
+\doxysubsection{Полный список свойств}
+\label{class_mih_stat_library_1_1_calculators_1_1_probability_calculator_a2dd7e79014d396eb5df116712030ee6c} 
+\index{MihStatLibrary.Calculators.ProbabilityCalculator@{MihStatLibrary.Calculators.ProbabilityCalculator}!ProbabilityOne@{ProbabilityOne}}
+\index{ProbabilityOne@{ProbabilityOne}!MihStatLibrary.Calculators.ProbabilityCalculator@{MihStatLibrary.Calculators.ProbabilityCalculator}}
+\doxysubsubsection{ProbabilityOne}
+{\footnotesize\ttfamily double Mih\+Stat\+Library.\+Calculators.\+Probability\+Calculator.\+Probability\+One\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Вероятность бита 1 в данных 
+
+
+
+См. определение в файле \textbf{ Probability\+Calculator.\+cs} строка \textbf{ 23}
+
+\label{class_mih_stat_library_1_1_calculators_1_1_probability_calculator_ac9a55af4a97313171de76799f8a9d118} 
+\index{MihStatLibrary.Calculators.ProbabilityCalculator@{MihStatLibrary.Calculators.ProbabilityCalculator}!ProbabilityZero@{ProbabilityZero}}
+\index{ProbabilityZero@{ProbabilityZero}!MihStatLibrary.Calculators.ProbabilityCalculator@{MihStatLibrary.Calculators.ProbabilityCalculator}}
+\doxysubsubsection{ProbabilityZero}
+{\footnotesize\ttfamily double Mih\+Stat\+Library.\+Calculators.\+Probability\+Calculator.\+Probability\+Zero\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Вероятность бита 0 в данных 
+
+
+
+См. определение в файле \textbf{ Probability\+Calculator.\+cs} строка \textbf{ 28}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Calculators/\textbf{ Probability\+Calculator.\+cs}\end{DoxyCompactItemize}

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['onescounter_2ecs_0',['OnesCounter.cs',['../_ones_counter_8cs.html',1,'']]],
-  ['onescounterexception_1',['OnesCounterException',['../class_mih_stat_library_1_1_counters_1_1_ones_counter_exception.html',1,'MihStatLibrary.Counters.OnesCounterException'],['../class_mih_stat_library_1_1_counters_1_1_ones_counter_exception.html#a779879b67e6b416a5b7ef6bd102d9aae',1,'MihStatLibrary.Counters.OnesCounterException.OnesCounterException()']]]
+  ['onescalculator_2ecs_0',['OnesCalculator.cs',['../_ones_calculator_8cs.html',1,'']]],
+  ['onescalculatorexception_1',['OnesCalculatorException',['../class_mih_stat_library_1_1_calculators_1_1_ones_calculator_exception.html',1,'MihStatLibrary.Calculators.OnesCalculatorException'],['../class_mih_stat_library_1_1_calculators_1_1_ones_calculator_exception.html#affbad9ee2f18bc891ca5be5cb502988d',1,'MihStatLibrary.Calculators.OnesCalculatorException.OnesCalculatorException()']]]
 ];

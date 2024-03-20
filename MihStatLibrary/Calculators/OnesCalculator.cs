@@ -19,9 +19,9 @@ namespace MihStatLibrary.Calculators
         /// </summary>
         /// <param name="blockData">Блок данных</param>
         /// <returns>Количество единичных бит</returns>
-        static public double Calculate(BlockData blockData)
+        static public long Calculate(BlockData blockData)
         {
-            double result = 0;
+            long result = 0;
             foreach (var element in blockData.Data)
             {
                 result += Tools.ArNumberOne[element];
@@ -30,17 +30,39 @@ namespace MihStatLibrary.Calculators
         }
 
         /// <summary>
+        /// Функция рассчета количества единичных бит в файле
+        /// </summary>
+        /// <param name="fileName">Имя файла</param>
+        static public long Calculate(string fileName)
+        {
+            long nmOnes = 0;
+
+            FileStream fsData = new FileStream(fileName, FileMode.Open);
+            BlockData blockData = new BlockData(new BlockDataFileSource(fsData));
+            double iNmBlocks = Math.Ceiling((double)fsData.Length / Tools.SIZE_BLOCK_BYTES);
+            for (int i = 0; i < iNmBlocks; i++)
+            {
+                blockData.GetBlockData(Tools.SIZE_BLOCK_BYTES);
+                nmOnes += Calculate(blockData);
+            }
+
+            fsData.Close();
+
+            return nmOnes;
+        }
+
+        /// <summary>
         /// Рассчет количества "1" в гистограмме частот. СМЕЩЕНИЕ ГИСТОГРАММЫ ДОЛЖНО БЫТЬ РАЗНО РАЗМЕРНОСТИ!
         /// </summary>
         /// <param name="freqHistogram">Гистограмма частот. СМЕЩЕНИЕ ГИСТОГРАММЫ ДОЛЖНО БЫТЬ РАЗНО РАЗМЕРНОСТИ!</param>
         /// <returns>Количество единичных бит</returns>
         /// <exception cref="ProbabilityCalculatorException">Попытка посчитать количество единичных бит на гистограмме с разными значениями смещения и размерности</exception>
-        static public double Calculate(FreqHistogram freqHistogram)
+        static public long Calculate(FreqHistogram freqHistogram)
         {
             if (freqHistogram.Dimension != freqHistogram.SzShift)
                 throw new ProbabilityCalculatorException("Смещение гистограммы должно быть равно размерности!");
 
-            double result = 0;
+            long result = 0;
             for (int i = 0; i < freqHistogram.Histogram.Length; i++)
             {
                 result += freqHistogram.Histogram[i] * Calculate(i);

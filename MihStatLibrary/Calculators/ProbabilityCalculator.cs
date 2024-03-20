@@ -66,7 +66,7 @@ namespace MihStatLibrary.Calculators
         /// Ассинхронная функция рассчета вероятностей 1 и 0 в файле
         /// </summary>
         /// <param name="fileName">Имя файла</param>
-        public async void CalculateAsync(string fileName)
+        public async Task CalculateAsync(string fileName)
         {
             FileStream fsData = new FileStream(fileName, FileMode.Open);
             
@@ -77,7 +77,7 @@ namespace MihStatLibrary.Calculators
             {
                 BlockData blockData = new BlockData(new BlockDataFileSource(fsData));
                 blockData.GetBlockData(Tools.SIZE_BLOCK_BYTES);
-                Task calculateBlock = new Task(() => _calculate(blockData));
+                Task calculateBlock = new Task(() => Calculate(blockData));
                 tasks.Add(calculateBlock);
                 calculateBlock.Start();
             }
@@ -102,7 +102,7 @@ namespace MihStatLibrary.Calculators
             for (int i = 0; i < iNmBlocks; i++)
             {
                 blockData.GetBlockData(Tools.SIZE_BLOCK_BYTES);
-                _calculate(blockData);
+                Calculate(blockData);
             }
 
             fsData.Close();
@@ -113,6 +113,8 @@ namespace MihStatLibrary.Calculators
         /// ЕСЛИ РАЗМЕР ФАЙЛА В БИТАХ НЕ КРАТЕН РАЗМЕРНОСТИ ГИСТОГРАММЫ ЧАСТОТ, БИТЫ, НЕ ОБСЧИТАННЫЕ ГИСТОГРАММОЙ, НЕ УЧИТЫВАЮТСЯ!
         /// </summary>
         /// <param name="freqHistogram">Гистограмма частот. СМЕЩЕНИЕ ДОЛЖНО БЫТЬ РАВНО РАЗМЕРНОСТИ!</param>
+        /// <exception cref="ProbabilityCalculatorException">Попытка посчитать количество единиц на гистограмме
+        /// с разным значением размерности и смещения</exception>
         public void Calculate(FreqHistogram freqHistogram)
         {
             if (freqHistogram.SzShift != freqHistogram.Dimension)
@@ -147,14 +149,14 @@ namespace MihStatLibrary.Calculators
         /// Функция рассчета вероятностей 1 и 0 на блоке данных
         /// </summary>
         /// <param name="blockData">Блок данных</param>
-        private void _calculate(BlockData blockData)
+        public void Calculate(BlockData blockData)
         {
             long count = 0;
             foreach (var element in blockData.Data)
             {
                 count += Tools.ArNumberOne[element];
             }
-            _probabilityOne += (double)count / (blockData.SzBlockData * Tools.BITS_IN_BYTE);
+            _probabilityOne = (double)count / (blockData.SzBlockData * Tools.BITS_IN_BYTE);
             _probabilityZero = 1 - _probabilityOne;
         }
     }

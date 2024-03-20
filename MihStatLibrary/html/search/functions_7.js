@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['reduce_0',['Reduce',['../class_mih_stat_library_1_1_histogram_1_1_freq_histogram.html#a852b0cc946ff89982baebb31c85756b7',1,'MihStatLibrary.Histogram.FreqHistogram.Reduce(FreqHistogram destHistogram)'],['../class_mih_stat_library_1_1_histogram_1_1_freq_histogram.html#a506f0326acffe276a64c0a0d99db785f',1,'MihStatLibrary.Histogram.FreqHistogram.Reduce(int pDestDimension)']]],
-  ['reduceexception_1',['ReduceException',['../class_mih_stat_library_1_1_histogram_1_1_reduce_exception.html#a32e972dea0185ae499f10aea3a74c229',1,'MihStatLibrary::Histogram::ReduceException']]]
+  ['probabilitycalculator_0',['ProbabilityCalculator',['../class_mih_stat_library_1_1_calculators_1_1_probability_calculator.html#a90a23df45221016f78313e132ef50d34',1,'MihStatLibrary::Calculators::ProbabilityCalculator']]],
+  ['probabilitycalculatorexception_1',['ProbabilityCalculatorException',['../class_mih_stat_library_1_1_calculators_1_1_probability_calculator_exception.html#a41121a3134554c387d6e4609433e38f8',1,'MihStatLibrary::Calculators::ProbabilityCalculatorException']]]
 ];

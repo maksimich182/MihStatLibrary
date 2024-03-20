@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['onescounter_2ecs_0',['OnesCounter.cs',['../_ones_counter_8cs.html',1,'']]]
+  ['onescalculator_2ecs_0',['OnesCalculator.cs',['../_ones_calculator_8cs.html',1,'']]]
 ];

@@ -1,8 +1,10 @@
 var annotated_dup =
 [
     [ "MihStatLibrary", "namespace_mih_stat_library.html", [
-      [ "Counters", "namespace_mih_stat_library_1_1_counters.html", [
-        [ "OnesCounterException", "class_mih_stat_library_1_1_counters_1_1_ones_counter_exception.html", "class_mih_stat_library_1_1_counters_1_1_ones_counter_exception" ]
+      [ "Calculators", "namespace_mih_stat_library_1_1_calculators.html", [
+        [ "OnesCalculatorException", "class_mih_stat_library_1_1_calculators_1_1_ones_calculator_exception.html", "class_mih_stat_library_1_1_calculators_1_1_ones_calculator_exception" ],
+        [ "ProbabilityCalculator", "class_mih_stat_library_1_1_calculators_1_1_probability_calculator.html", "class_mih_stat_library_1_1_calculators_1_1_probability_calculator" ],
+        [ "ProbabilityCalculatorException", "class_mih_stat_library_1_1_calculators_1_1_probability_calculator_exception.html", "class_mih_stat_library_1_1_calculators_1_1_probability_calculator_exception" ]
       ] ],
       [ "Data", "namespace_mih_stat_library_1_1_data.html", [
         [ "BlockData", "class_mih_stat_library_1_1_data_1_1_block_data.html", "class_mih_stat_library_1_1_data_1_1_block_data" ],
