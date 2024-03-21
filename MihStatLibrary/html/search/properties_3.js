@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['probabilityone_0',['ProbabilityOne',['../class_mih_stat_library_1_1_calculators_1_1_probability_calculator.html#a2dd7e79014d396eb5df116712030ee6c',1,'MihStatLibrary::Calculators::ProbabilityCalculator']]],
-  ['probabilityzero_1',['ProbabilityZero',['../class_mih_stat_library_1_1_calculators_1_1_probability_calculator.html#ac9a55af4a97313171de76799f8a9d118',1,'MihStatLibrary::Calculators::ProbabilityCalculator']]]
+  ['szblockdata_0',['SzBlockData',['../class_mih_stat_library_1_1_data_1_1_block_data.html#a6b24241a97524cd1cc42ba4e6eda1378',1,'MihStatLibrary::Data::BlockData']]],
+  ['szshift_1',['SzShift',['../class_mih_stat_library_1_1_tables_1_1_mark_table.html#ac5915c8920a73941b655293465d1264f',1,'MihStatLibrary::Tables::MarkTable']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['equals_0',['Equals',['../class_mih_stat_library_1_1_histogram_1_1_freq_histogram.html#ac59ef9c1852c07e13ae69bb2a1988f0d',1,'MihStatLibrary::Histogram::FreqHistogram']]]
+  ['equals_0',['Equals',['../class_mih_stat_library_1_1_tables_1_1_mark_table.html#ae4f97ee205be19d4a7491d59f3ef6a50',1,'MihStatLibrary::Tables::MarkTable']]]
 ];

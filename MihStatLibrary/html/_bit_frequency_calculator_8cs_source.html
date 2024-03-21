@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MihStatLibrary: Исходный файл Calculators/BitFrequencyCalculator.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MihStatLibrary<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Библиотека инструментов для исследования последовательностей данных</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_bit_frequency_calculator_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">BitFrequencyCalculator.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_bit_frequency_calculator_8cs.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_mih_stat_library_1_1_data.html">MihStatLibrary.Data</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_mih_stat_library_1_1_tables.html">MihStatLibrary.Tables</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>System;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>System.Collections.Generic;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span>System.IO;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using </span>System.Linq;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">using </span>System.Text;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">using </span>System.Threading.Tasks;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="namespace_mih_stat_library.html">   10</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_mih_stat_library_1_1_calculators.html">MihStatLibrary.Calculators</a></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator.html">   15</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator.html">BitFrequencyCalculator</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keyword">private</span> <span class="keywordtype">double</span> _frequencyOne;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">private</span> <span class="keywordtype">double</span> _frequencyZero;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator.html#a826c1084202e57aaeed430801f6be3e4">   23</a></span>        <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code hl_property" href="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator.html#a826c1084202e57aaeed430801f6be3e4">FrequencyOne</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> _frequencyOne; } }</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator.html#a7f5cd70e5770c57b4b0311d4d3f80583">   28</a></span>        <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code hl_property" href="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator.html#a7f5cd70e5770c57b4b0311d4d3f80583">FrequencyZero</a> { <span class="keyword">get</span> { <span class="keywordflow">return</span> _frequencyZero; } }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator.html#a0a57ebf76cf078810a498159c54d3dfa">   33</a></span>        <span class="keyword">public</span> <a class="code hl_function" href="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator.html#a0a57ebf76cf078810a498159c54d3dfa">BitFrequencyCalculator</a>()</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            _frequencyOne = 0;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            _frequencyZero = 0;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        }</div>
+</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="comment">//public async void CalculateAsync(string fileName)</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="comment">//{</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="comment">//    FileStream fsData = new FileStream(fileName, FileMode.Open);</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="comment">//    List&lt;Thread&gt; lstThreads = new List&lt;Thread&gt;();</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="comment">//    double iNmBlocks = Math.Ceiling((double)fsData.Length / Tools.SIZE_BLOCK_BYTES);</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="comment">//    for (int i = 0; i &lt; iNmBlocks; i++)</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="comment">//    {</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="comment">//        Thread thCalcBlock = new Thread(() =&gt; Calculate(fsData, Tools.SIZE_BLOCK_BYTES));</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="comment">//        thCalcBlock.Name = &quot;thr&quot; + i.ToString();</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="comment">//        lstThreads.Add(thCalcBlock);</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="comment">//        thCalcBlock.Start();</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="comment">//    }</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="comment">//    foreach (var element in lstThreads)</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="comment">//    {</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="comment">//        element.Join();</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="comment">//    }</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="comment">//    fsData.Close();</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="comment">//}</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="foldopen" id="foldopen00069" data-start="{" data-end="}">
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator.html#a00c9c159382735012eed7551ff88a556">   69</a></span>        <span class="keyword">public</span> async Task <a class="code hl_function" href="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator.html#a00c9c159382735012eed7551ff88a556">CalculateAsync</a>(<span class="keywordtype">string</span> fileName)</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            FileStream fsData = <span class="keyword">new</span> FileStream(fileName, FileMode.Open);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            List&lt;Task&gt; tasks = <span class="keyword">new</span> List&lt;Task&gt;();</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="keywordtype">double</span> iNmBlocks = Math.Ceiling((<span class="keywordtype">double</span>)fsData.Length / <a class="code hl_class" href="class_mih_stat_library_1_1_tools.html">Tools</a>.<a class="code hl_variable" href="class_mih_stat_library_1_1_tools.html#af581cc676d4eb1d64e42591ac13171dc">SIZE_BLOCK_BYTES</a>);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; iNmBlocks; i++)</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                <a class="code hl_class" href="class_mih_stat_library_1_1_data_1_1_block_data.html">BlockData</a> blockData = <span class="keyword">new</span> <a class="code hl_class" href="class_mih_stat_library_1_1_data_1_1_block_data.html">BlockData</a>(<span class="keyword">new</span> <a class="code hl_class" href="class_mih_stat_library_1_1_data_1_1_block_data_file_source.html">BlockDataFileSource</a>(fsData));</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                blockData.<a class="code hl_function" href="class_mih_stat_library_1_1_data_1_1_block_data.html#abec423eab4a7d6f83088472f627327dc">GetBlockData</a>(<a class="code hl_class" href="class_mih_stat_library_1_1_tools.html">Tools</a>.<a class="code hl_variable" href="class_mih_stat_library_1_1_tools.html#af581cc676d4eb1d64e42591ac13171dc">SIZE_BLOCK_BYTES</a>);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                Task calculateBlock = <span class="keyword">new</span> Task(() =&gt; <a class="code hl_function" href="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator.html#af32e3314776dd52d0e1339b2341ab513">Calculate</a>(blockData));</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                tasks.Add(calculateBlock);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                calculateBlock.Start();</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            <span class="keywordflow">foreach</span> (var element <span class="keywordflow">in</span> tasks)</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                await element;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            fsData.Close();</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        }</div>
+</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="foldopen" id="foldopen00097" data-start="{" data-end="}">
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator.html#af32e3314776dd52d0e1339b2341ab513">   97</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator.html#af32e3314776dd52d0e1339b2341ab513">Calculate</a>(<span class="keywordtype">string</span> fileName)</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            FileStream fsData = <span class="keyword">new</span> FileStream(fileName, FileMode.Open);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            <a class="code hl_class" href="class_mih_stat_library_1_1_data_1_1_block_data.html">BlockData</a> blockData = <span class="keyword">new</span> <a class="code hl_class" href="class_mih_stat_library_1_1_data_1_1_block_data.html">BlockData</a>(<span class="keyword">new</span> <a class="code hl_class" href="class_mih_stat_library_1_1_data_1_1_block_data_file_source.html">BlockDataFileSource</a>(fsData));</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <span class="keywordtype">double</span> iNmBlocks = Math.Ceiling((<span class="keywordtype">double</span>)fsData.Length / <a class="code hl_class" href="class_mih_stat_library_1_1_tools.html">Tools</a>.<a class="code hl_variable" href="class_mih_stat_library_1_1_tools.html#af581cc676d4eb1d64e42591ac13171dc">SIZE_BLOCK_BYTES</a>);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; iNmBlocks; i++)</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                blockData.<a class="code hl_function" href="class_mih_stat_library_1_1_data_1_1_block_data.html#abec423eab4a7d6f83088472f627327dc">GetBlockData</a>(<a class="code hl_class" href="class_mih_stat_library_1_1_tools.html">Tools</a>.<a class="code hl_variable" href="class_mih_stat_library_1_1_tools.html#af581cc676d4eb1d64e42591ac13171dc">SIZE_BLOCK_BYTES</a>);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                <a class="code hl_function" href="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator.html#af32e3314776dd52d0e1339b2341ab513">Calculate</a>(blockData);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            }</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            fsData.Close();</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        }</div>
+</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator.html#ac196dd27bd7523e555f70cb57677e9c9">  118</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator.html#ac196dd27bd7523e555f70cb57677e9c9">Calculate</a>(<a class="code hl_class" href="class_mih_stat_library_1_1_tables_1_1_mark_table.html">MarkTable</a> markTable)</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            <span class="keywordflow">if</span> (markTable.<a class="code hl_property" href="class_mih_stat_library_1_1_tables_1_1_mark_table.html#ac5915c8920a73941b655293465d1264f">SzShift</a> != markTable.<a class="code hl_property" href="class_mih_stat_library_1_1_tables_1_1_mark_table.html#a6d58a2ea12471be935d4da80268c4438">Dimension</a>)</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code hl_class" href="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_exception.html">BitFrequencyCalculatorException</a>(<span class="stringliteral">&quot;Количество единиц рассчитывается только при совпадении размерности и смещения!&quot;</span>);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            <span class="keywordtype">long</span> onesCounter = 0;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            <span class="keywordtype">int</span> maxValueForNmOnesInByte = (Tools.ArNumberOne.Length &lt;= markTable.<a class="code hl_property" href="class_mih_stat_library_1_1_tables_1_1_mark_table.html#a725f6b347e8c02f60dbe51e5dcb63f7f">Table</a>.Length)</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                ? <a class="code hl_class" href="class_mih_stat_library_1_1_tools.html">Tools</a>.<a class="code hl_variable" href="class_mih_stat_library_1_1_tools.html#a7cb96720178d4646c6bca6b539da63c0">ArNumberOne</a>.Length : markTable.<a class="code hl_property" href="class_mih_stat_library_1_1_tables_1_1_mark_table.html#a725f6b347e8c02f60dbe51e5dcb63f7f">Table</a>.Length;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; maxValueForNmOnesInByte; i++)</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                onesCounter += markTable.<a class="code hl_property" href="class_mih_stat_library_1_1_tables_1_1_mark_table.html#a725f6b347e8c02f60dbe51e5dcb63f7f">Table</a>[i] * <a class="code hl_class" href="class_mih_stat_library_1_1_tools.html">Tools</a>.<a class="code hl_variable" href="class_mih_stat_library_1_1_tools.html#a7cb96720178d4646c6bca6b539da63c0">ArNumberOne</a>[i];</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            }</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = maxValueForNmOnesInByte; i &lt; markTable.<a class="code hl_property" href="class_mih_stat_library_1_1_tables_1_1_mark_table.html#a725f6b347e8c02f60dbe51e5dcb63f7f">Table</a>.Length; i++)</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                <span class="keywordtype">int</span> value = i;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                <span class="keywordtype">int</span> onesInValue = 0;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                <span class="keywordflow">while</span>(value != 0)</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                {</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                    onesInValue += (value &amp; 0x1) == 1 ? 1 : 0;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                    value &gt;&gt;= 1;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                }</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                onesCounter += markTable.<a class="code hl_property" href="class_mih_stat_library_1_1_tables_1_1_mark_table.html#a725f6b347e8c02f60dbe51e5dcb63f7f">Table</a>[i] * onesInValue;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>            }</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>            _frequencyOne += (double)onesCounter / (markTable.<a class="code hl_property" href="class_mih_stat_library_1_1_tables_1_1_mark_table.html#ae7060e7e7555b7cac43a7a8b314e8f03">NmVectors</a> * markTable.<a class="code hl_property" href="class_mih_stat_library_1_1_tables_1_1_mark_table.html#a6d58a2ea12471be935d4da80268c4438">Dimension</a>);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            _frequencyZero = 1 - _frequencyOne;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        }</div>
+</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="foldopen" id="foldopen00152" data-start="{" data-end="}">
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator.html#a9b5105dbc12a58d3bce111277f14cbae">  152</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator.html#a9b5105dbc12a58d3bce111277f14cbae">Calculate</a>(<a class="code hl_class" href="class_mih_stat_library_1_1_data_1_1_block_data.html">BlockData</a> blockData)</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        {</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            <span class="keywordtype">long</span> count = 0;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            <span class="keywordflow">foreach</span> (var element <span class="keywordflow">in</span> blockData.Data)</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                count += <a class="code hl_class" href="class_mih_stat_library_1_1_tools.html">Tools</a>.<a class="code hl_variable" href="class_mih_stat_library_1_1_tools.html#a7cb96720178d4646c6bca6b539da63c0">ArNumberOne</a>[element];</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            }</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            _frequencyOne = (double)count / (blockData.SzBlockData * <a class="code hl_class" href="class_mih_stat_library_1_1_tools.html">Tools</a>.<a class="code hl_variable" href="class_mih_stat_library_1_1_tools.html#ab5ce1ec2e21fc4e2e73f416c6dbc812d">BITS_IN_BYTE</a>);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>            _frequencyZero = 1 - _frequencyOne;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        }</div>
+</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    }</div>
+</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>}</div>
+</div>
+<div class="ttc" id="aclass_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_exception_html"><div class="ttname"><a href="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_exception.html">MihStatLibrary.Calculators.BitFrequencyCalculatorException</a></div><div class="ttdoc">Исключение, возникающее при попытке посчитать оценки вероятностей бит 1 и 0.</div><div class="ttdef"><b>Definition</b> <a href="_calculators_exceptions_8cs_source.html#l00023">CalculatorsExceptions.cs:24</a></div></div>
+<div class="ttc" id="aclass_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_html"><div class="ttname"><a href="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator.html">MihStatLibrary.Calculators.BitFrequencyCalculator</a></div><div class="ttdoc">Класс вычислителя оценки вероятностей бит 1 и 0 в данных</div><div class="ttdef"><b>Definition</b> <a href="#l00015">BitFrequencyCalculator.cs:16</a></div></div>
+<div class="ttc" id="aclass_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_html_a00c9c159382735012eed7551ff88a556"><div class="ttname"><a href="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator.html#a00c9c159382735012eed7551ff88a556">MihStatLibrary.Calculators.BitFrequencyCalculator.CalculateAsync</a></div><div class="ttdeci">async Task CalculateAsync(string fileName)</div><div class="ttdoc">Ассинхронная функция рассчета оценки вероятностей 1 и 0 в файле</div><div class="ttdef"><b>Definition</b> <a href="#l00069">BitFrequencyCalculator.cs:69</a></div></div>
+<div class="ttc" id="aclass_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_html_a0a57ebf76cf078810a498159c54d3dfa"><div class="ttname"><a href="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator.html#a0a57ebf76cf078810a498159c54d3dfa">MihStatLibrary.Calculators.BitFrequencyCalculator.BitFrequencyCalculator</a></div><div class="ttdeci">BitFrequencyCalculator()</div><div class="ttdoc">Конструктор класса вычислителя вероятностей бит 1 и 0 в данных</div><div class="ttdef"><b>Definition</b> <a href="#l00033">BitFrequencyCalculator.cs:33</a></div></div>
+<div class="ttc" id="aclass_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_html_a7f5cd70e5770c57b4b0311d4d3f80583"><div class="ttname"><a href="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator.html#a7f5cd70e5770c57b4b0311d4d3f80583">MihStatLibrary.Calculators.BitFrequencyCalculator.FrequencyZero</a></div><div class="ttdeci">double FrequencyZero</div><div class="ttdoc">Оценка вероятности 0 в данных</div><div class="ttdef"><b>Definition</b> <a href="#l00028">BitFrequencyCalculator.cs:28</a></div></div>
+<div class="ttc" id="aclass_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_html_a826c1084202e57aaeed430801f6be3e4"><div class="ttname"><a href="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator.html#a826c1084202e57aaeed430801f6be3e4">MihStatLibrary.Calculators.BitFrequencyCalculator.FrequencyOne</a></div><div class="ttdeci">double FrequencyOne</div><div class="ttdoc">Оценка вероятности бита 1 в данных</div><div class="ttdef"><b>Definition</b> <a href="#l00023">BitFrequencyCalculator.cs:23</a></div></div>
+<div class="ttc" id="aclass_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_html_a9b5105dbc12a58d3bce111277f14cbae"><div class="ttname"><a href="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator.html#a9b5105dbc12a58d3bce111277f14cbae">MihStatLibrary.Calculators.BitFrequencyCalculator.Calculate</a></div><div class="ttdeci">void Calculate(BlockData blockData)</div><div class="ttdoc">Функция рассчета оценки вероятностей 1 и 0 на блоке данных</div><div class="ttdef"><b>Definition</b> <a href="#l00152">BitFrequencyCalculator.cs:152</a></div></div>
+<div class="ttc" id="aclass_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_html_ac196dd27bd7523e555f70cb57677e9c9"><div class="ttname"><a href="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator.html#ac196dd27bd7523e555f70cb57677e9c9">MihStatLibrary.Calculators.BitFrequencyCalculator.Calculate</a></div><div class="ttdeci">void Calculate(MarkTable markTable)</div><div class="ttdoc">Функция рассчета оценки вероятностей 1 и 0 по маркировочной таблице. СМЕЩЕНИЕ ДОЛЖНО БЫТЬ РАВНО РАЗМЕ...</div><div class="ttdef"><b>Definition</b> <a href="#l00118">BitFrequencyCalculator.cs:118</a></div></div>
+<div class="ttc" id="aclass_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_html_af32e3314776dd52d0e1339b2341ab513"><div class="ttname"><a href="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator.html#af32e3314776dd52d0e1339b2341ab513">MihStatLibrary.Calculators.BitFrequencyCalculator.Calculate</a></div><div class="ttdeci">void Calculate(string fileName)</div><div class="ttdoc">Функция рассчета оценки вероятностей 1 и 0 в файле</div><div class="ttdef"><b>Definition</b> <a href="#l00097">BitFrequencyCalculator.cs:97</a></div></div>
+<div class="ttc" id="aclass_mih_stat_library_1_1_data_1_1_block_data_file_source_html"><div class="ttname"><a href="class_mih_stat_library_1_1_data_1_1_block_data_file_source.html">MihStatLibrary.Data.BlockDataFileSource</a></div><div class="ttdoc">Источник получения данных из файла</div><div class="ttdef"><b>Definition</b> <a href="_block_data_file_source_8cs_source.html#l00012">BlockDataFileSource.cs:13</a></div></div>
+<div class="ttc" id="aclass_mih_stat_library_1_1_data_1_1_block_data_html"><div class="ttname"><a href="class_mih_stat_library_1_1_data_1_1_block_data.html">MihStatLibrary.Data.BlockData</a></div><div class="ttdoc">Класс для получения данных блоками</div><div class="ttdef"><b>Definition</b> <a href="_block_data_8cs_source.html#l00006">BlockData.cs:7</a></div></div>
+<div class="ttc" id="aclass_mih_stat_library_1_1_data_1_1_block_data_html_abec423eab4a7d6f83088472f627327dc"><div class="ttname"><a href="class_mih_stat_library_1_1_data_1_1_block_data.html#abec423eab4a7d6f83088472f627327dc">MihStatLibrary.Data.BlockData.GetBlockData</a></div><div class="ttdeci">void GetBlockData(int szBlock)</div><div class="ttdoc">Заполняет блок данными из источника</div><div class="ttdef"><b>Definition</b> <a href="_block_data_8cs_source.html#l00035">BlockData.cs:35</a></div></div>
+<div class="ttc" id="aclass_mih_stat_library_1_1_tables_1_1_mark_table_html"><div class="ttname"><a href="class_mih_stat_library_1_1_tables_1_1_mark_table.html">MihStatLibrary.Tables.MarkTable</a></div><div class="ttdoc">Класс маркировочной таблицы</div><div class="ttdef"><b>Definition</b> <a href="_mark_table_8cs_source.html#l00015">MarkTable.cs:16</a></div></div>
+<div class="ttc" id="aclass_mih_stat_library_1_1_tables_1_1_mark_table_html_a6d58a2ea12471be935d4da80268c4438"><div class="ttname"><a href="class_mih_stat_library_1_1_tables_1_1_mark_table.html#a6d58a2ea12471be935d4da80268c4438">MihStatLibrary.Tables.MarkTable.Dimension</a></div><div class="ttdeci">int Dimension</div><div class="ttdoc">Размерность маркировочной таблицы</div><div class="ttdef"><b>Definition</b> <a href="_mark_table_8cs_source.html#l00045">MarkTable.cs:45</a></div></div>
+<div class="ttc" id="aclass_mih_stat_library_1_1_tables_1_1_mark_table_html_a725f6b347e8c02f60dbe51e5dcb63f7f"><div class="ttname"><a href="class_mih_stat_library_1_1_tables_1_1_mark_table.html#a725f6b347e8c02f60dbe51e5dcb63f7f">MihStatLibrary.Tables.MarkTable.Table</a></div><div class="ttdeci">long[] Table</div><div class="ttdoc">Маркировочная таблица</div><div class="ttdef"><b>Definition</b> <a href="_mark_table_8cs_source.html#l00040">MarkTable.cs:40</a></div></div>
+<div class="ttc" id="aclass_mih_stat_library_1_1_tables_1_1_mark_table_html_ac5915c8920a73941b655293465d1264f"><div class="ttname"><a href="class_mih_stat_library_1_1_tables_1_1_mark_table.html#ac5915c8920a73941b655293465d1264f">MihStatLibrary.Tables.MarkTable.SzShift</a></div><div class="ttdeci">int SzShift</div><div class="ttdoc">Смещение маркировочной таблицы</div><div class="ttdef"><b>Definition</b> <a href="_mark_table_8cs_source.html#l00055">MarkTable.cs:55</a></div></div>
+<div class="ttc" id="aclass_mih_stat_library_1_1_tables_1_1_mark_table_html_ae7060e7e7555b7cac43a7a8b314e8f03"><div class="ttname"><a href="class_mih_stat_library_1_1_tables_1_1_mark_table.html#ae7060e7e7555b7cac43a7a8b314e8f03">MihStatLibrary.Tables.MarkTable.NmVectors</a></div><div class="ttdeci">long NmVectors</div><div class="ttdoc">Количество учтенных последовательностей</div><div class="ttdef"><b>Definition</b> <a href="_mark_table_8cs_source.html#l00050">MarkTable.cs:50</a></div></div>
+<div class="ttc" id="aclass_mih_stat_library_1_1_tools_html"><div class="ttname"><a href="class_mih_stat_library_1_1_tools.html">MihStatLibrary.Tools</a></div><div class="ttdoc">Константы</div><div class="ttdef"><b>Definition</b> <a href="_tools_8cs_source.html#l00012">Tools.cs:13</a></div></div>
+<div class="ttc" id="aclass_mih_stat_library_1_1_tools_html_a7cb96720178d4646c6bca6b539da63c0"><div class="ttname"><a href="class_mih_stat_library_1_1_tools.html#a7cb96720178d4646c6bca6b539da63c0">MihStatLibrary.Tools.ArNumberOne</a></div><div class="ttdeci">static readonly int[] ArNumberOne</div><div class="ttdoc">Массив количества единиц в байтах</div><div class="ttdef"><b>Definition</b> <a href="_tools_8cs_source.html#l00035">Tools.cs:35</a></div></div>
+<div class="ttc" id="aclass_mih_stat_library_1_1_tools_html_ab5ce1ec2e21fc4e2e73f416c6dbc812d"><div class="ttname"><a href="class_mih_stat_library_1_1_tools.html#ab5ce1ec2e21fc4e2e73f416c6dbc812d">MihStatLibrary.Tools.BITS_IN_BYTE</a></div><div class="ttdeci">static readonly int BITS_IN_BYTE</div><div class="ttdoc">Количество бит в байте</div><div class="ttdef"><b>Definition</b> <a href="_tools_8cs_source.html#l00017">Tools.cs:17</a></div></div>
+<div class="ttc" id="aclass_mih_stat_library_1_1_tools_html_af581cc676d4eb1d64e42591ac13171dc"><div class="ttname"><a href="class_mih_stat_library_1_1_tools.html#af581cc676d4eb1d64e42591ac13171dc">MihStatLibrary.Tools.SIZE_BLOCK_BYTES</a></div><div class="ttdeci">static readonly int SIZE_BLOCK_BYTES</div><div class="ttdoc">Количество байт в блоке данных</div><div class="ttdef"><b>Definition</b> <a href="_tools_8cs_source.html#l00022">Tools.cs:22</a></div></div>
+<div class="ttc" id="anamespace_mih_stat_library_1_1_calculators_html"><div class="ttname"><a href="namespace_mih_stat_library_1_1_calculators.html">MihStatLibrary.Calculators</a></div><div class="ttdef"><b>Definition</b> <a href="#l00010">BitFrequencyCalculator.cs:11</a></div></div>
+<div class="ttc" id="anamespace_mih_stat_library_1_1_data_html"><div class="ttname"><a href="namespace_mih_stat_library_1_1_data.html">MihStatLibrary.Data</a></div><div class="ttdef"><b>Definition</b> <a href="_block_data_8cs_source.html#l00001">BlockData.cs:2</a></div></div>
+<div class="ttc" id="anamespace_mih_stat_library_1_1_tables_html"><div class="ttname"><a href="namespace_mih_stat_library_1_1_tables.html">MihStatLibrary.Tables</a></div><div class="ttdef"><b>Definition</b> <a href="_histogram_exceptions_8cs_source.html#l00007">HistogramExceptions.cs:8</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_ac3f7fb93686454dcf9f0844aa3c934a.html">Calculators</a></li><li class="navelem"><a class="el" href="_bit_frequency_calculator_8cs.html">BitFrequencyCalculator.cs</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+\doxysection{Класс Mih\+Stat\+Library\+Test.\+Mark\+Table\+Tests.\+Mark\+Table\+Test}
+\label{class_mih_stat_library_test_1_1_mark_table_tests_1_1_mark_table_test}\index{MihStatLibraryTest.MarkTableTests.MarkTableTest@{MihStatLibraryTest.MarkTableTests.MarkTableTest}}
+
+
+Тесты класса Mark\+Table.  
+
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ Mark\+Table\+Calculate\+From0\+To255\+File\+Test} ()
+\begin{DoxyCompactList}\small\item\em Тест маркировочной таблицы на файле заполненном байтами со значениями от 0 до 255\+: \end{DoxyCompactList}\item 
+void \textbf{ Mark\+Table\+Calculate11111111\+\_\+131\+MBTest} ()
+\begin{DoxyCompactList}\small\item\em Тест маркировочной таблицы на файле заполненном байтами 11111111 размером 131 МБ\+: \end{DoxyCompactList}\item 
+void \textbf{ Mark\+Table\+Calculate01010101\+\_\+131\+MBShift8\+Dim8\+Test} ()
+\begin{DoxyCompactList}\small\item\em Тест маркировочной таблицы на файле заполненном байтами 01010101 размером 131 МБ (Смещение 8, размерность 8)\+: \end{DoxyCompactList}\item 
+void \textbf{ Mark\+Table\+Calculate01010101\+\_\+131\+MBShift3\+Dim5\+Test} ()
+\begin{DoxyCompactList}\small\item\em Тест маркировочной таблицы на файле заполненном байтами 01010101 (Смещение 3, размерность 5)\+: \end{DoxyCompactList}\item 
+void \textbf{ Mark\+Table\+Invalid\+Shift\+Create\+Test} ()
+\begin{DoxyCompactList}\small\item\em Тест на генерацию исключения Invalid\+Shift\+Exception при некорректоном значении смещения при создании маркировочной таблицы\+: \end{DoxyCompactList}\item 
+void \textbf{ Mark\+Table\+Reduce\+Exception\+Test} ()
+\begin{DoxyCompactList}\small\item\em Тест на генерацию исключения Reduce\+Exception при некорректоном использовании функции пересчета маркировочной таблицы\+: \end{DoxyCompactList}\item 
+void \textbf{ Mark\+Table\+Reduce\+Calculation\+Test} ()
+\begin{DoxyCompactList}\small\item\em Тест на пересчет маркировочной таблицы на маркировочную таблицу меньших размеров\+: \end{DoxyCompactList}\item 
+void \textbf{ Mark\+Table\+Events\+Test} ()
+\begin{DoxyCompactList}\small\item\em Тест вызова событий изменения прогресса и процесса\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Тесты класса Mark\+Table. 
+
+\doxysubsection{Методы}
+\label{class_mih_stat_library_test_1_1_mark_table_tests_1_1_mark_table_test_a33be7b774a89d4d034cb810b07275e00} 
+\index{MihStatLibraryTest.MarkTableTests.MarkTableTest@{MihStatLibraryTest.MarkTableTests.MarkTableTest}!MarkTableCalculate01010101\_131MBShift3Dim5Test@{MarkTableCalculate01010101\_131MBShift3Dim5Test}}
+\index{MarkTableCalculate01010101\_131MBShift3Dim5Test@{MarkTableCalculate01010101\_131MBShift3Dim5Test}!MihStatLibraryTest.MarkTableTests.MarkTableTest@{MihStatLibraryTest.MarkTableTests.MarkTableTest}}
+\doxysubsubsection{MarkTableCalculate01010101\_131MBShift3Dim5Test()}
+{\footnotesize\ttfamily void Mih\+Stat\+Library\+Test.\+Mark\+Table\+Tests.\+Mark\+Table\+Test.\+Mark\+Table\+Calculate01010101\+\_\+131\+MBShift3\+Dim5\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тест маркировочной таблицы на файле заполненном байтами 01010101 (Смещение 3, размерность 5)\+: 
+
+
+\begin{DoxyEnumerate}
+\item Количество посчитанных векторов равно округленному вниз значению деления размера файла в битах на смещение минус округленное вниз деление размерности на смещение
+\item Все значения (кроме 01010 и 10101) равны 0, значение 01010 равно половине количества посчитанных векторов, значение 10101 равно значению 01010 
+\end{DoxyEnumerate}\label{class_mih_stat_library_test_1_1_mark_table_tests_1_1_mark_table_test_a67aa1c2877e14943dd861b1dc10e5943} 
+\index{MihStatLibraryTest.MarkTableTests.MarkTableTest@{MihStatLibraryTest.MarkTableTests.MarkTableTest}!MarkTableCalculate01010101\_131MBShift8Dim8Test@{MarkTableCalculate01010101\_131MBShift8Dim8Test}}
+\index{MarkTableCalculate01010101\_131MBShift8Dim8Test@{MarkTableCalculate01010101\_131MBShift8Dim8Test}!MihStatLibraryTest.MarkTableTests.MarkTableTest@{MihStatLibraryTest.MarkTableTests.MarkTableTest}}
+\doxysubsubsection{MarkTableCalculate01010101\_131MBShift8Dim8Test()}
+{\footnotesize\ttfamily void Mih\+Stat\+Library\+Test.\+Mark\+Table\+Tests.\+Mark\+Table\+Test.\+Mark\+Table\+Calculate01010101\+\_\+131\+MBShift8\+Dim8\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тест маркировочной таблицы на файле заполненном байтами 01010101 размером 131 МБ (Смещение 8, размерность 8)\+: 
+
+
+\begin{DoxyEnumerate}
+\item Все значения (кроме 01010101) равны 0, значение 01010101 равно размеру файла в байтах 
+\end{DoxyEnumerate}\label{class_mih_stat_library_test_1_1_mark_table_tests_1_1_mark_table_test_a6db7e7bdce3ebff51aea80626891efd3} 
+\index{MihStatLibraryTest.MarkTableTests.MarkTableTest@{MihStatLibraryTest.MarkTableTests.MarkTableTest}!MarkTableCalculate11111111\_131MBTest@{MarkTableCalculate11111111\_131MBTest}}
+\index{MarkTableCalculate11111111\_131MBTest@{MarkTableCalculate11111111\_131MBTest}!MihStatLibraryTest.MarkTableTests.MarkTableTest@{MihStatLibraryTest.MarkTableTests.MarkTableTest}}
+\doxysubsubsection{MarkTableCalculate11111111\_131MBTest()}
+{\footnotesize\ttfamily void Mih\+Stat\+Library\+Test.\+Mark\+Table\+Tests.\+Mark\+Table\+Test.\+Mark\+Table\+Calculate11111111\+\_\+131\+MBTest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тест маркировочной таблицы на файле заполненном байтами 11111111 размером 131 МБ\+: 
+
+
+\begin{DoxyEnumerate}
+\item Смещение 8, размерность 8, все значения (кроме последнего) равны 0, последнее равно размеру файла в байтах 
+\end{DoxyEnumerate}\label{class_mih_stat_library_test_1_1_mark_table_tests_1_1_mark_table_test_af87ca7494caee1390a3725f4bfa3b494} 
+\index{MihStatLibraryTest.MarkTableTests.MarkTableTest@{MihStatLibraryTest.MarkTableTests.MarkTableTest}!MarkTableCalculateFrom0To255FileTest@{MarkTableCalculateFrom0To255FileTest}}
+\index{MarkTableCalculateFrom0To255FileTest@{MarkTableCalculateFrom0To255FileTest}!MihStatLibraryTest.MarkTableTests.MarkTableTest@{MihStatLibraryTest.MarkTableTests.MarkTableTest}}
+\doxysubsubsection{MarkTableCalculateFrom0To255FileTest()}
+{\footnotesize\ttfamily void Mih\+Stat\+Library\+Test.\+Mark\+Table\+Tests.\+Mark\+Table\+Test.\+Mark\+Table\+Calculate\+From0\+To255\+File\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тест маркировочной таблицы на файле заполненном байтами со значениями от 0 до 255\+: 
+
+
+\begin{DoxyEnumerate}
+\item Тестирование на размерности 8 1.\+1. В таблице все значения равны 1 1.\+2. В таблице обсчиталось 256 последовательностей
+\item Тестирование на размерности 13 2.\+1. В таблице обсчиталось 157 значений 
+\end{DoxyEnumerate}\label{class_mih_stat_library_test_1_1_mark_table_tests_1_1_mark_table_test_a960282cc463e9cca9eb0fd5ea3fc07ad} 
+\index{MihStatLibraryTest.MarkTableTests.MarkTableTest@{MihStatLibraryTest.MarkTableTests.MarkTableTest}!MarkTableEventsTest@{MarkTableEventsTest}}
+\index{MarkTableEventsTest@{MarkTableEventsTest}!MihStatLibraryTest.MarkTableTests.MarkTableTest@{MihStatLibraryTest.MarkTableTests.MarkTableTest}}
+\doxysubsubsection{MarkTableEventsTest()}
+{\footnotesize\ttfamily void Mih\+Stat\+Library\+Test.\+Mark\+Table\+Tests.\+Mark\+Table\+Test.\+Mark\+Table\+Events\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тест вызова событий изменения прогресса и процесса\+: 
+
+
+\begin{DoxyEnumerate}
+\item Запускается рассчет маркировочной таблицы на файле. Проверяется, были ли вызваны события 
+\end{DoxyEnumerate}\label{class_mih_stat_library_test_1_1_mark_table_tests_1_1_mark_table_test_a0aec651566c6a3ec94590cddbbb43326} 
+\index{MihStatLibraryTest.MarkTableTests.MarkTableTest@{MihStatLibraryTest.MarkTableTests.MarkTableTest}!MarkTableInvalidShiftCreateTest@{MarkTableInvalidShiftCreateTest}}
+\index{MarkTableInvalidShiftCreateTest@{MarkTableInvalidShiftCreateTest}!MihStatLibraryTest.MarkTableTests.MarkTableTest@{MihStatLibraryTest.MarkTableTests.MarkTableTest}}
+\doxysubsubsection{MarkTableInvalidShiftCreateTest()}
+{\footnotesize\ttfamily void Mih\+Stat\+Library\+Test.\+Mark\+Table\+Tests.\+Mark\+Table\+Test.\+Mark\+Table\+Invalid\+Shift\+Create\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тест на генерацию исключения Invalid\+Shift\+Exception при некорректоном значении смещения при создании маркировочной таблицы\+: 
+
+
+\begin{DoxyEnumerate}
+\item Попытка создания таблицы с размерностью 5 и смещением 7 
+\end{DoxyEnumerate}\label{class_mih_stat_library_test_1_1_mark_table_tests_1_1_mark_table_test_aaa7957378ad36706723ad3c9545bec7e} 
+\index{MihStatLibraryTest.MarkTableTests.MarkTableTest@{MihStatLibraryTest.MarkTableTests.MarkTableTest}!MarkTableReduceCalculationTest@{MarkTableReduceCalculationTest}}
+\index{MarkTableReduceCalculationTest@{MarkTableReduceCalculationTest}!MihStatLibraryTest.MarkTableTests.MarkTableTest@{MihStatLibraryTest.MarkTableTests.MarkTableTest}}
+\doxysubsubsection{MarkTableReduceCalculationTest()}
+{\footnotesize\ttfamily void Mih\+Stat\+Library\+Test.\+Mark\+Table\+Tests.\+Mark\+Table\+Test.\+Mark\+Table\+Reduce\+Calculation\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тест на пересчет маркировочной таблицы на маркировочную таблицу меньших размеров\+: 
+
+
+\begin{DoxyEnumerate}
+\item Тесты с файлом с байтами 11110000 размером 5 МБ. Пересчет таблицы на размерности от 1 до 22 и сравнения с таблицами, посчитанными на файле 
+\end{DoxyEnumerate}\label{class_mih_stat_library_test_1_1_mark_table_tests_1_1_mark_table_test_a86f145c779bec76656aced63676de120} 
+\index{MihStatLibraryTest.MarkTableTests.MarkTableTest@{MihStatLibraryTest.MarkTableTests.MarkTableTest}!MarkTableReduceExceptionTest@{MarkTableReduceExceptionTest}}
+\index{MarkTableReduceExceptionTest@{MarkTableReduceExceptionTest}!MihStatLibraryTest.MarkTableTests.MarkTableTest@{MihStatLibraryTest.MarkTableTests.MarkTableTest}}
+\doxysubsubsection{MarkTableReduceExceptionTest()}
+{\footnotesize\ttfamily void Mih\+Stat\+Library\+Test.\+Mark\+Table\+Tests.\+Mark\+Table\+Test.\+Mark\+Table\+Reduce\+Exception\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тест на генерацию исключения Reduce\+Exception при некорректоном использовании функции пересчета маркировочной таблицы\+: 
+
+
+\begin{DoxyEnumerate}
+\item Тесты над файлом с байтами 11110000 размером 1 МБ 1.\+1. Создание и обсчет таблицы размерностью 6 и смещением 3, попытка пересчитать на таблицы размерностью 7 и смещением 3 1.\+2. Создание и обсчет таблицы размерностью 6 и смещением 1, попытка пересчитать на таблицы размерностью 7 и смещением 3 1.\+3. Попытка пересчитать таблицы размерностью 6 и смещением 1 на таблицы размерностью 7 и смещением 1 1.\+4. Попытка пересчитать таблицы размерностью 6 и смещением 1 на таблицы размерностью 7 и смещением 1 
+\end{DoxyEnumerate}
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Freq\+Histogram\+Tests/\textbf{ Mark\+Table\+Test.\+cs}\end{DoxyCompactItemize}

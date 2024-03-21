@@ -1,5 +1,5 @@
 ﻿using MihStatLibrary.Data;
-using MihStatLibrary.Histogram;
+using MihStatLibrary.Tables;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,20 +52,20 @@ namespace MihStatLibrary.Calculators
         }
 
         /// <summary>
-        /// Рассчет количества "1" в гистограмме частот. СМЕЩЕНИЕ ГИСТОГРАММЫ ДОЛЖНО БЫТЬ РАЗНО РАЗМЕРНОСТИ!
+        /// Рассчет количества "1" в маркировочной таблице. СМЕЩЕНИЕ ТАБЛИЦЫ ДОЛЖНО БЫТЬ РАЗНО РАЗМЕРНОСТИ!
         /// </summary>
-        /// <param name="freqHistogram">Гистограмма частот. СМЕЩЕНИЕ ГИСТОГРАММЫ ДОЛЖНО БЫТЬ РАЗНО РАЗМЕРНОСТИ!</param>
+        /// <param name="markTable">Маркировочная таблица. СМЕЩЕНИЕ ТАБЛИЦЫ ДОЛЖНО БЫТЬ РАЗНО РАЗМЕРНОСТИ!</param>
         /// <returns>Количество единичных бит</returns>
-        /// <exception cref="ProbabilityCalculatorException">Попытка посчитать количество единичных бит на гистограмме с разными значениями смещения и размерности</exception>
-        static public long Calculate(FreqHistogram freqHistogram)
+        /// <exception cref="BitFrequencyCalculatorException">Попытка посчитать количество единичных бит на таблице с разными значениями смещения и размерности</exception>
+        static public long Calculate(MarkTable markTable)
         {
-            if (freqHistogram.Dimension != freqHistogram.SzShift)
-                throw new ProbabilityCalculatorException("Смещение гистограммы должно быть равно размерности!");
+            if (markTable.Dimension != markTable.SzShift)
+                throw new BitFrequencyCalculatorException("Смещение таблицы должно быть равно размерности!");
 
             long result = 0;
-            for (int i = 0; i < freqHistogram.Histogram.Length; i++)
+            for (int i = 0; i < markTable.Table.Length; i++)
             {
-                result += freqHistogram.Histogram[i] * Calculate(i);
+                result += markTable.Table[i] * Calculate(i);
             }
             return result;
         }

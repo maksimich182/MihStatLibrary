@@ -7,24 +7,24 @@ using System.Threading.Tasks;
 namespace MihStatLibrary.Calculators
 {
     /// <summary>
-    /// Исключение, возникающее при попытке посчитать количество единиц на гистограмме частот со смещением отличным от размерности
+    /// Исключение, возникающее при попытке посчитать количество единиц на маркировочной таблице со смещением отличным от размерности
     /// </summary>
     public class OnesCalculatorException : Exception
     {
         /// <summary>
-        /// Исключение, возникающее при попытке посчитать количество единиц на гистограмме частот со смещением отличным от размерности
+        /// Исключение, возникающее при попытке посчитать количество единиц на маркировочной таблице со смещением отличным от размерности
         /// </summary>
         public OnesCalculatorException(string pMessage) : base(pMessage) { }
     }
 
     /// <summary>
-    /// Исключение, возникающее при попытке посчитать вероятность битов 1 и 0
+    /// Исключение, возникающее при попытке посчитать оценки вероятностей бит 1 и 0
     /// </summary>
-    public class ProbabilityCalculatorException : Exception
+    public class BitFrequencyCalculatorException : Exception
     {
         /// <summary>
-        /// Исключение, возникающее при попытке посчитать вероятность битов 1 и 0
+        /// Исключение, возникающее при попытке посчитать оценки вероятностей бит 1 и 0
         /// </summary>
-        public ProbabilityCalculatorException(string pMessage) : base(pMessage) { }
+        public BitFrequencyCalculatorException(string pMessage) : base(pMessage) { }
     }
 }

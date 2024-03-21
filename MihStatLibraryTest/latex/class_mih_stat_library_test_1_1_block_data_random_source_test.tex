@@ -9,7 +9,9 @@
 \begin{DoxyCompactItemize}
 \item 
 void \textbf{ Test\+Get\+Block\+Data\+Random} ()
-\begin{DoxyCompactList}\small\item\em Тест получения блока данных\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Тест получения случайного блока данных по размеру\+: \end{DoxyCompactList}\item 
+void \textbf{ Test\+Get\+Block\+Data\+Random\+Probability} ()
+\begin{DoxyCompactList}\small\item\em Тест получения случайного блока данных по вероятности\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Подробное описание}
@@ -24,12 +26,24 @@ void \textbf{ Test\+Get\+Block\+Data\+Random} ()
 
 
 
-Тест получения блока данных\+: 
+Тест получения случайного блока данных по размеру\+: 
 
 
 \begin{DoxyEnumerate}
-\item Размер полученных данных совпадает с ожидаемым
-\item TO DO (после реализации гистограммы частот)\+: Полученные данные случайны 
+\item Размер полученных данных совпадает с ожидаемым 
+\end{DoxyEnumerate}\label{class_mih_stat_library_test_1_1_block_data_random_source_test_a90e54830941916be8b341e14e1d873ba} 
+\index{MihStatLibraryTest.BlockDataRandomSourceTest@{MihStatLibraryTest.BlockDataRandomSourceTest}!TestGetBlockDataRandomProbability@{TestGetBlockDataRandomProbability}}
+\index{TestGetBlockDataRandomProbability@{TestGetBlockDataRandomProbability}!MihStatLibraryTest.BlockDataRandomSourceTest@{MihStatLibraryTest.BlockDataRandomSourceTest}}
+\doxysubsubsection{TestGetBlockDataRandomProbability()}
+{\footnotesize\ttfamily void Mih\+Stat\+Library\+Test.\+Block\+Data\+Random\+Source\+Test.\+Test\+Get\+Block\+Data\+Random\+Probability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тест получения случайного блока данных по вероятности\+: 
+
+
+\begin{DoxyEnumerate}
+\item Генерируются случайные блоки данных разного размера с XOR-\/ом 3. На полученных данных рассчитываются вероятности знаков 0 и 1. Проверяется, что полученные вероятности меньше 0.\+6 
 \end{DoxyEnumerate}
 
 Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}

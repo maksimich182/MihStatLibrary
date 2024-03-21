@@ -48,7 +48,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_block_data_8cs.html"
+"_bit_frequency_calculator_8cs.html"
 ];
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';

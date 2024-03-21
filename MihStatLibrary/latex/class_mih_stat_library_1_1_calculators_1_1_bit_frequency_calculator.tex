@@ -1,0 +1,171 @@
+\doxysection{Класс Mih\+Stat\+Library.\+Calculators.\+Bit\+Frequency\+Calculator}
+\label{class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator}\index{MihStatLibrary.Calculators.BitFrequencyCalculator@{MihStatLibrary.Calculators.BitFrequencyCalculator}}
+
+
+Класс вычислителя оценки вероятностей бит 1 и 0 в данных  
+
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Bit\+Frequency\+Calculator} ()
+\begin{DoxyCompactList}\small\item\em Конструктор класса вычислителя вероятностей бит 1 и 0 в данных \end{DoxyCompactList}\item 
+async Task \textbf{ Calculate\+Async} (string file\+Name)
+\begin{DoxyCompactList}\small\item\em Ассинхронная функция рассчета оценки вероятностей 1 и 0 в файле \end{DoxyCompactList}\item 
+void \textbf{ Calculate} (string file\+Name)
+\begin{DoxyCompactList}\small\item\em Функция рассчета оценки вероятностей 1 и 0 в файле \end{DoxyCompactList}\item 
+void \textbf{ Calculate} (\textbf{ Mark\+Table} mark\+Table)
+\begin{DoxyCompactList}\small\item\em Функция рассчета оценки вероятностей 1 и 0 по маркировочной таблице. СМЕЩЕНИЕ ДОЛЖНО БЫТЬ РАВНО РАЗМЕРНОСТИ! ЕСЛИ РАЗМЕР ФАЙЛА В БИТАХ НЕ КРАТЕН РАЗМЕРНОСТИ ГИСТОГРАММЫ ЧАСТОТ, БИТЫ, НЕ ОБСЧИТАННЫЕ ГИСТОГРАММОЙ, НЕ УЧИТЫВАЮТСЯ! \end{DoxyCompactList}\item 
+void \textbf{ Calculate} (\textbf{ Block\+Data} block\+Data)
+\begin{DoxyCompactList}\small\item\em Функция рассчета оценки вероятностей 1 и 0 на блоке данных \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Свойства}
+\begin{DoxyCompactItemize}
+\item 
+double \textbf{ Frequency\+One}\hspace{0.3cm}{\ttfamily  [get]}
+\begin{DoxyCompactList}\small\item\em Оценка вероятности бита 1 в данных \end{DoxyCompactList}\item 
+double \textbf{ Frequency\+Zero}\hspace{0.3cm}{\ttfamily  [get]}
+\begin{DoxyCompactList}\small\item\em Оценка вероятности 0 в данных \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс вычислителя оценки вероятностей бит 1 и 0 в данных 
+
+См. определение в файле \textbf{ Bit\+Frequency\+Calculator.\+cs} строка \textbf{ 15}
+
+
+
+\doxysubsection{Конструктор(ы)}
+\label{class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_a0a57ebf76cf078810a498159c54d3dfa} 
+\index{MihStatLibrary.Calculators.BitFrequencyCalculator@{MihStatLibrary.Calculators.BitFrequencyCalculator}!BitFrequencyCalculator@{BitFrequencyCalculator}}
+\index{BitFrequencyCalculator@{BitFrequencyCalculator}!MihStatLibrary.Calculators.BitFrequencyCalculator@{MihStatLibrary.Calculators.BitFrequencyCalculator}}
+\doxysubsubsection{BitFrequencyCalculator()}
+{\footnotesize\ttfamily Mih\+Stat\+Library.\+Calculators.\+Bit\+Frequency\+Calculator.\+Bit\+Frequency\+Calculator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Конструктор класса вычислителя вероятностей бит 1 и 0 в данных 
+
+
+
+См. определение в файле \textbf{ Bit\+Frequency\+Calculator.\+cs} строка \textbf{ 33}
+
+
+
+\doxysubsection{Методы}
+\label{class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_a9b5105dbc12a58d3bce111277f14cbae} 
+\index{MihStatLibrary.Calculators.BitFrequencyCalculator@{MihStatLibrary.Calculators.BitFrequencyCalculator}!Calculate@{Calculate}}
+\index{Calculate@{Calculate}!MihStatLibrary.Calculators.BitFrequencyCalculator@{MihStatLibrary.Calculators.BitFrequencyCalculator}}
+\doxysubsubsection{Calculate()\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void Mih\+Stat\+Library.\+Calculators.\+Bit\+Frequency\+Calculator.\+Calculate (\begin{DoxyParamCaption}\item[{\textbf{ Block\+Data}}]{block\+Data }\end{DoxyParamCaption})}
+
+
+
+Функция рассчета оценки вероятностей 1 и 0 на блоке данных 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em block\+Data} & Блок данных\\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \textbf{ Bit\+Frequency\+Calculator.\+cs} строка \textbf{ 152}
+
+\label{class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_ac196dd27bd7523e555f70cb57677e9c9} 
+\index{MihStatLibrary.Calculators.BitFrequencyCalculator@{MihStatLibrary.Calculators.BitFrequencyCalculator}!Calculate@{Calculate}}
+\index{Calculate@{Calculate}!MihStatLibrary.Calculators.BitFrequencyCalculator@{MihStatLibrary.Calculators.BitFrequencyCalculator}}
+\doxysubsubsection{Calculate()\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void Mih\+Stat\+Library.\+Calculators.\+Bit\+Frequency\+Calculator.\+Calculate (\begin{DoxyParamCaption}\item[{\textbf{ Mark\+Table}}]{mark\+Table }\end{DoxyParamCaption})}
+
+
+
+Функция рассчета оценки вероятностей 1 и 0 по маркировочной таблице. СМЕЩЕНИЕ ДОЛЖНО БЫТЬ РАВНО РАЗМЕРНОСТИ! ЕСЛИ РАЗМЕР ФАЙЛА В БИТАХ НЕ КРАТЕН РАЗМЕРНОСТИ ГИСТОГРАММЫ ЧАСТОТ, БИТЫ, НЕ ОБСЧИТАННЫЕ ГИСТОГРАММОЙ, НЕ УЧИТЫВАЮТСЯ! 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em mark\+Table} & Маркировочная таблица. СМЕЩЕНИЕ ДОЛЖНО БЫТЬ РАВНО РАЗМЕРНОСТИ!\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em Bit\+Frequency\+Calculator\+Exception} & Попытка посчитать количество единиц на гистограмме с разным значением размерности и смещения\\
+\hline
+\end{DoxyExceptions}
+
+
+См. определение в файле \textbf{ Bit\+Frequency\+Calculator.\+cs} строка \textbf{ 118}
+
+\label{class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_af32e3314776dd52d0e1339b2341ab513} 
+\index{MihStatLibrary.Calculators.BitFrequencyCalculator@{MihStatLibrary.Calculators.BitFrequencyCalculator}!Calculate@{Calculate}}
+\index{Calculate@{Calculate}!MihStatLibrary.Calculators.BitFrequencyCalculator@{MihStatLibrary.Calculators.BitFrequencyCalculator}}
+\doxysubsubsection{Calculate()\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Mih\+Stat\+Library.\+Calculators.\+Bit\+Frequency\+Calculator.\+Calculate (\begin{DoxyParamCaption}\item[{string}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Функция рассчета оценки вероятностей 1 и 0 в файле 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em file\+Name} & Имя файла\\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \textbf{ Bit\+Frequency\+Calculator.\+cs} строка \textbf{ 97}
+
+\label{class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_a00c9c159382735012eed7551ff88a556} 
+\index{MihStatLibrary.Calculators.BitFrequencyCalculator@{MihStatLibrary.Calculators.BitFrequencyCalculator}!CalculateAsync@{CalculateAsync}}
+\index{CalculateAsync@{CalculateAsync}!MihStatLibrary.Calculators.BitFrequencyCalculator@{MihStatLibrary.Calculators.BitFrequencyCalculator}}
+\doxysubsubsection{CalculateAsync()}
+{\footnotesize\ttfamily async Task Mih\+Stat\+Library.\+Calculators.\+Bit\+Frequency\+Calculator.\+Calculate\+Async (\begin{DoxyParamCaption}\item[{string}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Ассинхронная функция рассчета оценки вероятностей 1 и 0 в файле 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em file\+Name} & Имя файла\\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \textbf{ Bit\+Frequency\+Calculator.\+cs} строка \textbf{ 69}
+
+
+
+\doxysubsection{Полный список свойств}
+\label{class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_a826c1084202e57aaeed430801f6be3e4} 
+\index{MihStatLibrary.Calculators.BitFrequencyCalculator@{MihStatLibrary.Calculators.BitFrequencyCalculator}!FrequencyOne@{FrequencyOne}}
+\index{FrequencyOne@{FrequencyOne}!MihStatLibrary.Calculators.BitFrequencyCalculator@{MihStatLibrary.Calculators.BitFrequencyCalculator}}
+\doxysubsubsection{FrequencyOne}
+{\footnotesize\ttfamily double Mih\+Stat\+Library.\+Calculators.\+Bit\+Frequency\+Calculator.\+Frequency\+One\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Оценка вероятности бита 1 в данных 
+
+
+
+См. определение в файле \textbf{ Bit\+Frequency\+Calculator.\+cs} строка \textbf{ 23}
+
+\label{class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_a7f5cd70e5770c57b4b0311d4d3f80583} 
+\index{MihStatLibrary.Calculators.BitFrequencyCalculator@{MihStatLibrary.Calculators.BitFrequencyCalculator}!FrequencyZero@{FrequencyZero}}
+\index{FrequencyZero@{FrequencyZero}!MihStatLibrary.Calculators.BitFrequencyCalculator@{MihStatLibrary.Calculators.BitFrequencyCalculator}}
+\doxysubsubsection{FrequencyZero}
+{\footnotesize\ttfamily double Mih\+Stat\+Library.\+Calculators.\+Bit\+Frequency\+Calculator.\+Frequency\+Zero\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Оценка вероятности 0 в данных 
+
+
+
+См. определение в файле \textbf{ Bit\+Frequency\+Calculator.\+cs} строка \textbf{ 28}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Calculators/\textbf{ Bit\+Frequency\+Calculator.\+cs}\end{DoxyCompactItemize}

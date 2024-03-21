@@ -1,0 +1,135 @@
+.TH "MihStatLibrary.Calculators.BitFrequencyCalculator" 3 "Version 1.0" "MihStatLibrary" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MihStatLibrary.Calculators.BitFrequencyCalculator \- Класс вычислителя оценки вероятностей бит 1 и 0 в данных  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Открытые члены"
+
+.in +1c
+.ti -1c
+.RI "\fBBitFrequencyCalculator\fP ()"
+.br
+.RI "Конструктор класса вычислителя вероятностей бит 1 и 0 в данных "
+.ti -1c
+.RI "async Task \fBCalculateAsync\fP (string fileName)"
+.br
+.RI "Ассинхронная функция рассчета оценки вероятностей 1 и 0 в файле "
+.ti -1c
+.RI "void \fBCalculate\fP (string fileName)"
+.br
+.RI "Функция рассчета оценки вероятностей 1 и 0 в файле "
+.ti -1c
+.RI "void \fBCalculate\fP (\fBMarkTable\fP markTable)"
+.br
+.RI "Функция рассчета оценки вероятностей 1 и 0 по маркировочной таблице\&. СМЕЩЕНИЕ ДОЛЖНО БЫТЬ РАВНО РАЗМЕРНОСТИ! ЕСЛИ РАЗМЕР ФАЙЛА В БИТАХ НЕ КРАТЕН РАЗМЕРНОСТИ ГИСТОГРАММЫ ЧАСТОТ, БИТЫ, НЕ ОБСЧИТАННЫЕ ГИСТОГРАММОЙ, НЕ УЧИТЫВАЮТСЯ! "
+.ti -1c
+.RI "void \fBCalculate\fP (\fBBlockData\fP blockData)"
+.br
+.RI "Функция рассчета оценки вероятностей 1 и 0 на блоке данных "
+.in -1c
+.SS "Свойства"
+
+.in +1c
+.ti -1c
+.RI "double \fBFrequencyOne\fP\fR [get]\fP"
+.br
+.RI "Оценка вероятности бита 1 в данных "
+.ti -1c
+.RI "double \fBFrequencyZero\fP\fR [get]\fP"
+.br
+.RI "Оценка вероятности 0 в данных "
+.in -1c
+.SH "Подробное описание"
+.PP 
+Класс вычислителя оценки вероятностей бит 1 и 0 в данных 
+.PP
+См\&. определение в файле \fBBitFrequencyCalculator\&.cs\fP строка \fB15\fP
+.SH "Конструктор(ы)"
+.PP 
+.SS "MihStatLibrary\&.Calculators\&.BitFrequencyCalculator\&.BitFrequencyCalculator ()"
+
+.PP
+Конструктор класса вычислителя вероятностей бит 1 и 0 в данных 
+.PP
+См\&. определение в файле \fBBitFrequencyCalculator\&.cs\fP строка \fB33\fP
+.SH "Методы"
+.PP 
+.SS "void MihStatLibrary\&.Calculators\&.BitFrequencyCalculator\&.Calculate (\fBBlockData\fP blockData)"
+
+.PP
+Функция рассчета оценки вероятностей 1 и 0 на блоке данных 
+.PP
+\fBАргументы\fP
+.RS 4
+\fIblockData\fP Блок данных
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBBitFrequencyCalculator\&.cs\fP строка \fB152\fP
+.SS "void MihStatLibrary\&.Calculators\&.BitFrequencyCalculator\&.Calculate (\fBMarkTable\fP markTable)"
+
+.PP
+Функция рассчета оценки вероятностей 1 и 0 по маркировочной таблице\&. СМЕЩЕНИЕ ДОЛЖНО БЫТЬ РАВНО РАЗМЕРНОСТИ! ЕСЛИ РАЗМЕР ФАЙЛА В БИТАХ НЕ КРАТЕН РАЗМЕРНОСТИ ГИСТОГРАММЫ ЧАСТОТ, БИТЫ, НЕ ОБСЧИТАННЫЕ ГИСТОГРАММОЙ, НЕ УЧИТЫВАЮТСЯ! 
+.PP
+\fBАргументы\fP
+.RS 4
+\fImarkTable\fP Маркировочная таблица\&. СМЕЩЕНИЕ ДОЛЖНО БЫТЬ РАВНО РАЗМЕРНОСТИ!
+.RE
+.PP
+\fBИсключения\fP
+.RS 4
+\fIBitFrequencyCalculatorException\fP Попытка посчитать количество единиц на гистограмме с разным значением размерности и смещения
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBBitFrequencyCalculator\&.cs\fP строка \fB118\fP
+.SS "void MihStatLibrary\&.Calculators\&.BitFrequencyCalculator\&.Calculate (string fileName)"
+
+.PP
+Функция рассчета оценки вероятностей 1 и 0 в файле 
+.PP
+\fBАргументы\fP
+.RS 4
+\fIfileName\fP Имя файла
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBBitFrequencyCalculator\&.cs\fP строка \fB97\fP
+.SS "async Task MihStatLibrary\&.Calculators\&.BitFrequencyCalculator\&.CalculateAsync (string fileName)"
+
+.PP
+Ассинхронная функция рассчета оценки вероятностей 1 и 0 в файле 
+.PP
+\fBАргументы\fP
+.RS 4
+\fIfileName\fP Имя файла
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBBitFrequencyCalculator\&.cs\fP строка \fB69\fP
+.SH "Полный список свойств"
+.PP 
+.SS "double MihStatLibrary\&.Calculators\&.BitFrequencyCalculator\&.FrequencyOne\fR [get]\fP"
+
+.PP
+Оценка вероятности бита 1 в данных 
+.PP
+См\&. определение в файле \fBBitFrequencyCalculator\&.cs\fP строка \fB23\fP
+.SS "double MihStatLibrary\&.Calculators\&.BitFrequencyCalculator\&.FrequencyZero\fR [get]\fP"
+
+.PP
+Оценка вероятности 0 в данных 
+.PP
+См\&. определение в файле \fBBitFrequencyCalculator\&.cs\fP строка \fB28\fP
+
+.SH "Автор"
+.PP 
+Автоматически создано Doxygen для MihStatLibrary из исходного текста\&.

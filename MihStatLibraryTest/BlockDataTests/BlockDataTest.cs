@@ -59,7 +59,6 @@ namespace MihStatLibraryTest
         /// Тест получения блока данных из рандомайзера:
         /// 1. После получения данных массив данных проинициализирован
         /// 2. Размер полученных данных совпадает с ожидаемым
-        /// 3. TO DO (после реализации гистограммы частот): Полученные данные случайны
         /// </summary>
         [TestMethod]
         public void TestGetBlockDataRandom()
@@ -77,7 +76,7 @@ namespace MihStatLibraryTest
             Assert.AreEqual(blockData.SzBlockData, szBlockData);
 
             szBlockData = 8866652;
-            blockData!.GetBlockData(szBlockData);
+            blockData.GetBlockData(szBlockData);
             Assert.IsNotNull(blockData.Data);
             Assert.AreEqual(blockData.SzBlockData, szBlockData);
         }

@@ -1,0 +1,111 @@
+\doxysection{Класс Mih\+Stat\+Library\+Test.\+Calculators\+Tests.\+Bit\+Frequency\+Calculator\+Test}
+\label{class_mih_stat_library_test_1_1_calculators_tests_1_1_bit_frequency_calculator_test}\index{MihStatLibraryTest.CalculatorsTests.BitFrequencyCalculatorTest@{MihStatLibraryTest.CalculatorsTests.BitFrequencyCalculatorTest}}
+
+
+Тесты класса Bit\+Frequency\+Calculator.  
+
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ Bit\+Frequency\+Calculate\+Block\+Test} ()
+\begin{DoxyCompactList}\small\item\em Тест метода Calculate на блоке данных\+: \end{DoxyCompactList}\item 
+async Task \textbf{ Bit\+Frequency\+Async\+Calculate\+File01010101\+\_\+131\+MBTest} ()
+\begin{DoxyCompactList}\small\item\em Тест ассинхронного метода Calculate\+Async на файле\+: \end{DoxyCompactList}\item 
+void \textbf{ Bit\+Frequency\+Calculate\+File01010101\+\_\+131\+MBTest} ()
+\begin{DoxyCompactList}\small\item\em Тест метода Calculate на файле\+: \end{DoxyCompactList}\item 
+void \textbf{ Bit\+Frequency\+Calculate\+Block\+Data\+Test} ()
+\begin{DoxyCompactList}\small\item\em Тест метода Calculate на блоке данных\+: \end{DoxyCompactList}\item 
+void \textbf{ Bit\+Frequency\+Calculate\+Mark\+Table\+Test} ()
+\begin{DoxyCompactList}\small\item\em Тест метода Calculate на маркировочной таблице\+: \end{DoxyCompactList}\item 
+void \textbf{ Bit\+Frequency\+Calculate\+Mark\+Table\+Exception\+Test} ()
+\begin{DoxyCompactList}\small\item\em Тест вызова исключения Bit\+Frequency\+Calculator\+Exception из метода Calculate на маркировочной таблице при разных значениях смещения и размерности\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Тесты класса Bit\+Frequency\+Calculator. 
+
+\doxysubsection{Методы}
+\label{class_mih_stat_library_test_1_1_calculators_tests_1_1_bit_frequency_calculator_test_a5a885d1d7f830b132c8e2795b77df359} 
+\index{MihStatLibraryTest.CalculatorsTests.BitFrequencyCalculatorTest@{MihStatLibraryTest.CalculatorsTests.BitFrequencyCalculatorTest}!BitFrequencyAsyncCalculateFile01010101\_131MBTest@{BitFrequencyAsyncCalculateFile01010101\_131MBTest}}
+\index{BitFrequencyAsyncCalculateFile01010101\_131MBTest@{BitFrequencyAsyncCalculateFile01010101\_131MBTest}!MihStatLibraryTest.CalculatorsTests.BitFrequencyCalculatorTest@{MihStatLibraryTest.CalculatorsTests.BitFrequencyCalculatorTest}}
+\doxysubsubsection{BitFrequencyAsyncCalculateFile01010101\_131MBTest()}
+{\footnotesize\ttfamily async Task Mih\+Stat\+Library\+Test.\+Calculators\+Tests.\+Bit\+Frequency\+Calculator\+Test.\+Bit\+Frequency\+Async\+Calculate\+File01010101\+\_\+131\+MBTest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тест ассинхронного метода Calculate\+Async на файле\+: 
+
+
+\begin{DoxyEnumerate}
+\item Методами Calculate\+Aync и Calculate на файле размером 131 МБ из байт 01010101 рассчитываются оценки вероятностей. Сравниваются полученные значения 
+\end{DoxyEnumerate}\label{class_mih_stat_library_test_1_1_calculators_tests_1_1_bit_frequency_calculator_test_ac20c4fba8e3dd18396ebfbfa99006864} 
+\index{MihStatLibraryTest.CalculatorsTests.BitFrequencyCalculatorTest@{MihStatLibraryTest.CalculatorsTests.BitFrequencyCalculatorTest}!BitFrequencyCalculateBlockDataTest@{BitFrequencyCalculateBlockDataTest}}
+\index{BitFrequencyCalculateBlockDataTest@{BitFrequencyCalculateBlockDataTest}!MihStatLibraryTest.CalculatorsTests.BitFrequencyCalculatorTest@{MihStatLibraryTest.CalculatorsTests.BitFrequencyCalculatorTest}}
+\doxysubsubsection{BitFrequencyCalculateBlockDataTest()}
+{\footnotesize\ttfamily void Mih\+Stat\+Library\+Test.\+Calculators\+Tests.\+Bit\+Frequency\+Calculator\+Test.\+Bit\+Frequency\+Calculate\+Block\+Data\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тест метода Calculate на блоке данных\+: 
+
+
+\begin{DoxyEnumerate}
+\item Методом Calculate блоке данных размером 100.\+000.\+000 байт из файла размером 131 МБ из байт 01010101 рассчитываются оценки вероятностей. Проверяется, что оценка вероятности 1 = 0.\+5, а оценка вероятности 0 равна оценке вероятности 1. 
+\end{DoxyEnumerate}\label{class_mih_stat_library_test_1_1_calculators_tests_1_1_bit_frequency_calculator_test_ade1f64e611ffae83f79480bbee155b5f} 
+\index{MihStatLibraryTest.CalculatorsTests.BitFrequencyCalculatorTest@{MihStatLibraryTest.CalculatorsTests.BitFrequencyCalculatorTest}!BitFrequencyCalculateBlockTest@{BitFrequencyCalculateBlockTest}}
+\index{BitFrequencyCalculateBlockTest@{BitFrequencyCalculateBlockTest}!MihStatLibraryTest.CalculatorsTests.BitFrequencyCalculatorTest@{MihStatLibraryTest.CalculatorsTests.BitFrequencyCalculatorTest}}
+\doxysubsubsection{BitFrequencyCalculateBlockTest()}
+{\footnotesize\ttfamily void Mih\+Stat\+Library\+Test.\+Calculators\+Tests.\+Bit\+Frequency\+Calculator\+Test.\+Bit\+Frequency\+Calculate\+Block\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тест метода Calculate на блоке данных\+: 
+
+
+\begin{DoxyEnumerate}
+\item Генерируется блок данных размером 100.\+000.\+000 байт случайной последовательности с XOR-\/ом 3. Расчитывается оценка вероятности бит. На том же блоке рассчитывается количество бит 1 с использованием Ones\+Calculator и делится на количество бит в блоке. Сравниваются полученные значения 
+\end{DoxyEnumerate}\label{class_mih_stat_library_test_1_1_calculators_tests_1_1_bit_frequency_calculator_test_acb16df35c4cc7f4c6f164be0eb1c0106} 
+\index{MihStatLibraryTest.CalculatorsTests.BitFrequencyCalculatorTest@{MihStatLibraryTest.CalculatorsTests.BitFrequencyCalculatorTest}!BitFrequencyCalculateFile01010101\_131MBTest@{BitFrequencyCalculateFile01010101\_131MBTest}}
+\index{BitFrequencyCalculateFile01010101\_131MBTest@{BitFrequencyCalculateFile01010101\_131MBTest}!MihStatLibraryTest.CalculatorsTests.BitFrequencyCalculatorTest@{MihStatLibraryTest.CalculatorsTests.BitFrequencyCalculatorTest}}
+\doxysubsubsection{BitFrequencyCalculateFile01010101\_131MBTest()}
+{\footnotesize\ttfamily void Mih\+Stat\+Library\+Test.\+Calculators\+Tests.\+Bit\+Frequency\+Calculator\+Test.\+Bit\+Frequency\+Calculate\+File01010101\+\_\+131\+MBTest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тест метода Calculate на файле\+: 
+
+
+\begin{DoxyEnumerate}
+\item Методом Calculate на файле размером 131 МБ из байт 01010101 рассчитываются оценки вероятностей. Проверяется, что оценка вероятности 1 = 0.\+5, а оценка вероятности 0 равна оценке вероятности 1. 
+\end{DoxyEnumerate}\label{class_mih_stat_library_test_1_1_calculators_tests_1_1_bit_frequency_calculator_test_a31eb8509e4821bf15c220cdebe7a9bc7} 
+\index{MihStatLibraryTest.CalculatorsTests.BitFrequencyCalculatorTest@{MihStatLibraryTest.CalculatorsTests.BitFrequencyCalculatorTest}!BitFrequencyCalculateMarkTableExceptionTest@{BitFrequencyCalculateMarkTableExceptionTest}}
+\index{BitFrequencyCalculateMarkTableExceptionTest@{BitFrequencyCalculateMarkTableExceptionTest}!MihStatLibraryTest.CalculatorsTests.BitFrequencyCalculatorTest@{MihStatLibraryTest.CalculatorsTests.BitFrequencyCalculatorTest}}
+\doxysubsubsection{BitFrequencyCalculateMarkTableExceptionTest()}
+{\footnotesize\ttfamily void Mih\+Stat\+Library\+Test.\+Calculators\+Tests.\+Bit\+Frequency\+Calculator\+Test.\+Bit\+Frequency\+Calculate\+Mark\+Table\+Exception\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тест вызова исключения Bit\+Frequency\+Calculator\+Exception из метода Calculate на маркировочной таблице при разных значениях смещения и размерности\+: 
+
+
+\begin{DoxyEnumerate}
+\item Рассчитывается маркировочная таблица размерностью 16 (кратно размеру файла в битах) и смещением 15. Проверяется создание исключения. 
+\end{DoxyEnumerate}\label{class_mih_stat_library_test_1_1_calculators_tests_1_1_bit_frequency_calculator_test_ae3db387272ff13c2213b294a7c43c1f2} 
+\index{MihStatLibraryTest.CalculatorsTests.BitFrequencyCalculatorTest@{MihStatLibraryTest.CalculatorsTests.BitFrequencyCalculatorTest}!BitFrequencyCalculateMarkTableTest@{BitFrequencyCalculateMarkTableTest}}
+\index{BitFrequencyCalculateMarkTableTest@{BitFrequencyCalculateMarkTableTest}!MihStatLibraryTest.CalculatorsTests.BitFrequencyCalculatorTest@{MihStatLibraryTest.CalculatorsTests.BitFrequencyCalculatorTest}}
+\doxysubsubsection{BitFrequencyCalculateMarkTableTest()}
+{\footnotesize\ttfamily void Mih\+Stat\+Library\+Test.\+Calculators\+Tests.\+Bit\+Frequency\+Calculator\+Test.\+Bit\+Frequency\+Calculate\+Mark\+Table\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Тест метода Calculate на маркировочной таблице\+: 
+
+
+\begin{DoxyEnumerate}
+\item Рассчитывается маркировочная таблица размерностью 16 (кратно размеру файла в битах) и смещением 16 файла размером 131 МБ из байт 01010101 рассчитываются оценки вероятностей. Проверяется, что оценка вероятности 1 = 0.\+5, а оценка вероятности 0 равна оценке вероятности 1. 
+\end{DoxyEnumerate}
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Calculators\+Tests/\textbf{ Bit\+Frequency\+Calculator\+Test.\+cs}\end{DoxyCompactItemize}

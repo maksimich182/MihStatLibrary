@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['probabilitycalculator_0',['ProbabilityCalculator',['../class_mih_stat_library_1_1_calculators_1_1_probability_calculator.html#a90a23df45221016f78313e132ef50d34',1,'MihStatLibrary::Calculators::ProbabilityCalculator']]],
-  ['probabilitycalculatorexception_1',['ProbabilityCalculatorException',['../class_mih_stat_library_1_1_calculators_1_1_probability_calculator_exception.html#a41121a3134554c387d6e4609433e38f8',1,'MihStatLibrary::Calculators::ProbabilityCalculatorException']]]
+  ['reduce_0',['Reduce',['../class_mih_stat_library_1_1_tables_1_1_mark_table.html#a51db56e57901578918c4dd1a4a9700da',1,'MihStatLibrary.Tables.MarkTable.Reduce(MarkTable destTable)'],['../class_mih_stat_library_1_1_tables_1_1_mark_table.html#a6af7d599b277193eb598afd920af3d6f',1,'MihStatLibrary.Tables.MarkTable.Reduce(int pDestDimension)']]],
+  ['reduceexception_1',['ReduceException',['../class_mih_stat_library_1_1_tables_1_1_reduce_exception.html#a95f7250a05cb0f836e73e5e27db3f53e',1,'MihStatLibrary::Tables::ReduceException']]]
 ];

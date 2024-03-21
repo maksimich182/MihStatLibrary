@@ -1,10 +1,10 @@
 var indexSectionsWithContent =
 {
-  0: ".bcdfmot",
-  1: "bfo",
+  0: ".bcdmot",
+  1: "bmo",
   2: "m",
-  3: ".bdfmo",
-  4: "cft"
+  3: ".bdmo",
+  4: "bcmt"
 };
 
 var indexSectionNames =

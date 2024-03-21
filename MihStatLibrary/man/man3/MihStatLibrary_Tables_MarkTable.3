@@ -1,0 +1,266 @@
+.TH "MihStatLibrary.Tables.MarkTable" 3 "Version 1.0" "MihStatLibrary" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MihStatLibrary.Tables.MarkTable \- Класс маркировочной таблицы  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Открытые члены"
+
+.in +1c
+.ti -1c
+.RI "\fBMarkTable\fP (int dimension)"
+.br
+.RI "Конструктор класса маркировочной таблицыт без зацепления "
+.ti -1c
+.RI "\fBMarkTable\fP (int dimension, int szShift)"
+.br
+.RI "Конструктор класса маркировочной таблицы с зацеплением "
+.ti -1c
+.RI "void \fBCalculate\fP (\fBBlockData\fP data)"
+.br
+.RI "Подсчет маркировочной таблицы по блоку данных "
+.ti -1c
+.RI "void \fBClear\fP ()"
+.br
+.RI "Обнуление маркировочной таблицы "
+.ti -1c
+.RI "void \fBCalculate\fP (string fileName)"
+.br
+.RI "Подсчет маркировочной таблицы по данным файла "
+.ti -1c
+.RI "void \fBReduce\fP (\fBMarkTable\fP destTable)"
+.br
+.RI "Функция пересчета маркировочной таблицы в таблицу с меньшей размерностью векторов\&. ФУНКЦИЯ РАБОТАЕТ ТОЛЬКО СО СМЕЩЕНИЕМ 1! "
+.ti -1c
+.RI "\fBMarkTable\fP \fBReduce\fP (int pDestDimension)"
+.br
+.RI "Функция создания маркировочной таблицы на основании маркировочной таблицы большей размерности\&. ФУНКЦИЯ РАБОТАЕТ ТОЛЬКО СО СМЕЩЕНИЕМ 1! "
+.ti -1c
+.RI "override bool \fBEquals\fP (object? obj)"
+.br
+.RI "Глубокое сравнение двух экземпляров MarkTable "
+.ti -1c
+.RI "override int \fBGetHashCode\fP ()"
+.br
+.RI "Вычисление hash объекта MarkTable "
+.in -1c
+.SS "Свойства"
+
+.in +1c
+.ti -1c
+.RI "long[] \fBTable\fP\fR [get]\fP"
+.br
+.RI "Маркировочная таблица "
+.ti -1c
+.RI "int \fBDimension\fP\fR [get]\fP"
+.br
+.RI "Размерность маркировочной таблицы "
+.ti -1c
+.RI "long \fBNmVectors\fP\fR [get]\fP"
+.br
+.RI "Количество учтенных последовательностей "
+.ti -1c
+.RI "int \fBSzShift\fP\fR [get]\fP"
+.br
+.RI "Смещение маркировочной таблицы "
+.in -1c
+.SS "События"
+
+.in +1c
+.ti -1c
+.RI "EventHandler< string >? \fBProcessChanged\fP = null"
+.br
+.RI "Событие изменения процесса обсчитывания "
+.ti -1c
+.RI "EventHandler< int >? \fBProgressChanged\fP = null"
+.br
+.RI "Событие изменения прогресса обсчитывания "
+.in -1c
+.SH "Подробное описание"
+.PP 
+Класс маркировочной таблицы 
+.PP
+См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB15\fP
+.SH "Конструктор(ы)"
+.PP 
+.SS "MihStatLibrary\&.Tables\&.MarkTable\&.MarkTable (int dimension)"
+
+.PP
+Конструктор класса маркировочной таблицыт без зацепления 
+.PP
+\fBАргументы\fP
+.RS 4
+\fIdimension\fP Размерность векторов маркировочной таблицы
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB62\fP
+.SS "MihStatLibrary\&.Tables\&.MarkTable\&.MarkTable (int dimension, int szShift)"
+
+.PP
+Конструктор класса маркировочной таблицы с зацеплением 
+.PP
+\fBАргументы\fP
+.RS 4
+\fIdimension\fP Размерность векторов маркировочной таблицы
+.br
+\fIszShift\fP Размер смещения
+.RE
+.PP
+\fBИсключения\fP
+.RS 4
+\fIInvalidShiftException\fP Попытка задать смещение больше размерности
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB79\fP
+.SH "Методы"
+.PP 
+.SS "void MihStatLibrary\&.Tables\&.MarkTable\&.Calculate (\fBBlockData\fP data)"
+
+.PP
+Подсчет маркировочной таблицы по блоку данных 
+.PP
+\fBАргументы\fP
+.RS 4
+\fIdata\fP Блок данных
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB90\fP
+.SS "void MihStatLibrary\&.Tables\&.MarkTable\&.Calculate (string fileName)"
+
+.PP
+Подсчет маркировочной таблицы по данным файла 
+.PP
+\fBАргументы\fP
+.RS 4
+\fIfileName\fP Имя файла
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB130\fP
+.SS "void MihStatLibrary\&.Tables\&.MarkTable\&.Clear ()"
+
+.PP
+Обнуление маркировочной таблицы 
+.PP
+См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB118\fP
+.SS "override bool MihStatLibrary\&.Tables\&.MarkTable\&.Equals (object? obj)"
+
+.PP
+Глубокое сравнение двух экземпляров MarkTable 
+.PP
+\fBАргументы\fP
+.RS 4
+\fIobj\fP Экземпляр для сравнения
+.RE
+.PP
+\fBВозвращает\fP
+.RS 4
+Результат сравнения
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB240\fP
+.SS "override int MihStatLibrary\&.Tables\&.MarkTable\&.GetHashCode ()"
+
+.PP
+Вычисление hash объекта MarkTable 
+.PP
+\fBВозвращает\fP
+.RS 4
+Hash объекта MarkTable
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB263\fP
+.SS "\fBMarkTable\fP MihStatLibrary\&.Tables\&.MarkTable\&.Reduce (int pDestDimension)"
+
+.PP
+Функция создания маркировочной таблицы на основании маркировочной таблицы большей размерности\&. ФУНКЦИЯ РАБОТАЕТ ТОЛЬКО СО СМЕЩЕНИЕМ 1! 
+.PP
+\fBАргументы\fP
+.RS 4
+\fIpDestDimension\fP Размерность новой маркировочной таблицы
+.RE
+.PP
+\fBВозвращает\fP
+.RS 4
+Новая маркировочная таблица с пересчитанными значениями и смещением 1
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB184\fP
+.SS "void MihStatLibrary\&.Tables\&.MarkTable\&.Reduce (\fBMarkTable\fP destTable)"
+
+.PP
+Функция пересчета маркировочной таблицы в таблицу с меньшей размерностью векторов\&. ФУНКЦИЯ РАБОТАЕТ ТОЛЬКО СО СМЕЩЕНИЕМ 1! 
+.PP
+\fBАргументы\fP
+.RS 4
+\fIdestTable\fP маркировочная таблица, куда будут записаны пересчитанные значения\&. смещение должно быть равным 1!
+.RE
+.PP
+\fBИсключения\fP
+.RS 4
+\fIReduceException\fP Попытка пересчитать маркировочную таблицу на большую размерность или смещения таблиц не равны 1
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB152\fP
+.SH "Полный список свойств"
+.PP 
+.SS "int MihStatLibrary\&.Tables\&.MarkTable\&.Dimension\fR [get]\fP"
+
+.PP
+Размерность маркировочной таблицы 
+.PP
+См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB45\fP
+.SS "long MihStatLibrary\&.Tables\&.MarkTable\&.NmVectors\fR [get]\fP"
+
+.PP
+Количество учтенных последовательностей 
+.PP
+См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB50\fP
+.SS "int MihStatLibrary\&.Tables\&.MarkTable\&.SzShift\fR [get]\fP"
+
+.PP
+Смещение маркировочной таблицы 
+.PP
+См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB55\fP
+.SS "long [] MihStatLibrary\&.Tables\&.MarkTable\&.Table\fR [get]\fP"
+
+.PP
+Маркировочная таблица 
+.PP
+См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB40\fP
+.SH "Cобытия"
+.PP 
+.SS "EventHandler<string>? MihStatLibrary\&.Tables\&.MarkTable\&.ProcessChanged = null"
+
+.PP
+Событие изменения процесса обсчитывания 
+.PP
+См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB30\fP
+.SS "EventHandler<int>? MihStatLibrary\&.Tables\&.MarkTable\&.ProgressChanged = null"
+
+.PP
+Событие изменения прогресса обсчитывания 
+.PP
+См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB35\fP
+
+.SH "Автор"
+.PP 
+Автоматически создано Doxygen для MihStatLibrary из исходного текста\&.

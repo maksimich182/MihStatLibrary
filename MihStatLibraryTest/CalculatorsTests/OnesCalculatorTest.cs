@@ -1,7 +1,7 @@
 ﻿using MihStatLibrary;
 using MihStatLibrary.Calculators;
 using MihStatLibrary.Data;
-using MihStatLibrary.Histogram;
+using MihStatLibrary.Tables;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,29 +33,29 @@ namespace MihStatLibraryTest.OnesCalculatorTests
         }
 
         /// <summary>
-        /// Тест на вычисление количества единичных бит в гистограмме частот:
-        /// 1. Сравнивается количество единичных бит в гистограмме частот размерностью 16 (чтоб не осталось необсчитанных хвостов), 
+        /// Тест на вычисление количества единичных бит в маркировочной таблице:
+        /// 1. Сравнивается количество единичных бит в маркировочной таблице размерностью 16 (чтоб не осталось необсчитанных хвостов), 
         /// посчитанной на файле, содержащем 131 МБ байт 010100101 с размером файла в битах, 
         /// поделенном на 2 (в каждом байте половина бит единичные)
         /// </summary>
         [TestMethod]
-        public void CalculateOneInFreqHistogramTest()
+        public void CalculateOneInMarkTableTest()
         {
-            FreqHistogram fq = new FreqHistogram(16);
+            MarkTable fq = new MarkTable(16);
             fq.Calculate(DataFiles.File01010101_131MB);
             Assert.AreEqual(OnesCalculator.Calculate(fq), (new FileInfo(DataFiles.File01010101_131MB).Length * Tools.BITS_IN_BYTE) / 2);
         }
 
         /// <summary>
-        /// Тест на исключение при вычислении количества единичных бит в гистограмме частот с разными смещением и размерностью:
-        /// 1. Проверяется возникновение исключения при попытке посчитать количество единичных бит на гистограмме частот с разными значениями смещения и размерности
+        /// Тест на исключение при вычислении количества единичных бит в маркировочной таблице с разными смещением и размерностью:
+        /// 1. Проверяется возникновение исключения при попытке посчитать количество единичных бит на маркировочной таблице с разными значениями смещения и размерности
         /// </summary>
         [TestMethod]
-        public void CalculateOneInFreqHistogramWithDifferentShiftAndDimTest()
+        public void CalculateOneInMarkTableWithDifferentShiftAndDimTest()
         {
-            FreqHistogram fq = new FreqHistogram(16, 3);
+            MarkTable fq = new MarkTable(16, 3);
             fq.Calculate(DataFiles.File11110000_5MB);
-            Assert.ThrowsException<ProbabilityCalculatorException>(() => OnesCalculator.Calculate(fq));
+            Assert.ThrowsException<BitFrequencyCalculatorException>(() => OnesCalculator.Calculate(fq));
         }
 
         /// <summary>

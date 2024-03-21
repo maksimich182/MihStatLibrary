@@ -23,7 +23,7 @@ namespace MihStatLibraryTest
         public void TestGetBlockDataRandom()
         {
             BlockDataRandomSource blockData = new BlockDataRandomSource();
-            ProbabilityCalculator probabilityCalculator = new ProbabilityCalculator();
+            BitFrequencyCalculator probabilityCalculator = new BitFrequencyCalculator();
             byte[] data;
 
             int szBlockData = 40;
@@ -48,27 +48,27 @@ namespace MihStatLibraryTest
         public void TestGetBlockDataRandomProbability()
         {
             BlockData blockData = new BlockData(new BlockDataRandomSource(3));
-            ProbabilityCalculator probabilityCalculator = new ProbabilityCalculator();
+            BitFrequencyCalculator probabilityCalculator = new BitFrequencyCalculator();
 
             int szBlockData = 40;
             blockData.GetBlockData(szBlockData);
             probabilityCalculator.Calculate(blockData);
-            Assert.IsTrue(probabilityCalculator.ProbabilityOne < 0.6);
-            Assert.IsTrue(probabilityCalculator.ProbabilityZero < 0.6);
-            probabilityCalculator = new ProbabilityCalculator();
+            Assert.IsTrue(probabilityCalculator.FrequencyOne < 0.6);
+            Assert.IsTrue(probabilityCalculator.FrequencyZero < 0.6);
+            probabilityCalculator = new BitFrequencyCalculator();
 
             szBlockData = 4650;
             blockData.GetBlockData(szBlockData);
             probabilityCalculator.Calculate(blockData);
-            Assert.IsTrue(probabilityCalculator.ProbabilityOne < 0.6);
-            Assert.IsTrue(probabilityCalculator.ProbabilityZero < 0.6);
-            probabilityCalculator = new ProbabilityCalculator();
+            Assert.IsTrue(probabilityCalculator.FrequencyOne < 0.6);
+            Assert.IsTrue(probabilityCalculator.FrequencyZero < 0.6);
+            probabilityCalculator = new BitFrequencyCalculator();
 
             szBlockData = 8866652;
             blockData.GetBlockData(szBlockData);
             probabilityCalculator.Calculate(blockData);
-            Assert.IsTrue(probabilityCalculator.ProbabilityOne < 0.6);
-            Assert.IsTrue(probabilityCalculator.ProbabilityZero < 0.6);
+            Assert.IsTrue(probabilityCalculator.FrequencyOne < 0.6);
+            Assert.IsTrue(probabilityCalculator.FrequencyZero < 0.6);
         }
     }
 }

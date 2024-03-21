@@ -105,8 +105,11 @@ $(function(){initNavTree('class_mih_stat_library_test_1_1_block_data_random_sour
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Открытые члены</h2></td></tr>
 <tr class="memitem:aff287df0176b94bd9f9244c8f1fa583d" id="r_aff287df0176b94bd9f9244c8f1fa583d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff287df0176b94bd9f9244c8f1fa583d">TestGetBlockDataRandom</a> ()</td></tr>
-<tr class="memdesc:aff287df0176b94bd9f9244c8f1fa583d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тест получения блока данных:  <br /></td></tr>
+<tr class="memdesc:aff287df0176b94bd9f9244c8f1fa583d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тест получения случайного блока данных по размеру:  <br /></td></tr>
 <tr class="separator:aff287df0176b94bd9f9244c8f1fa583d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90e54830941916be8b341e14e1d873ba" id="r_a90e54830941916be8b341e14e1d873ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90e54830941916be8b341e14e1d873ba">TestGetBlockDataRandomProbability</a> ()</td></tr>
+<tr class="memdesc:a90e54830941916be8b341e14e1d873ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тест получения случайного блока данных по вероятности:  <br /></td></tr>
+<tr class="separator:a90e54830941916be8b341e14e1d873ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
 <div class="textblock"><p>Тесты класса BlockDataRandomSource. </p>
@@ -126,10 +129,31 @@ $(function(){initNavTree('class_mih_stat_library_test_1_1_block_data_random_sour
       </table>
 </div><div class="memdoc">
 
-<p>Тест получения блока данных: </p>
+<p>Тест получения случайного блока данных по размеру: </p>
 <ol type="1">
-<li>Размер полученных данных совпадает с ожидаемым</li>
-<li>TO DO (после реализации гистограммы частот): Полученные данные случайны </li>
+<li>Размер полученных данных совпадает с ожидаемым </li>
+</ol>
+
+</div>
+</div>
+<a id="a90e54830941916be8b341e14e1d873ba" name="a90e54830941916be8b341e14e1d873ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90e54830941916be8b341e14e1d873ba">&#9670;&#160;</a></span>TestGetBlockDataRandomProbability()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MihStatLibraryTest.BlockDataRandomSourceTest.TestGetBlockDataRandomProbability </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Тест получения случайного блока данных по вероятности: </p>
+<ol type="1">
+<li>Генерируются случайные блоки данных разного размера с XOR-ом 3. На полученных данных рассчитываются вероятности знаков 0 и 1. Проверяется, что полученные вероятности меньше 0.6 </li>
 </ol>
 
 </div>
