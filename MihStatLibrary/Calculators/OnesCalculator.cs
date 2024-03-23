@@ -102,5 +102,23 @@ namespace MihStatLibrary.Calculators
             }
             return result;
         }
+
+        /// <summary>
+		/// Рассчет количества единичных бит в <see cref="long"/>
+		/// </summary>
+		/// <param name="data">Данные</param>
+		/// <returns>Количество единичных бит</returns>
+		static public long Calculate(long data)
+        {
+            long result = 0;
+            long dataBuffer = data;
+            while(dataBuffer != 0)
+            {
+                if ((data & 0x1) == 1)
+                    dataBuffer += 1;
+
+            }
+            return result;
+        }
     }
 }
