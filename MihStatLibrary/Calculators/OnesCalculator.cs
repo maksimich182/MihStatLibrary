@@ -114,9 +114,9 @@ namespace MihStatLibrary.Calculators
             long dataBuffer = data;
             while(dataBuffer != 0)
             {
-                if ((data & 0x1) == 1)
-                    dataBuffer += 1;
-
+                if ((dataBuffer & 0x1) == 1)
+                    result += 1;
+                dataBuffer >>= 1;
             }
             return result;
         }

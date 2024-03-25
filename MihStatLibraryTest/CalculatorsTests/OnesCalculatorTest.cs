@@ -87,5 +87,23 @@ namespace MihStatLibraryTest.OnesCalculatorTests
             
             Assert.AreEqual(nmOnes * 2, new FileInfo(DataFiles.File01010101_131MB).Length * Tools.BITS_IN_BYTE);
         }
+
+        /// <summary>
+        /// Тест на вычисление количества единичных бит в <see cref="long"/>:
+        /// 1. Вычисление количества единичных бит в числах типа <see cref="long"/>.
+        /// Сравниваются полученные значение со значениями, посчитанными вручную
+        /// </summary>
+        [TestMethod]
+        public void CalculateOneLongDataTest()
+        {
+            long data = 345;
+            Assert.AreEqual(OnesCalculator.Calculate(data), 5);
+
+            data = 45_688_764;
+            Assert.AreEqual(OnesCalculator.Calculate(data), 15);
+
+            data = 864_534_354_384;
+            Assert.AreEqual(OnesCalculator.Calculate(data), 17);
+        }
     }
 }
