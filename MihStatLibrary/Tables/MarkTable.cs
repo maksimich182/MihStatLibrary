@@ -179,11 +179,11 @@ namespace MihStatLibrary.Tables
         /// <summary>
         /// Функция создания маркировочной таблицы на основании маркировочной таблицы большей размерности. ФУНКЦИЯ РАБОТАЕТ ТОЛЬКО СО СМЕЩЕНИЕМ 1! 
         /// </summary>
-        /// <param name="pDestDimension">Размерность новой маркировочной таблицы</param>
+        /// <param name="destDimension">Размерность новой маркировочной таблицы</param>
         /// <returns>Новая маркировочная таблица с пересчитанными значениями и смещением 1</returns>
-        public MarkTable Reduce(int pDestDimension)
+        public MarkTable Reduce(int destDimension)
         {
-            MarkTable resultTable = new MarkTable(pDestDimension, this._szShift);
+            MarkTable resultTable = new MarkTable(destDimension, this._szShift);
             this.Reduce(resultTable);
 
             return resultTable;
