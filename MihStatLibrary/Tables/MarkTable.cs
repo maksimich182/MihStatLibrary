@@ -56,7 +56,7 @@ namespace MihStatLibrary.Tables
 
 
         /// <summary>
-        /// Конструктор класса маркировочной таблицыт без зацепления
+        /// Конструктор класса маркировочной таблицы без зацепления
         /// </summary>
         /// <param name="dimension">Размерность векторов маркировочной таблицы</param>
         public MarkTable(int dimension)
