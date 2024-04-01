@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -53,6 +54,37 @@ namespace MihStatLibrary
         public static int GetPercent(long number, long maxNumber)
         {
             return (int)((double)number / maxNumber) * 100;
+        }
+
+        /// <summary>
+        /// Функция для деления больших чисел <see cref="BigInteger"/>
+        /// </summary>
+        /// <param name="dividend">Делимое</param>
+        /// <param name="divisor">Дулитель</param>
+        /// <returns>Результат деления в <see cref="double"/></returns>
+        public static double BigIntDevider(BigInteger dividend, BigInteger divisor)
+        {
+            const long numberForDivision = 1000000000000000000;
+            double result = 0;
+            BigInteger remainder;
+            BigInteger intResDiv = BigInteger.DivRem(dividend, divisor, out remainder);
+            result = (double)intResDiv + ((double)BigInteger.Divide((remainder * numberForDivision), divisor) / numberForDivision);
+            return result;
+        }
+
+        /// <summary>
+        /// Функция для деления числа <see cref="double"/> на число <see cref="BigInteger"/>
+        /// </summary>
+        /// <param name="dividend">Делимое</param>
+        /// <param name="divisor">Дулитель</param>
+        /// <returns>Результат деления в <see cref="double"/></returns>
+        public static double BigIntDevider(double dividend, BigInteger divisor)
+        {
+            const long numberForDivision = 1000000000000000000;
+            BigInteger divident = (BigInteger)(dividend * numberForDivision);
+            double result = BigIntDevider(divident, divisor);
+            result /= numberForDivision;
+            return result;
         }
     }
 }
