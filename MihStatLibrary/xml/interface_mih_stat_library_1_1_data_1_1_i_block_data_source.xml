@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="ru">
+  <compounddef id="interface_mih_stat_library_1_1_data_1_1_i_block_data_source" kind="interface" language="C#" prot="public">
+    <compoundname>MihStatLibrary::Data::IBlockDataSource</compoundname>
+    <derivedcompoundref refid="class_mih_stat_library_1_1_data_1_1_block_data_file_source" prot="public" virt="non-virtual">MihStatLibrary.Data.BlockDataFileSource</derivedcompoundref>
+    <derivedcompoundref refid="class_mih_stat_library_1_1_data_1_1_block_data_random_source" prot="public" virt="non-virtual">MihStatLibrary.Data.BlockDataRandomSource</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_mih_stat_library_1_1_data_1_1_i_block_data_source_1af2eb27a45edbd4dfc94fc76b6328b4c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>byte[]</type>
+        <definition>byte[] MihStatLibrary.Data.IBlockDataSource.GetBlockData</definition>
+        <argsstring>(int szBlock)</argsstring>
+        <name>GetBlockData</name>
+        <qualifiedname>MihStatLibrary.Data.IBlockDataSource.GetBlockData</qualifiedname>
+        <reimplementedby refid="class_mih_stat_library_1_1_data_1_1_block_data_file_source_1acfc35f26e4868eebcc0112b82995261a">GetBlockData</reimplementedby>
+        <reimplementedby refid="class_mih_stat_library_1_1_data_1_1_block_data_random_source_1a7881b8686223925ca1c945ad9b6656a6">GetBlockData</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>szBlock</declname>
+        </param>
+        <briefdescription>
+<para>Заполняет блок данными из источника </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>szBlock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Размер запрашиваемого блока данных в байтах</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data/IBlockDataSource.cs" line="18" column="21"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Интерфейс источника получения блока данных </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MihStatLibrary.Data.IBlockDataSource</label>
+        <link refid="interface_mih_stat_library_1_1_data_1_1_i_block_data_source"/>
+      </node>
+      <node id="2">
+        <label>MihStatLibrary.Data.BlockDataFileSource</label>
+        <link refid="class_mih_stat_library_1_1_data_1_1_block_data_file_source"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MihStatLibrary.Data.BlockDataRandomSource</label>
+        <link refid="class_mih_stat_library_1_1_data_1_1_block_data_random_source"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="Data/IBlockDataSource.cs" line="12" column="22" bodyfile="Data/IBlockDataSource.cs" bodystart="13" bodyend="19"/>
+    <listofallmembers>
+      <member refid="interface_mih_stat_library_1_1_data_1_1_i_block_data_source_1af2eb27a45edbd4dfc94fc76b6328b4c7" prot="public" virt="non-virtual"><scope>MihStatLibrary::Data::IBlockDataSource</scope><name>GetBlockData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="ru">
+  <compounddef id="class_mih_stat_library_1_1_data_1_1_block_data_random_source" kind="class" language="C#" prot="public">
+    <compoundname>MihStatLibrary::Data::BlockDataRandomSource</compoundname>
+    <basecompoundref refid="interface_mih_stat_library_1_1_data_1_1_i_block_data_source" prot="public" virt="non-virtual">MihStatLibrary.Data.IBlockDataSource</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_mih_stat_library_1_1_data_1_1_block_data_random_source_1acb87e0429c4bb8e47eb6fc9160259cd7" prot="private" static="no" mutable="no">
+        <type>readonly Random</type>
+        <definition>readonly Random MihStatLibrary.Data.BlockDataRandomSource._rnd</definition>
+        <argsstring></argsstring>
+        <name>_rnd</name>
+        <qualifiedname>MihStatLibrary.Data.BlockDataRandomSource._rnd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data/BlockDataRandomSource.cs" line="15" column="33" bodyfile="Data/BlockDataRandomSource.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mih_stat_library_1_1_data_1_1_block_data_random_source_1a0bbd7b0eb63ce3af9732fe27628df093" prot="private" static="no" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int MihStatLibrary.Data.BlockDataRandomSource._nmXor</definition>
+        <argsstring></argsstring>
+        <name>_nmXor</name>
+        <qualifiedname>MihStatLibrary.Data.BlockDataRandomSource._nmXor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data/BlockDataRandomSource.cs" line="16" column="30" bodyfile="Data/BlockDataRandomSource.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_mih_stat_library_1_1_data_1_1_block_data_random_source_1a58bbd174715732423661e2ee7f1dcd9a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MihStatLibrary.Data.BlockDataRandomSource.BlockDataRandomSource</definition>
+        <argsstring>(int nmXor=0)</argsstring>
+        <name>BlockDataRandomSource</name>
+        <qualifiedname>MihStatLibrary.Data.BlockDataRandomSource.BlockDataRandomSource</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>nmXor</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Конструктор, создающий элемент класса BlockDataRandomSource </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nmXor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Количество XOR-ов значений из Random для получения одного байта случайной последовательности</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data/BlockDataRandomSource.cs" line="22" column="16" bodyfile="Data/BlockDataRandomSource.cs" bodystart="22" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mih_stat_library_1_1_data_1_1_block_data_random_source_1a7881b8686223925ca1c945ad9b6656a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>byte[]</type>
+        <definition>byte[] MihStatLibrary.Data.BlockDataRandomSource.GetBlockData</definition>
+        <argsstring>(int szBlock)</argsstring>
+        <name>GetBlockData</name>
+        <qualifiedname>MihStatLibrary.Data.BlockDataRandomSource.GetBlockData</qualifiedname>
+        <reimplements refid="interface_mih_stat_library_1_1_data_1_1_i_block_data_source_1af2eb27a45edbd4dfc94fc76b6328b4c7">GetBlockData</reimplements>
+        <param>
+          <type>int</type>
+          <declname>szBlock</declname>
+        </param>
+        <briefdescription>
+<para>Создает массив случайных байт, полученных путем XOR-а определенного количества байт из Random </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>szBlock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Размер возвращаемого блока данных</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Блок данных</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data/BlockDataRandomSource.cs" line="33" column="21" bodyfile="Data/BlockDataRandomSource.cs" bodystart="33" bodyend="48"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Источник получения случайных данных. Случайная последовательность получается путем XOR-а определенного количества случайных значений. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>IBlockDataSource</label>
+        <link refid="interface_mih_stat_library_1_1_data_1_1_i_block_data_source"/>
+      </node>
+      <node id="1">
+        <label>MihStatLibrary.Data.BlockDataRandomSource</label>
+        <link refid="class_mih_stat_library_1_1_data_1_1_block_data_random_source"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>IBlockDataSource</label>
+        <link refid="interface_mih_stat_library_1_1_data_1_1_i_block_data_source"/>
+      </node>
+      <node id="1">
+        <label>MihStatLibrary.Data.BlockDataRandomSource</label>
+        <link refid="class_mih_stat_library_1_1_data_1_1_block_data_random_source"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Data/BlockDataRandomSource.cs" line="13" column="11" bodyfile="Data/BlockDataRandomSource.cs" bodystart="14" bodyend="49"/>
+    <listofallmembers>
+      <member refid="class_mih_stat_library_1_1_data_1_1_block_data_random_source_1a0bbd7b0eb63ce3af9732fe27628df093" prot="private" virt="non-virtual"><scope>MihStatLibrary::Data::BlockDataRandomSource</scope><name>_nmXor</name></member>
+      <member refid="class_mih_stat_library_1_1_data_1_1_block_data_random_source_1acb87e0429c4bb8e47eb6fc9160259cd7" prot="private" virt="non-virtual"><scope>MihStatLibrary::Data::BlockDataRandomSource</scope><name>_rnd</name></member>
+      <member refid="class_mih_stat_library_1_1_data_1_1_block_data_random_source_1a58bbd174715732423661e2ee7f1dcd9a" prot="public" virt="non-virtual"><scope>MihStatLibrary::Data::BlockDataRandomSource</scope><name>BlockDataRandomSource</name></member>
+      <member refid="class_mih_stat_library_1_1_data_1_1_block_data_random_source_1a7881b8686223925ca1c945ad9b6656a6" prot="public" virt="non-virtual"><scope>MihStatLibrary::Data::BlockDataRandomSource</scope><name>GetBlockData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

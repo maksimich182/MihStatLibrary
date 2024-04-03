@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="ru">
+  <compounddef id="namespace_mih_stat_library_1_1_calculators" kind="namespace" language="C#">
+    <compoundname>MihStatLibrary::Calculators</compoundname>
+    <innerclass refid="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator" prot="public">MihStatLibrary::Calculators::BitFrequencyCalculator</innerclass>
+    <innerclass refid="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_exception" prot="public">MihStatLibrary::Calculators::BitFrequencyCalculatorException</innerclass>
+    <innerclass refid="class_mih_stat_library_1_1_calculators_1_1_ones_calculator" prot="public">MihStatLibrary::Calculators::OnesCalculator</innerclass>
+    <innerclass refid="class_mih_stat_library_1_1_calculators_1_1_ones_calculator_exception" prot="public">MihStatLibrary::Calculators::OnesCalculatorException</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Calculators/BitFrequencyCalculator.cs" line="10" column="1"/>
+  </compounddef>
+</doxygen>

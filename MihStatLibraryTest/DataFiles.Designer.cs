@@ -158,5 +158,14 @@ namespace MihStatLibraryTest {
                 return ResourceManager.GetString("FileRandom128MB", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на ..\..\..\Resources\random_1GB.
+        /// </summary>
+        internal static string FileRandom1GB {
+            get {
+                return ResourceManager.GetString("FileRandom1GB", resourceCulture);
+            }
+        }
     }
 }

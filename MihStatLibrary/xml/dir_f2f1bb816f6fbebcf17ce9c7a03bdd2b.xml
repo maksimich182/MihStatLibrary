@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="ru">
+  <compounddef id="dir_f2f1bb816f6fbebcf17ce9c7a03bdd2b" kind="dir">
+    <compoundname>Tables</compoundname>
+    <innerfile refid="_mark_table_8cs">MarkTable.cs</innerfile>
+    <innerfile refid="_mark_table_exceptions_8cs">MarkTableExceptions.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tables/"/>
+  </compounddef>
+</doxygen>

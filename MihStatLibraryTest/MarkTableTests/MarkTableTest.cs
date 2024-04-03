@@ -4,6 +4,7 @@ using MihStatLibrary.Data;
 using MihStatLibrary.Tables;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -193,5 +194,27 @@ namespace MihStatLibraryTest.MarkTableTests
             Assert.IsTrue(isProgressEventHandle);
             Assert.IsTrue(isProcessEventHandle);
         }
+
+        //[TestMethod] ToDo
+        //public async Task MarkTableAsyncCalculateTest()
+        //{
+        //    Stopwatch sw = Stopwatch.StartNew();
+        //    MarkTable markTableAsync = new MarkTable(7);
+        //    CancellationTokenSource cts = new CancellationTokenSource();
+        //    CancellationToken ct = cts.Token;
+        //    await markTableAsync.CalculateAsync(DataFiles.FileRandom1GB, ct);
+        //    long sum = 0;
+        //    foreach(var val in markTableAsync.Table)
+        //    {
+        //        sum += val;
+        //    }
+        //    sw.Stop();
+        //    Debug.WriteLine($"Async: {sw.ToString()}");
+        //    sw.Restart();
+        //    MarkTable markTableSync = new MarkTable(7);
+        //    markTableSync.Calculate(DataFiles.FileRandom1GB);
+        //    Debug.WriteLine($"Sync: {sw.ToString()}");
+        //    Assert.IsTrue(markTableAsync.Equals(markTableSync));
+        //}
     }
 }

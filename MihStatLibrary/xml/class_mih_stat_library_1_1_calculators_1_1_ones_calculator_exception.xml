@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="ru">
+  <compounddef id="class_mih_stat_library_1_1_calculators_1_1_ones_calculator_exception" kind="class" language="C#" prot="public">
+    <compoundname>MihStatLibrary::Calculators::OnesCalculatorException</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Exception</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_mih_stat_library_1_1_calculators_1_1_ones_calculator_exception_1affbad9ee2f18bc891ca5be5cb502988d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MihStatLibrary.Calculators.OnesCalculatorException.OnesCalculatorException</definition>
+        <argsstring>(string pMessage)</argsstring>
+        <name>OnesCalculatorException</name>
+        <qualifiedname>MihStatLibrary.Calculators.OnesCalculatorException.OnesCalculatorException</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>pMessage</declname>
+        </param>
+        <briefdescription>
+<para>Исключение, возникающее при попытке посчитать количество единиц на маркировочной таблице со смещением отличным от размерности </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Calculators/CalculatorsExceptions.cs" line="17" column="16" bodyfile="Calculators/CalculatorsExceptions.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Исключение, возникающее при попытке посчитать количество единиц на маркировочной таблице со смещением отличным от размерности </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Exception</label>
+      </node>
+      <node id="1">
+        <label>MihStatLibrary.Calculators.OnesCalculatorException</label>
+        <link refid="class_mih_stat_library_1_1_calculators_1_1_ones_calculator_exception"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Exception</label>
+      </node>
+      <node id="1">
+        <label>MihStatLibrary.Calculators.OnesCalculatorException</label>
+        <link refid="class_mih_stat_library_1_1_calculators_1_1_ones_calculator_exception"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Calculators/CalculatorsExceptions.cs" line="12" column="11" bodyfile="Calculators/CalculatorsExceptions.cs" bodystart="13" bodyend="18"/>
+    <listofallmembers>
+      <member refid="class_mih_stat_library_1_1_calculators_1_1_ones_calculator_exception_1affbad9ee2f18bc891ca5be5cb502988d" prot="public" virt="non-virtual"><scope>MihStatLibrary::Calculators::OnesCalculatorException</scope><name>OnesCalculatorException</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

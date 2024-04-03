@@ -6,6 +6,7 @@ using System.Linq;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace MihStatLibrary.Tables
 {
@@ -23,6 +24,7 @@ namespace MihStatLibrary.Tables
         private BigInteger _remain;
         private int _szRemain;
         private long _nmVectors;
+        private object _locker;
 
         /// <summary>
         /// Событие изменения процесса обсчитывания
@@ -68,6 +70,7 @@ namespace MihStatLibrary.Tables
             _remain = 0;
             _szRemain = 0;
             _nmVectors = 0;
+            _locker = new object();
         }
 
         /// <summary>
@@ -102,10 +105,13 @@ namespace MihStatLibrary.Tables
 
             while (countReadElements < data.SzBlockData)
             {
-                _getDataForCalculate(data, ref dataBuffer, ref szBuffer, ref countReadElements);
-                _calculateData(ref dataBuffer, ref szBuffer);
-                if (this.ProgressChanged != null)
-                    this.ProgressChanged(this, Tools.GetPercent(countReadElements, data.SzBlockData));
+                lock (_locker)
+                {
+                    _getDataForCalculate(data, ref dataBuffer, ref szBuffer, ref countReadElements);
+                    _calculateData(ref dataBuffer, ref szBuffer);
+                }
+                
+                this.ProgressChanged?.Invoke(this, Tools.GetPercent(countReadElements, data.SzBlockData));
             }
 
             _remain = dataBuffer;
@@ -127,7 +133,8 @@ namespace MihStatLibrary.Tables
         /// Подсчет маркировочной таблицы по данным файла
         /// </summary>
         /// <param name="fileName">Имя файла</param>
-        public void Calculate(string fileName)
+        /// <param name="token">Токен отмены рассчета маркировочной таблицы. При срабатывании выполнение завершается перед получением очередного болока данных</param>
+        public void Calculate(string fileName, CancellationToken? token = null)
         {
             FileStream dataStream = new FileStream(fileName, FileMode.Open);
             BlockData blockData = new BlockData(new BlockDataFileSource(dataStream));
@@ -135,14 +142,52 @@ namespace MihStatLibrary.Tables
             double nmBlocks = Math.Ceiling((double)dataStream.Length / Tools.SIZE_BLOCK_BYTES);
             for (int i = 0; i < nmBlocks; i++)
             {
+                if (token?.IsCancellationRequested ?? false)
+                {
+                    dataStream.Close();
+                    return;
+                }
+
                 blockData.GetBlockData(Tools.SIZE_BLOCK_BYTES);
                 Calculate(blockData);
-                if(this.ProcessChanged != null)
-                    this.ProcessChanged(this, $"Маркировочная таблица: {i + 1} из {nmBlocks}");
+                this.ProcessChanged?.Invoke(this, $"Маркировочная таблица: {i + 1} из {nmBlocks}");
             }
             dataStream.Close();
-
         }
+
+        /// <summary>
+        /// Подсчет маркировочной таблицы по данным файла ToDo
+        /// </summary>
+        /// <param name="fileName">Имя файла</param>
+        //public async Task CalculateAsync(string fileName, CancellationToken? token = null)
+        //{
+        //    FileStream dataStream = new FileStream(fileName, FileMode.Open);
+        //    BlockData blockData = new BlockData(new BlockDataFileSource(dataStream));
+
+        //    int szBlock = (int)(Math.Ceiling((double)(Tools.SIZE_BLOCK_BYTES * Tools.BITS_IN_BYTE) / (_dimension * Tools.BITS_IN_BYTE))
+        //        * (_dimension * Tools.BITS_IN_BYTE)) / Tools.BITS_IN_BYTE;
+        //    double nmBlocks = Math.Ceiling((double)dataStream.Length / szBlock);
+
+        //    List<Task> tasks = new List<Task>();
+        //    for (int i = 0; i < nmBlocks - 1; i++)
+        //    {
+        //        Task task = new Task(() =>
+        //        {
+        //            blockData.GetBlockData(szBlock);
+        //            BlockData blockDataTask = (BlockData)blockData.Clone();
+        //            Calculate(blockDataTask);
+        //        }, token ?? CancellationToken.None);
+        //        tasks.Add(task);
+        //        task.Start();
+        //        this.ProcessChanged?.Invoke(this, $"Маркировочная таблица: {i + 1} из {nmBlocks}"); //TODO
+        //    }
+        //    await Task.WhenAll(tasks.ToArray());
+
+        //    blockData.GetBlockData(szBlock);
+        //    Calculate(blockData);
+
+        //    dataStream.Close();
+        //}
 
         /// <summary>
         /// Функция пересчета маркировочной таблицы в таблицу с меньшей размерностью векторов. ФУНКЦИЯ РАБОТАЕТ ТОЛЬКО СО СМЕЩЕНИЕМ 1!
@@ -206,7 +251,7 @@ namespace MihStatLibrary.Tables
                 _table[(long)((dataBuffer & (_mask << offsetMask)) >> offsetMask)]++;
                 _nmVectors++;
                 //dataBuffer >>= _szShift;
-                dataBuffer &= maskRemain; 
+                dataBuffer &= maskRemain;
                 szBuffer -= _szShift;
             }
         }
@@ -241,14 +286,14 @@ namespace MihStatLibrary.Tables
         {
             var other = obj as MarkTable;
 
-            if(other == null)
+            if (other == null)
                 return false;
 
             if (_dimension != other._dimension || _szShift != other._szShift || _mask != other._mask
                 || _remain != other._remain || _szRemain != other._szRemain || _nmVectors != other._nmVectors)
                 return false;
 
-            for(int i = 0; i < _table.Length; i++)
+            for (int i = 0; i < _table.Length; i++)
             {
                 if (_table[i] != other._table[i]) return false;
             }

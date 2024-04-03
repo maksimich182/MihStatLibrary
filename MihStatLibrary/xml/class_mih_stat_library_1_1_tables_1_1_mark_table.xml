@@ -1,0 +1,664 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="ru">
+  <compounddef id="class_mih_stat_library_1_1_tables_1_1_mark_table" kind="class" language="C#" prot="public">
+    <compoundname>MihStatLibrary::Tables::MarkTable</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_mih_stat_library_1_1_tables_1_1_mark_table_1af30521df8879f6830a1e1e4090024b0b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MihStatLibrary.Tables.MarkTable._dimension</definition>
+        <argsstring></argsstring>
+        <name>_dimension</name>
+        <qualifiedname>MihStatLibrary.Tables.MarkTable._dimension</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tables/MarkTable.cs" line="19" column="21" bodyfile="Tables/MarkTable.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mih_stat_library_1_1_tables_1_1_mark_table_1ab0b90b07b7228c4ce6463e0afc63ca92" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MihStatLibrary.Tables.MarkTable._szShift</definition>
+        <argsstring></argsstring>
+        <name>_szShift</name>
+        <qualifiedname>MihStatLibrary.Tables.MarkTable._szShift</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tables/MarkTable.cs" line="20" column="21" bodyfile="Tables/MarkTable.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mih_stat_library_1_1_tables_1_1_mark_table_1aecda996d868b3abd4efca326353104c1" prot="private" static="no" mutable="no">
+        <type>long</type>
+        <definition>long MihStatLibrary.Tables.MarkTable._mask</definition>
+        <argsstring></argsstring>
+        <name>_mask</name>
+        <qualifiedname>MihStatLibrary.Tables.MarkTable._mask</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tables/MarkTable.cs" line="21" column="22" bodyfile="Tables/MarkTable.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mih_stat_library_1_1_tables_1_1_mark_table_1a7caec7d39f8646bd2e3fee31f60371b9" prot="private" static="no" mutable="no">
+        <type>long[]</type>
+        <definition>long [] MihStatLibrary.Tables.MarkTable._table</definition>
+        <argsstring></argsstring>
+        <name>_table</name>
+        <qualifiedname>MihStatLibrary.Tables.MarkTable._table</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tables/MarkTable.cs" line="22" column="22" bodyfile="Tables/MarkTable.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mih_stat_library_1_1_tables_1_1_mark_table_1ad819ad7c7a18d2423b06ef6c42a42efa" prot="private" static="no" mutable="no">
+        <type>BigInteger</type>
+        <definition>BigInteger MihStatLibrary.Tables.MarkTable._remain</definition>
+        <argsstring></argsstring>
+        <name>_remain</name>
+        <qualifiedname>MihStatLibrary.Tables.MarkTable._remain</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tables/MarkTable.cs" line="23" column="28" bodyfile="Tables/MarkTable.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mih_stat_library_1_1_tables_1_1_mark_table_1ad888a7b36a25348a273da42315d63bb9" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MihStatLibrary.Tables.MarkTable._szRemain</definition>
+        <argsstring></argsstring>
+        <name>_szRemain</name>
+        <qualifiedname>MihStatLibrary.Tables.MarkTable._szRemain</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tables/MarkTable.cs" line="24" column="21" bodyfile="Tables/MarkTable.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mih_stat_library_1_1_tables_1_1_mark_table_1a9b2071638681cc91bcb6f3adacf2d7b4" prot="private" static="no" mutable="no">
+        <type>long</type>
+        <definition>long MihStatLibrary.Tables.MarkTable._nmVectors</definition>
+        <argsstring></argsstring>
+        <name>_nmVectors</name>
+        <qualifiedname>MihStatLibrary.Tables.MarkTable._nmVectors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tables/MarkTable.cs" line="25" column="22" bodyfile="Tables/MarkTable.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mih_stat_library_1_1_tables_1_1_mark_table_1a00d83cb7a3bbd71830abeed35daee9ec" prot="private" static="no" mutable="no">
+        <type>object</type>
+        <definition>object MihStatLibrary.Tables.MarkTable._locker</definition>
+        <argsstring></argsstring>
+        <name>_locker</name>
+        <qualifiedname>MihStatLibrary.Tables.MarkTable._locker</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tables/MarkTable.cs" line="26" column="24" bodyfile="Tables/MarkTable.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="event">
+      <memberdef kind="event" id="class_mih_stat_library_1_1_tables_1_1_mark_table_1acd0e989389d7767a743c15893e3847f0" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>EventHandler&lt; string &gt;?</type>
+        <definition>EventHandler&lt;string&gt;? MihStatLibrary.Tables.MarkTable.ProcessChanged</definition>
+        <argsstring></argsstring>
+        <name>ProcessChanged</name>
+        <qualifiedname>MihStatLibrary.Tables.MarkTable.ProcessChanged</qualifiedname>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Событие изменения процесса обсчитывания </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tables/MarkTable.cs" line="31" column="35" bodyfile="Tables/MarkTable.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_mih_stat_library_1_1_tables_1_1_mark_table_1a7fdbf6d0beb9937f96fbcdcc12fed266" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>EventHandler&lt; int &gt;?</type>
+        <definition>EventHandler&lt;int&gt;? MihStatLibrary.Tables.MarkTable.ProgressChanged</definition>
+        <argsstring></argsstring>
+        <name>ProgressChanged</name>
+        <qualifiedname>MihStatLibrary.Tables.MarkTable.ProgressChanged</qualifiedname>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Событие изменения прогресса обсчитывания </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tables/MarkTable.cs" line="36" column="35" bodyfile="Tables/MarkTable.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_mih_stat_library_1_1_tables_1_1_mark_table_1a725f6b347e8c02f60dbe51e5dcb63f7f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>long[]</type>
+        <definition>long [] MihStatLibrary.Tables.MarkTable.Table</definition>
+        <argsstring></argsstring>
+        <name>Table</name>
+        <qualifiedname>MihStatLibrary.Tables.MarkTable.Table</qualifiedname>
+        <briefdescription>
+<para>Маркировочная таблица </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tables/MarkTable.cs" line="41" column="21" bodyfile="Tables/MarkTable.cs" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="property" id="class_mih_stat_library_1_1_tables_1_1_mark_table_1a6d58a2ea12471be935d4da80268c4438" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int MihStatLibrary.Tables.MarkTable.Dimension</definition>
+        <argsstring></argsstring>
+        <name>Dimension</name>
+        <qualifiedname>MihStatLibrary.Tables.MarkTable.Dimension</qualifiedname>
+        <briefdescription>
+<para>Размерность маркировочной таблицы </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tables/MarkTable.cs" line="46" column="20" bodyfile="Tables/MarkTable.cs" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="property" id="class_mih_stat_library_1_1_tables_1_1_mark_table_1ae7060e7e7555b7cac43a7a8b314e8f03" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>long</type>
+        <definition>long MihStatLibrary.Tables.MarkTable.NmVectors</definition>
+        <argsstring></argsstring>
+        <name>NmVectors</name>
+        <qualifiedname>MihStatLibrary.Tables.MarkTable.NmVectors</qualifiedname>
+        <briefdescription>
+<para>Количество учтенных последовательностей </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tables/MarkTable.cs" line="51" column="21" bodyfile="Tables/MarkTable.cs" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="property" id="class_mih_stat_library_1_1_tables_1_1_mark_table_1ac5915c8920a73941b655293465d1264f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int MihStatLibrary.Tables.MarkTable.SzShift</definition>
+        <argsstring></argsstring>
+        <name>SzShift</name>
+        <qualifiedname>MihStatLibrary.Tables.MarkTable.SzShift</qualifiedname>
+        <briefdescription>
+<para>Смещение маркировочной таблицы </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tables/MarkTable.cs" line="56" column="20" bodyfile="Tables/MarkTable.cs" bodystart="56" bodyend="56"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_mih_stat_library_1_1_tables_1_1_mark_table_1aada6be9189577b1b257ae9ef75e0cbdf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MihStatLibrary.Tables.MarkTable.MarkTable</definition>
+        <argsstring>(int dimension)</argsstring>
+        <name>MarkTable</name>
+        <qualifiedname>MihStatLibrary.Tables.MarkTable.MarkTable</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>dimension</declname>
+        </param>
+        <briefdescription>
+<para>Конструктор класса маркировочной таблицы без зацепления </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dimension</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Размерность векторов маркировочной таблицы</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tables/MarkTable.cs" line="63" column="16" bodyfile="Tables/MarkTable.cs" bodystart="63" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mih_stat_library_1_1_tables_1_1_mark_table_1a46b7ec33c3edf9a778052c0485c1753d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MihStatLibrary.Tables.MarkTable.MarkTable</definition>
+        <argsstring>(int dimension, int szShift)</argsstring>
+        <name>MarkTable</name>
+        <qualifiedname>MihStatLibrary.Tables.MarkTable.MarkTable</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>dimension</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>szShift</declname>
+        </param>
+        <briefdescription>
+<para>Конструктор класса маркировочной таблицы с зацеплением </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dimension</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Размерность векторов маркировочной таблицы</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>szShift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Размер смещения</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>InvalidShiftException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Попытка задать смещение больше размерности</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tables/MarkTable.cs" line="81" column="16" bodyfile="Tables/MarkTable.cs" bodystart="81" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mih_stat_library_1_1_tables_1_1_mark_table_1aa86ebfc7ac81f2ca32e80f1fe21bd052" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MihStatLibrary.Tables.MarkTable.Calculate</definition>
+        <argsstring>(BlockData data)</argsstring>
+        <name>Calculate</name>
+        <qualifiedname>MihStatLibrary.Tables.MarkTable.Calculate</qualifiedname>
+        <param>
+          <type><ref refid="class_mih_stat_library_1_1_data_1_1_block_data" kindref="compound">BlockData</ref></type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Подсчет маркировочной таблицы по блоку данных </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Блок данных</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tables/MarkTable.cs" line="92" column="21" bodyfile="Tables/MarkTable.cs" bodystart="92" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mih_stat_library_1_1_tables_1_1_mark_table_1a727c4f62770dd09f5f052b9da39c2cb0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MihStatLibrary.Tables.MarkTable.Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
+        <qualifiedname>MihStatLibrary.Tables.MarkTable.Clear</qualifiedname>
+        <briefdescription>
+<para>Обнуление маркировочной таблицы </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tables/MarkTable.cs" line="123" column="21" bodyfile="Tables/MarkTable.cs" bodystart="123" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mih_stat_library_1_1_tables_1_1_mark_table_1a5e7a4194287173a37a52729826e720f3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MihStatLibrary.Tables.MarkTable.Calculate</definition>
+        <argsstring>(string fileName)</argsstring>
+        <name>Calculate</name>
+        <qualifiedname>MihStatLibrary.Tables.MarkTable.Calculate</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+<para>Подсчет маркировочной таблицы по данным файла </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Имя файла</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tables/MarkTable.cs" line="135" column="21" bodyfile="Tables/MarkTable.cs" bodystart="135" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mih_stat_library_1_1_tables_1_1_mark_table_1ad93cc292848f833411d491d6aaaa0dcc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task MihStatLibrary.Tables.MarkTable.CalculateAsync</definition>
+        <argsstring>(string fileName, CancellationToken? token=null)</argsstring>
+        <name>CalculateAsync</name>
+        <qualifiedname>MihStatLibrary.Tables.MarkTable.CalculateAsync</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type>CancellationToken?</type>
+          <declname>token</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+<para>Подсчет маркировочной таблицы по данным файла </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Имя файла</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tables/MarkTable.cs" line="154" column="27" bodyfile="Tables/MarkTable.cs" bodystart="154" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mih_stat_library_1_1_tables_1_1_mark_table_1a51db56e57901578918c4dd1a4a9700da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MihStatLibrary.Tables.MarkTable.Reduce</definition>
+        <argsstring>(MarkTable destTable)</argsstring>
+        <name>Reduce</name>
+        <qualifiedname>MihStatLibrary.Tables.MarkTable.Reduce</qualifiedname>
+        <param>
+          <type><ref refid="class_mih_stat_library_1_1_tables_1_1_mark_table" kindref="compound">MarkTable</ref></type>
+          <declname>destTable</declname>
+        </param>
+        <briefdescription>
+<para>Функция пересчета маркировочной таблицы в таблицу с меньшей размерностью векторов. ФУНКЦИЯ РАБОТАЕТ ТОЛЬКО СО СМЕЩЕНИЕМ 1! </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>destTable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>маркировочная таблица, куда будут записаны пересчитанные значения. смещение должно быть равным 1!</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ReduceException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Попытка пересчитать маркировочную таблицу на большую размерность или смещения таблиц не равны 1</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tables/MarkTable.cs" line="189" column="21" bodyfile="Tables/MarkTable.cs" bodystart="189" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mih_stat_library_1_1_tables_1_1_mark_table_1a20e856d740be976dc0df64714e3221a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_mih_stat_library_1_1_tables_1_1_mark_table" kindref="compound">MarkTable</ref></type>
+        <definition>MarkTable MihStatLibrary.Tables.MarkTable.Reduce</definition>
+        <argsstring>(int destDimension)</argsstring>
+        <name>Reduce</name>
+        <qualifiedname>MihStatLibrary.Tables.MarkTable.Reduce</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>destDimension</declname>
+        </param>
+        <briefdescription>
+<para>Функция создания маркировочной таблицы на основании маркировочной таблицы большей размерности. ФУНКЦИЯ РАБОТАЕТ ТОЛЬКО СО СМЕЩЕНИЕМ 1! </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>destDimension</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Размерность новой маркировочной таблицы</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Новая маркировочная таблица с пересчитанными значениями и смещением 1</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tables/MarkTable.cs" line="221" column="26" bodyfile="Tables/MarkTable.cs" bodystart="221" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mih_stat_library_1_1_tables_1_1_mark_table_1ae4f97ee205be19d4a7491d59f3ef6a50" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool MihStatLibrary.Tables.MarkTable.Equals</definition>
+        <argsstring>(object? obj)</argsstring>
+        <name>Equals</name>
+        <qualifiedname>MihStatLibrary.Tables.MarkTable.Equals</qualifiedname>
+        <param>
+          <type>object?</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+<para>Глубокое сравнение двух экземпляров MarkTable </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Экземпляр для сравнения</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Результат сравнения</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tables/MarkTable.cs" line="277" column="30" bodyfile="Tables/MarkTable.cs" bodystart="277" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mih_stat_library_1_1_tables_1_1_mark_table_1a71e4f50f7ce08f2160b5364e62fedf6b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int MihStatLibrary.Tables.MarkTable.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <qualifiedname>MihStatLibrary.Tables.MarkTable.GetHashCode</qualifiedname>
+        <briefdescription>
+<para>Вычисление hash объекта MarkTable </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Hash объекта MarkTable</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tables/MarkTable.cs" line="300" column="29" bodyfile="Tables/MarkTable.cs" bodystart="300" bodyend="303"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_mih_stat_library_1_1_tables_1_1_mark_table_1aaea53a79c3032b7eb7455019e6d07f8b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MihStatLibrary.Tables.MarkTable._calculateData</definition>
+        <argsstring>(ref BigInteger dataBuffer, ref int szBuffer)</argsstring>
+        <name>_calculateData</name>
+        <qualifiedname>MihStatLibrary.Tables.MarkTable._calculateData</qualifiedname>
+        <param>
+          <type>ref BigInteger</type>
+          <declname>dataBuffer</declname>
+        </param>
+        <param>
+          <type>ref int</type>
+          <declname>szBuffer</declname>
+        </param>
+        <briefdescription>
+<para>Обсчет порции данных </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Буффер для порции данных</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>szBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Количество бит данных в буффере</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tables/MarkTable.cs" line="234" column="22" bodyfile="Tables/MarkTable.cs" bodystart="234" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mih_stat_library_1_1_tables_1_1_mark_table_1a36bb6901c21d653b604b451ef8be5593" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MihStatLibrary.Tables.MarkTable._getDataForCalculate</definition>
+        <argsstring>(BlockData blockData, ref BigInteger dataBuffer, ref int szBuffer, ref int countReadElements)</argsstring>
+        <name>_getDataForCalculate</name>
+        <qualifiedname>MihStatLibrary.Tables.MarkTable._getDataForCalculate</qualifiedname>
+        <param>
+          <type><ref refid="class_mih_stat_library_1_1_data_1_1_block_data" kindref="compound">BlockData</ref></type>
+          <declname>blockData</declname>
+        </param>
+        <param>
+          <type>ref BigInteger</type>
+          <declname>dataBuffer</declname>
+        </param>
+        <param>
+          <type>ref int</type>
+          <declname>szBuffer</declname>
+        </param>
+        <param>
+          <type>ref int</type>
+          <declname>countReadElements</declname>
+        </param>
+        <briefdescription>
+<para>Получение новой порции данных </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>blockData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Обсчитываемый блок данных</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Буффер для порции данных. Содержит в том числе данные после прошлых вызовов</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>szBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Количество бит данных в буффере</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>countReadElements</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Количество считанных из блока данных байт</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tables/MarkTable.cs" line="258" column="22" bodyfile="Tables/MarkTable.cs" bodystart="258" bodyend="270"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Класс маркировочной таблицы </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tables/MarkTable.cs" line="15" column="11" bodyfile="Tables/MarkTable.cs" bodystart="16" bodyend="304"/>
+    <listofallmembers>
+      <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1aaea53a79c3032b7eb7455019e6d07f8b" prot="private" virt="non-virtual"><scope>MihStatLibrary::Tables::MarkTable</scope><name>_calculateData</name></member>
+      <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1af30521df8879f6830a1e1e4090024b0b" prot="private" virt="non-virtual"><scope>MihStatLibrary::Tables::MarkTable</scope><name>_dimension</name></member>
+      <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1a36bb6901c21d653b604b451ef8be5593" prot="private" virt="non-virtual"><scope>MihStatLibrary::Tables::MarkTable</scope><name>_getDataForCalculate</name></member>
+      <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1a00d83cb7a3bbd71830abeed35daee9ec" prot="private" virt="non-virtual"><scope>MihStatLibrary::Tables::MarkTable</scope><name>_locker</name></member>
+      <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1aecda996d868b3abd4efca326353104c1" prot="private" virt="non-virtual"><scope>MihStatLibrary::Tables::MarkTable</scope><name>_mask</name></member>
+      <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1a9b2071638681cc91bcb6f3adacf2d7b4" prot="private" virt="non-virtual"><scope>MihStatLibrary::Tables::MarkTable</scope><name>_nmVectors</name></member>
+      <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1ad819ad7c7a18d2423b06ef6c42a42efa" prot="private" virt="non-virtual"><scope>MihStatLibrary::Tables::MarkTable</scope><name>_remain</name></member>
+      <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1ad888a7b36a25348a273da42315d63bb9" prot="private" virt="non-virtual"><scope>MihStatLibrary::Tables::MarkTable</scope><name>_szRemain</name></member>
+      <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1ab0b90b07b7228c4ce6463e0afc63ca92" prot="private" virt="non-virtual"><scope>MihStatLibrary::Tables::MarkTable</scope><name>_szShift</name></member>
+      <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1a7caec7d39f8646bd2e3fee31f60371b9" prot="private" virt="non-virtual"><scope>MihStatLibrary::Tables::MarkTable</scope><name>_table</name></member>
+      <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1aa86ebfc7ac81f2ca32e80f1fe21bd052" prot="public" virt="non-virtual"><scope>MihStatLibrary::Tables::MarkTable</scope><name>Calculate</name></member>
+      <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1a5e7a4194287173a37a52729826e720f3" prot="public" virt="non-virtual"><scope>MihStatLibrary::Tables::MarkTable</scope><name>Calculate</name></member>
+      <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1ad93cc292848f833411d491d6aaaa0dcc" prot="public" virt="non-virtual"><scope>MihStatLibrary::Tables::MarkTable</scope><name>CalculateAsync</name></member>
+      <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1a727c4f62770dd09f5f052b9da39c2cb0" prot="public" virt="non-virtual"><scope>MihStatLibrary::Tables::MarkTable</scope><name>Clear</name></member>
+      <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1a6d58a2ea12471be935d4da80268c4438" prot="public" virt="non-virtual"><scope>MihStatLibrary::Tables::MarkTable</scope><name>Dimension</name></member>
+      <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1ae4f97ee205be19d4a7491d59f3ef6a50" prot="public" virt="non-virtual"><scope>MihStatLibrary::Tables::MarkTable</scope><name>Equals</name></member>
+      <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1a71e4f50f7ce08f2160b5364e62fedf6b" prot="public" virt="non-virtual"><scope>MihStatLibrary::Tables::MarkTable</scope><name>GetHashCode</name></member>
+      <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1aada6be9189577b1b257ae9ef75e0cbdf" prot="public" virt="non-virtual"><scope>MihStatLibrary::Tables::MarkTable</scope><name>MarkTable</name></member>
+      <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1a46b7ec33c3edf9a778052c0485c1753d" prot="public" virt="non-virtual"><scope>MihStatLibrary::Tables::MarkTable</scope><name>MarkTable</name></member>
+      <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1ae7060e7e7555b7cac43a7a8b314e8f03" prot="public" virt="non-virtual"><scope>MihStatLibrary::Tables::MarkTable</scope><name>NmVectors</name></member>
+      <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1acd0e989389d7767a743c15893e3847f0" prot="public" virt="non-virtual"><scope>MihStatLibrary::Tables::MarkTable</scope><name>ProcessChanged</name></member>
+      <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1a7fdbf6d0beb9937f96fbcdcc12fed266" prot="public" virt="non-virtual"><scope>MihStatLibrary::Tables::MarkTable</scope><name>ProgressChanged</name></member>
+      <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1a51db56e57901578918c4dd1a4a9700da" prot="public" virt="non-virtual"><scope>MihStatLibrary::Tables::MarkTable</scope><name>Reduce</name></member>
+      <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1a20e856d740be976dc0df64714e3221a1" prot="public" virt="non-virtual"><scope>MihStatLibrary::Tables::MarkTable</scope><name>Reduce</name></member>
+      <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1ac5915c8920a73941b655293465d1264f" prot="public" virt="non-virtual"><scope>MihStatLibrary::Tables::MarkTable</scope><name>SzShift</name></member>
+      <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1a725f6b347e8c02f60dbe51e5dcb63f7f" prot="public" virt="non-virtual"><scope>MihStatLibrary::Tables::MarkTable</scope><name>Table</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

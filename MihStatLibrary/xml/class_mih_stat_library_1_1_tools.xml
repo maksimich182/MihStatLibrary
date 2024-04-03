@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="ru">
+  <compounddef id="class_mih_stat_library_1_1_tools" kind="class" language="C#" prot="public">
+    <compoundname>MihStatLibrary::Tools</compoundname>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_mih_stat_library_1_1_tools_1ab5ce1ec2e21fc4e2e73f416c6dbc812d" prot="public" static="yes" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int MihStatLibrary.Tools.BITS_IN_BYTE</definition>
+        <argsstring></argsstring>
+        <name>BITS_IN_BYTE</name>
+        <qualifiedname>MihStatLibrary.Tools.BITS_IN_BYTE</qualifiedname>
+        <initializer>= 8</initializer>
+        <briefdescription>
+<para>Количество бит в байте </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools.cs" line="18" column="36" bodyfile="Tools.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mih_stat_library_1_1_tools_1af581cc676d4eb1d64e42591ac13171dc" prot="public" static="yes" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int MihStatLibrary.Tools.SIZE_BLOCK_BYTES</definition>
+        <argsstring></argsstring>
+        <name>SIZE_BLOCK_BYTES</name>
+        <qualifiedname>MihStatLibrary.Tools.SIZE_BLOCK_BYTES</qualifiedname>
+        <initializer>= 100000000</initializer>
+        <briefdescription>
+<para>Количество байт в блоке данных </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools.cs" line="23" column="36" bodyfile="Tools.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mih_stat_library_1_1_tools_1a81e94b37777111d3c16ce6cffc229067" prot="public" static="yes" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int MihStatLibrary.Tools.SIZE_BLOCK_BITS</definition>
+        <argsstring></argsstring>
+        <name>SIZE_BLOCK_BITS</name>
+        <qualifiedname>MihStatLibrary.Tools.SIZE_BLOCK_BITS</qualifiedname>
+        <initializer>= <ref refid="class_mih_stat_library_1_1_tools_1ab5ce1ec2e21fc4e2e73f416c6dbc812d" kindref="member">BITS_IN_BYTE</ref> * <ref refid="class_mih_stat_library_1_1_tools_1af581cc676d4eb1d64e42591ac13171dc" kindref="member">SIZE_BLOCK_BYTES</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools.cs" line="26" column="36" bodyfile="Tools.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mih_stat_library_1_1_tools_1a6a30c8e1e96659a0e7efd1a232aa54a9" prot="public" static="yes" mutable="no">
+        <type>readonly double</type>
+        <definition>readonly double MihStatLibrary.Tools.QUANTILE_1_A2</definition>
+        <argsstring></argsstring>
+        <name>QUANTILE_1_A2</name>
+        <qualifiedname>MihStatLibrary.Tools.QUANTILE_1_A2</qualifiedname>
+        <initializer>= 2.80703</initializer>
+        <briefdescription>
+<para>Квантиль </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools.cs" line="31" column="39" bodyfile="Tools.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mih_stat_library_1_1_tools_1a7cb96720178d4646c6bca6b539da63c0" prot="public" static="yes" mutable="no">
+        <type>readonly int[]</type>
+        <definition>readonly int [] MihStatLibrary.Tools.ArNumberOne</definition>
+        <argsstring></argsstring>
+        <name>ArNumberOne</name>
+        <qualifiedname>MihStatLibrary.Tools.ArNumberOne</qualifiedname>
+        <initializer>= { 0, 1, 1, 2, 1, 2, 2, 3, 1, 2, 2, 3, 2, 3,
+            3, 4, 1, 2, 2, 3, 2, 3, 3, 4, 2, 3, 3, 4, 3, 4, 4, 5, 1, 2, 2, 3, 2, 3, 3,
+            4, 2, 3, 3, 4, 3, 4, 4, 5, 2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6,
+            1, 2, 2, 3, 2, 3, 3, 4, 2, 3, 3, 4, 3, 4, 4, 5, 2, 3, 3, 4, 3, 4, 4, 5, 3,
+            4, 4, 5, 4, 5, 5, 6, 2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6, 3, 4,
+            4, 5, 4, 5, 5, 6, 4, 5, 5, 6, 5, 6, 6, 7, 1, 2, 2, 3, 2, 3, 3, 4, 2, 3, 3,
+            4, 3, 4, 4, 5, 2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6, 2, 3, 3, 4,
+            3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6, 3, 4, 4, 5, 4, 5, 5, 6, 4, 5, 5, 6, 5,
+            6, 6, 7, 2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6, 3, 4, 4, 5, 4, 5,
+            5, 6, 4, 5, 5, 6, 5, 6, 6, 7, 3, 4, 4, 5, 4, 5, 5, 6, 4, 5, 5, 6, 5, 6, 6,
+            7, 4, 5, 5, 6, 5, 6, 6, 7, 5, 6, 6, 7, 6, 7, 7, 8 }</initializer>
+        <briefdescription>
+<para>Массив количества единиц в байтах </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools.cs" line="36" column="36" bodyfile="Tools.cs" bodystart="36" bodyend="46"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_mih_stat_library_1_1_tools_1a20acde215ea24549530596bd37ffae1a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int MihStatLibrary.Tools.GetPercent</definition>
+        <argsstring>(long number, long maxNumber)</argsstring>
+        <name>GetPercent</name>
+        <qualifiedname>MihStatLibrary.Tools.GetPercent</qualifiedname>
+        <param>
+          <type>long</type>
+          <declname>number</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>maxNumber</declname>
+        </param>
+        <briefdescription>
+<para>Вычисление процента </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Число</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Максимальное число</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Процент</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools.cs" line="54" column="27" bodyfile="Tools.cs" bodystart="54" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mih_stat_library_1_1_tools_1a076abd74b7415b79fabf7dd6a360b29b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double MihStatLibrary.Tools.BigIntDevider</definition>
+        <argsstring>(BigInteger dividend, BigInteger divisor)</argsstring>
+        <name>BigIntDevider</name>
+        <qualifiedname>MihStatLibrary.Tools.BigIntDevider</qualifiedname>
+        <param>
+          <type>BigInteger</type>
+          <declname>dividend</declname>
+        </param>
+        <param>
+          <type>BigInteger</type>
+          <declname>divisor</declname>
+        </param>
+        <briefdescription>
+<para>Функция для деления больших чисел BigInteger </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dividend</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Делимое</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>divisor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Дулитель</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Результат деления в double</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools.cs" line="65" column="30" bodyfile="Tools.cs" bodystart="65" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mih_stat_library_1_1_tools_1a5da4239ad8a209533a013f19ef64dab4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double MihStatLibrary.Tools.BigIntDevider</definition>
+        <argsstring>(double dividend, BigInteger divisor)</argsstring>
+        <name>BigIntDevider</name>
+        <qualifiedname>MihStatLibrary.Tools.BigIntDevider</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>dividend</declname>
+        </param>
+        <param>
+          <type>BigInteger</type>
+          <declname>divisor</declname>
+        </param>
+        <briefdescription>
+<para>Функция для деления числа double на число BigInteger </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dividend</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Делимое</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>divisor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Дулитель</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Результат деления в double</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools.cs" line="81" column="30" bodyfile="Tools.cs" bodystart="81" bodyend="88"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Константы </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tools.cs" line="13" column="11" bodyfile="Tools.cs" bodystart="14" bodyend="89"/>
+    <listofallmembers>
+      <member refid="class_mih_stat_library_1_1_tools_1a7cb96720178d4646c6bca6b539da63c0" prot="public" virt="non-virtual"><scope>MihStatLibrary::Tools</scope><name>ArNumberOne</name></member>
+      <member refid="class_mih_stat_library_1_1_tools_1a076abd74b7415b79fabf7dd6a360b29b" prot="public" virt="non-virtual"><scope>MihStatLibrary::Tools</scope><name>BigIntDevider</name></member>
+      <member refid="class_mih_stat_library_1_1_tools_1a5da4239ad8a209533a013f19ef64dab4" prot="public" virt="non-virtual"><scope>MihStatLibrary::Tools</scope><name>BigIntDevider</name></member>
+      <member refid="class_mih_stat_library_1_1_tools_1ab5ce1ec2e21fc4e2e73f416c6dbc812d" prot="public" virt="non-virtual"><scope>MihStatLibrary::Tools</scope><name>BITS_IN_BYTE</name></member>
+      <member refid="class_mih_stat_library_1_1_tools_1a20acde215ea24549530596bd37ffae1a" prot="public" virt="non-virtual"><scope>MihStatLibrary::Tools</scope><name>GetPercent</name></member>
+      <member refid="class_mih_stat_library_1_1_tools_1a6a30c8e1e96659a0e7efd1a232aa54a9" prot="public" virt="non-virtual"><scope>MihStatLibrary::Tools</scope><name>QUANTILE_1_A2</name></member>
+      <member refid="class_mih_stat_library_1_1_tools_1a81e94b37777111d3c16ce6cffc229067" prot="public" virt="non-virtual"><scope>MihStatLibrary::Tools</scope><name>SIZE_BLOCK_BITS</name></member>
+      <member refid="class_mih_stat_library_1_1_tools_1af581cc676d4eb1d64e42591ac13171dc" prot="public" virt="non-virtual"><scope>MihStatLibrary::Tools</scope><name>SIZE_BLOCK_BYTES</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

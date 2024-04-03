@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="ru">
+  <compounddef id="class_mih_stat_library_1_1_calculators_1_1_ones_calculator" kind="class" language="C#" prot="public">
+    <compoundname>MihStatLibrary::Calculators::OnesCalculator</compoundname>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_mih_stat_library_1_1_calculators_1_1_ones_calculator_1acba5e30809fdd7983e7998226745f821" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>static long MihStatLibrary.Calculators.OnesCalculator.Calculate</definition>
+        <argsstring>(BlockData blockData)</argsstring>
+        <name>Calculate</name>
+        <qualifiedname>MihStatLibrary.Calculators.OnesCalculator.Calculate</qualifiedname>
+        <param>
+          <type><ref refid="class_mih_stat_library_1_1_data_1_1_block_data" kindref="compound">BlockData</ref></type>
+          <declname>blockData</declname>
+        </param>
+        <briefdescription>
+<para>Рассчет количества &quot;1&quot; в блоке данных </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>blockData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Блок данных</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Количество единичных бит</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Calculators/OnesCalculator.cs" line="22" column="28" bodyfile="Calculators/OnesCalculator.cs" bodystart="22" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mih_stat_library_1_1_calculators_1_1_ones_calculator_1a4e8eb582354a6068a8ece86e1cae394e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>static long MihStatLibrary.Calculators.OnesCalculator.Calculate</definition>
+        <argsstring>(string fileName)</argsstring>
+        <name>Calculate</name>
+        <qualifiedname>MihStatLibrary.Calculators.OnesCalculator.Calculate</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+<para>Функция рассчета количества единичных бит в файле </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Имя файла</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Calculators/OnesCalculator.cs" line="36" column="28" bodyfile="Calculators/OnesCalculator.cs" bodystart="36" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mih_stat_library_1_1_calculators_1_1_ones_calculator_1afd4a0488d279dda1b637e24dbd9ef25f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>static long MihStatLibrary.Calculators.OnesCalculator.Calculate</definition>
+        <argsstring>(MarkTable markTable)</argsstring>
+        <name>Calculate</name>
+        <qualifiedname>MihStatLibrary.Calculators.OnesCalculator.Calculate</qualifiedname>
+        <param>
+          <type><ref refid="class_mih_stat_library_1_1_tables_1_1_mark_table" kindref="compound">MarkTable</ref></type>
+          <declname>markTable</declname>
+        </param>
+        <briefdescription>
+<para>Рассчет количества &quot;1&quot; в маркировочной таблице. СМЕЩЕНИЕ ТАБЛИЦЫ ДОЛЖНО БЫТЬ РАЗНО РАЗМЕРНОСТИ! </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>markTable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Маркировочная таблица. СМЕЩЕНИЕ ТАБЛИЦЫ ДОЛЖНО БЫТЬ РАЗНО РАЗМЕРНОСТИ!</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Количество единичных бит</para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>BitFrequencyCalculatorException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Попытка посчитать количество единичных бит на таблице с разными значениями смещения и размерности</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Calculators/OnesCalculator.cs" line="60" column="28" bodyfile="Calculators/OnesCalculator.cs" bodystart="60" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mih_stat_library_1_1_calculators_1_1_ones_calculator_1aefa2f6705ffc1c1c3a75338c64510041" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>static long MihStatLibrary.Calculators.OnesCalculator.Calculate</definition>
+        <argsstring>(BigInteger data, int szDataBits)</argsstring>
+        <name>Calculate</name>
+        <qualifiedname>MihStatLibrary.Calculators.OnesCalculator.Calculate</qualifiedname>
+        <param>
+          <type>BigInteger</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>szDataBits</declname>
+        </param>
+        <briefdescription>
+<para>Рассчет количества &quot;1&quot; в первых <emphasis>szDataBits</emphasis>  бит из BigInteger </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>BigInteger из которого берется определенное количество бит</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>szDataBits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Количество бит для обсчета</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Количество единичных бит</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Calculators/OnesCalculator.cs" line="79" column="28" bodyfile="Calculators/OnesCalculator.cs" bodystart="79" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mih_stat_library_1_1_calculators_1_1_ones_calculator_1a01ad939d7269fac116cd4637d7e08f12" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>static long MihStatLibrary.Calculators.OnesCalculator.Calculate</definition>
+        <argsstring>(BigInteger data)</argsstring>
+        <name>Calculate</name>
+        <qualifiedname>MihStatLibrary.Calculators.OnesCalculator.Calculate</qualifiedname>
+        <param>
+          <type>BigInteger</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Рассчет количества единичных бит в BigInteger </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Данные</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Количество единичных бит</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Calculators/OnesCalculator.cs" line="91" column="20" bodyfile="Calculators/OnesCalculator.cs" bodystart="91" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mih_stat_library_1_1_calculators_1_1_ones_calculator_1a448a4b8149d42df8e22fa4ad8d0c76dc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>static long MihStatLibrary.Calculators.OnesCalculator.Calculate</definition>
+        <argsstring>(long data)</argsstring>
+        <name>Calculate</name>
+        <qualifiedname>MihStatLibrary.Calculators.OnesCalculator.Calculate</qualifiedname>
+        <param>
+          <type>long</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Рассчет количества единичных бит в long </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Данные</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Количество единичных бит</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Calculators/OnesCalculator.cs" line="111" column="20" bodyfile="Calculators/OnesCalculator.cs" bodystart="111" bodyend="122"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Класс подсчета количества единичных бит </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Calculators/OnesCalculator.cs" line="15" column="15" bodyfile="Calculators/OnesCalculator.cs" bodystart="16" bodyend="123"/>
+    <listofallmembers>
+      <member refid="class_mih_stat_library_1_1_calculators_1_1_ones_calculator_1acba5e30809fdd7983e7998226745f821" prot="public" virt="non-virtual"><scope>MihStatLibrary::Calculators::OnesCalculator</scope><name>Calculate</name></member>
+      <member refid="class_mih_stat_library_1_1_calculators_1_1_ones_calculator_1a4e8eb582354a6068a8ece86e1cae394e" prot="public" virt="non-virtual"><scope>MihStatLibrary::Calculators::OnesCalculator</scope><name>Calculate</name></member>
+      <member refid="class_mih_stat_library_1_1_calculators_1_1_ones_calculator_1afd4a0488d279dda1b637e24dbd9ef25f" prot="public" virt="non-virtual"><scope>MihStatLibrary::Calculators::OnesCalculator</scope><name>Calculate</name></member>
+      <member refid="class_mih_stat_library_1_1_calculators_1_1_ones_calculator_1aefa2f6705ffc1c1c3a75338c64510041" prot="public" virt="non-virtual"><scope>MihStatLibrary::Calculators::OnesCalculator</scope><name>Calculate</name></member>
+      <member refid="class_mih_stat_library_1_1_calculators_1_1_ones_calculator_1a01ad939d7269fac116cd4637d7e08f12" prot="public" virt="non-virtual"><scope>MihStatLibrary::Calculators::OnesCalculator</scope><name>Calculate</name></member>
+      <member refid="class_mih_stat_library_1_1_calculators_1_1_ones_calculator_1a448a4b8149d42df8e22fa4ad8d0c76dc" prot="public" virt="non-virtual"><scope>MihStatLibrary::Calculators::OnesCalculator</scope><name>Calculate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

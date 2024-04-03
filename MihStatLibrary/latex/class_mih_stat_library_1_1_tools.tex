@@ -9,7 +9,11 @@
 \begin{DoxyCompactItemize}
 \item 
 static int \textbf{ Get\+Percent} (long number, long max\+Number)
-\begin{DoxyCompactList}\small\item\em Вычисление процента \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Вычисление процента \end{DoxyCompactList}\item 
+static double \textbf{ Big\+Int\+Devider} (Big\+Integer dividend, Big\+Integer divisor)
+\begin{DoxyCompactList}\small\item\em Функция для деления больших чисел Big\+Integer \end{DoxyCompactList}\item 
+static double \textbf{ Big\+Int\+Devider} (double dividend, Big\+Integer divisor)
+\begin{DoxyCompactList}\small\item\em Функция для деления числа double на число Big\+Integer \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Статические открытые данные}
 \begin{DoxyCompactItemize}
 \item 
@@ -28,11 +32,59 @@ static readonly int[$\,$] \textbf{ Ar\+Number\+One}
 \doxysubsection{Подробное описание}
 Константы 
 
-См. определение в файле \textbf{ Tools.\+cs} строка \textbf{ 12}
+См. определение в файле \textbf{ Tools.\+cs} строка \textbf{ 13}
 
 
 
 \doxysubsection{Методы}
+\label{class_mih_stat_library_1_1_tools_a076abd74b7415b79fabf7dd6a360b29b} 
+\index{MihStatLibrary.Tools@{MihStatLibrary.Tools}!BigIntDevider@{BigIntDevider}}
+\index{BigIntDevider@{BigIntDevider}!MihStatLibrary.Tools@{MihStatLibrary.Tools}}
+\doxysubsubsection{BigIntDevider()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static double Mih\+Stat\+Library.\+Tools.\+Big\+Int\+Devider (\begin{DoxyParamCaption}\item[{Big\+Integer}]{dividend,  }\item[{Big\+Integer}]{divisor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Функция для деления больших чисел Big\+Integer 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em dividend} & Делимое\\
+\hline
+{\em divisor} & Дулитель\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Результат деления в double
+\end{DoxyReturn}
+
+
+См. определение в файле \textbf{ Tools.\+cs} строка \textbf{ 65}
+
+\label{class_mih_stat_library_1_1_tools_a5da4239ad8a209533a013f19ef64dab4} 
+\index{MihStatLibrary.Tools@{MihStatLibrary.Tools}!BigIntDevider@{BigIntDevider}}
+\index{BigIntDevider@{BigIntDevider}!MihStatLibrary.Tools@{MihStatLibrary.Tools}}
+\doxysubsubsection{BigIntDevider()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static double Mih\+Stat\+Library.\+Tools.\+Big\+Int\+Devider (\begin{DoxyParamCaption}\item[{double}]{dividend,  }\item[{Big\+Integer}]{divisor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Функция для деления числа double на число Big\+Integer 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em dividend} & Делимое\\
+\hline
+{\em divisor} & Дулитель\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Результат деления в double
+\end{DoxyReturn}
+
+
+См. определение в файле \textbf{ Tools.\+cs} строка \textbf{ 81}
+
 \label{class_mih_stat_library_1_1_tools_a20acde215ea24549530596bd37ffae1a} 
 \index{MihStatLibrary.Tools@{MihStatLibrary.Tools}!GetPercent@{GetPercent}}
 \index{GetPercent@{GetPercent}!MihStatLibrary.Tools@{MihStatLibrary.Tools}}
@@ -55,7 +107,7 @@ static readonly int[$\,$] \textbf{ Ar\+Number\+One}
 \end{DoxyReturn}
 
 
-См. определение в файле \textbf{ Tools.\+cs} строка \textbf{ 53}
+См. определение в файле \textbf{ Tools.\+cs} строка \textbf{ 54}
 
 
 
@@ -87,7 +139,7 @@ static readonly int[$\,$] \textbf{ Ar\+Number\+One}
 
 
 
-См. определение в файле \textbf{ Tools.\+cs} строка \textbf{ 35}
+См. определение в файле \textbf{ Tools.\+cs} строка \textbf{ 36}
 
 \label{class_mih_stat_library_1_1_tools_ab5ce1ec2e21fc4e2e73f416c6dbc812d} 
 \index{MihStatLibrary.Tools@{MihStatLibrary.Tools}!BITS\_IN\_BYTE@{BITS\_IN\_BYTE}}
@@ -101,7 +153,7 @@ static readonly int[$\,$] \textbf{ Ar\+Number\+One}
 
 
 
-См. определение в файле \textbf{ Tools.\+cs} строка \textbf{ 17}
+См. определение в файле \textbf{ Tools.\+cs} строка \textbf{ 18}
 
 \label{class_mih_stat_library_1_1_tools_a6a30c8e1e96659a0e7efd1a232aa54a9} 
 \index{MihStatLibrary.Tools@{MihStatLibrary.Tools}!QUANTILE\_1\_A2@{QUANTILE\_1\_A2}}
@@ -115,7 +167,7 @@ static readonly int[$\,$] \textbf{ Ar\+Number\+One}
 
 
 
-См. определение в файле \textbf{ Tools.\+cs} строка \textbf{ 30}
+См. определение в файле \textbf{ Tools.\+cs} строка \textbf{ 31}
 
 \label{class_mih_stat_library_1_1_tools_a81e94b37777111d3c16ce6cffc229067} 
 \index{MihStatLibrary.Tools@{MihStatLibrary.Tools}!SIZE\_BLOCK\_BITS@{SIZE\_BLOCK\_BITS}}
@@ -125,7 +177,7 @@ static readonly int[$\,$] \textbf{ Ar\+Number\+One}
 
 
 
-См. определение в файле \textbf{ Tools.\+cs} строка \textbf{ 25}
+См. определение в файле \textbf{ Tools.\+cs} строка \textbf{ 26}
 
 \label{class_mih_stat_library_1_1_tools_af581cc676d4eb1d64e42591ac13171dc} 
 \index{MihStatLibrary.Tools@{MihStatLibrary.Tools}!SIZE\_BLOCK\_BYTES@{SIZE\_BLOCK\_BYTES}}
@@ -139,7 +191,7 @@ static readonly int[$\,$] \textbf{ Ar\+Number\+One}
 
 
 
-См. определение в файле \textbf{ Tools.\+cs} строка \textbf{ 22}
+См. определение в файле \textbf{ Tools.\+cs} строка \textbf{ 23}
 
 
 

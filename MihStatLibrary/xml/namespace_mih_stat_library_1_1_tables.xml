@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="ru">
+  <compounddef id="namespace_mih_stat_library_1_1_tables" kind="namespace" language="C#">
+    <compoundname>MihStatLibrary::Tables</compoundname>
+    <innerclass refid="class_mih_stat_library_1_1_tables_1_1_invalid_shift_exception" prot="public">MihStatLibrary::Tables::InvalidShiftException</innerclass>
+    <innerclass refid="class_mih_stat_library_1_1_tables_1_1_mark_table" prot="public">MihStatLibrary::Tables::MarkTable</innerclass>
+    <innerclass refid="class_mih_stat_library_1_1_tables_1_1_reduce_exception" prot="public">MihStatLibrary::Tables::ReduceException</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tables/MarkTable.cs" line="10" column="1"/>
+  </compounddef>
+</doxygen>

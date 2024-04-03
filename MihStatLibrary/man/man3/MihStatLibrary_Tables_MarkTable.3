@@ -13,7 +13,7 @@ MihStatLibrary.Tables.MarkTable \- Класс маркировочной таб�
 .ti -1c
 .RI "\fBMarkTable\fP (int dimension)"
 .br
-.RI "Конструктор класса маркировочной таблицыт без зацепления "
+.RI "Конструктор класса маркировочной таблицы без зацепления "
 .ti -1c
 .RI "\fBMarkTable\fP (int dimension, int szShift)"
 .br
@@ -31,11 +31,15 @@ MihStatLibrary.Tables.MarkTable \- Класс маркировочной таб�
 .br
 .RI "Подсчет маркировочной таблицы по данным файла "
 .ti -1c
+.RI "async Task \fBCalculateAsync\fP (string fileName, CancellationToken? token=null)"
+.br
+.RI "Подсчет маркировочной таблицы по данным файла "
+.ti -1c
 .RI "void \fBReduce\fP (\fBMarkTable\fP destTable)"
 .br
 .RI "Функция пересчета маркировочной таблицы в таблицу с меньшей размерностью векторов\&. ФУНКЦИЯ РАБОТАЕТ ТОЛЬКО СО СМЕЩЕНИЕМ 1! "
 .ti -1c
-.RI "\fBMarkTable\fP \fBReduce\fP (int pDestDimension)"
+.RI "\fBMarkTable\fP \fBReduce\fP (int destDimension)"
 .br
 .RI "Функция создания маркировочной таблицы на основании маркировочной таблицы большей размерности\&. ФУНКЦИЯ РАБОТАЕТ ТОЛЬКО СО СМЕЩЕНИЕМ 1! "
 .ti -1c
@@ -89,7 +93,7 @@ MihStatLibrary.Tables.MarkTable \- Класс маркировочной таб�
 .SS "MihStatLibrary\&.Tables\&.MarkTable\&.MarkTable (int dimension)"
 
 .PP
-Конструктор класса маркировочной таблицыт без зацепления 
+Конструктор класса маркировочной таблицы без зацепления 
 .PP
 \fBАргументы\fP
 .RS 4
@@ -98,7 +102,7 @@ MihStatLibrary.Tables.MarkTable \- Класс маркировочной таб�
 .PP
 
 .PP
-См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB62\fP
+См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB63\fP
 .SS "MihStatLibrary\&.Tables\&.MarkTable\&.MarkTable (int dimension, int szShift)"
 
 .PP
@@ -118,7 +122,7 @@ MihStatLibrary.Tables.MarkTable \- Класс маркировочной таб�
 .PP
 
 .PP
-См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB79\fP
+См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB81\fP
 .SH "Методы"
 .PP 
 .SS "void MihStatLibrary\&.Tables\&.MarkTable\&.Calculate (\fBBlockData\fP data)"
@@ -133,7 +137,7 @@ MihStatLibrary.Tables.MarkTable \- Класс маркировочной таб�
 .PP
 
 .PP
-См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB90\fP
+См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB92\fP
 .SS "void MihStatLibrary\&.Tables\&.MarkTable\&.Calculate (string fileName)"
 
 .PP
@@ -146,13 +150,26 @@ MihStatLibrary.Tables.MarkTable \- Класс маркировочной таб�
 .PP
 
 .PP
-См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB130\fP
+См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB135\fP
+.SS "async Task MihStatLibrary\&.Tables\&.MarkTable\&.CalculateAsync (string fileName, CancellationToken? token = \fRnull\fP)"
+
+.PP
+Подсчет маркировочной таблицы по данным файла 
+.PP
+\fBАргументы\fP
+.RS 4
+\fIfileName\fP Имя файла
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB154\fP
 .SS "void MihStatLibrary\&.Tables\&.MarkTable\&.Clear ()"
 
 .PP
 Обнуление маркировочной таблицы 
 .PP
-См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB118\fP
+См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB123\fP
 .SS "override bool MihStatLibrary\&.Tables\&.MarkTable\&.Equals (object? obj)"
 
 .PP
@@ -170,7 +187,7 @@ MihStatLibrary.Tables.MarkTable \- Класс маркировочной таб�
 .PP
 
 .PP
-См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB240\fP
+См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB277\fP
 .SS "override int MihStatLibrary\&.Tables\&.MarkTable\&.GetHashCode ()"
 
 .PP
@@ -183,15 +200,15 @@ Hash объекта MarkTable
 .PP
 
 .PP
-См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB263\fP
-.SS "\fBMarkTable\fP MihStatLibrary\&.Tables\&.MarkTable\&.Reduce (int pDestDimension)"
+См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB300\fP
+.SS "\fBMarkTable\fP MihStatLibrary\&.Tables\&.MarkTable\&.Reduce (int destDimension)"
 
 .PP
 Функция создания маркировочной таблицы на основании маркировочной таблицы большей размерности\&. ФУНКЦИЯ РАБОТАЕТ ТОЛЬКО СО СМЕЩЕНИЕМ 1! 
 .PP
 \fBАргументы\fP
 .RS 4
-\fIpDestDimension\fP Размерность новой маркировочной таблицы
+\fIdestDimension\fP Размерность новой маркировочной таблицы
 .RE
 .PP
 \fBВозвращает\fP
@@ -201,7 +218,7 @@ Hash объекта MarkTable
 .PP
 
 .PP
-См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB184\fP
+См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB221\fP
 .SS "void MihStatLibrary\&.Tables\&.MarkTable\&.Reduce (\fBMarkTable\fP destTable)"
 
 .PP
@@ -219,7 +236,7 @@ Hash объекта MarkTable
 .PP
 
 .PP
-См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB152\fP
+См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB189\fP
 .SH "Полный список свойств"
 .PP 
 .SS "int MihStatLibrary\&.Tables\&.MarkTable\&.Dimension\fR [get]\fP"
@@ -227,25 +244,25 @@ Hash объекта MarkTable
 .PP
 Размерность маркировочной таблицы 
 .PP
-См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB45\fP
+См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB46\fP
 .SS "long MihStatLibrary\&.Tables\&.MarkTable\&.NmVectors\fR [get]\fP"
 
 .PP
 Количество учтенных последовательностей 
 .PP
-См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB50\fP
+См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB51\fP
 .SS "int MihStatLibrary\&.Tables\&.MarkTable\&.SzShift\fR [get]\fP"
 
 .PP
 Смещение маркировочной таблицы 
 .PP
-См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB55\fP
+См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB56\fP
 .SS "long [] MihStatLibrary\&.Tables\&.MarkTable\&.Table\fR [get]\fP"
 
 .PP
 Маркировочная таблица 
 .PP
-См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB40\fP
+См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB41\fP
 .SH "Cобытия"
 .PP 
 .SS "EventHandler<string>? MihStatLibrary\&.Tables\&.MarkTable\&.ProcessChanged = null"
@@ -253,13 +270,13 @@ Hash объекта MarkTable
 .PP
 Событие изменения процесса обсчитывания 
 .PP
-См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB30\fP
+См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB31\fP
 .SS "EventHandler<int>? MihStatLibrary\&.Tables\&.MarkTable\&.ProgressChanged = null"
 
 .PP
 Событие изменения прогресса обсчитывания 
 .PP
-См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB35\fP
+См\&. определение в файле \fBMarkTable\&.cs\fP строка \fB36\fP
 
 .SH "Автор"
 .PP 

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="ru">
+  <compounddef id="namespace_mih_stat_library_1_1_data" kind="namespace" language="C#">
+    <compoundname>MihStatLibrary::Data</compoundname>
+    <innerclass refid="class_mih_stat_library_1_1_data_1_1_block_data" prot="public">MihStatLibrary::Data::BlockData</innerclass>
+    <innerclass refid="class_mih_stat_library_1_1_data_1_1_block_data_file_source" prot="public">MihStatLibrary::Data::BlockDataFileSource</innerclass>
+    <innerclass refid="class_mih_stat_library_1_1_data_1_1_block_data_random_source" prot="public">MihStatLibrary::Data::BlockDataRandomSource</innerclass>
+    <innerclass refid="interface_mih_stat_library_1_1_data_1_1_i_block_data_source" prot="public">MihStatLibrary::Data::IBlockDataSource</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Data/BlockData.cs" line="1" column="1"/>
+  </compounddef>
+</doxygen>

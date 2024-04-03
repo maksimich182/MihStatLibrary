@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="ru">
+  <compounddef id="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_exception" kind="class" language="C#" prot="public">
+    <compoundname>MihStatLibrary::Calculators::BitFrequencyCalculatorException</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Exception</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_exception_1a4e381ab142c8cf2c86bec28426850754" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MihStatLibrary.Calculators.BitFrequencyCalculatorException.BitFrequencyCalculatorException</definition>
+        <argsstring>(string pMessage)</argsstring>
+        <name>BitFrequencyCalculatorException</name>
+        <qualifiedname>MihStatLibrary.Calculators.BitFrequencyCalculatorException.BitFrequencyCalculatorException</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>pMessage</declname>
+        </param>
+        <briefdescription>
+<para>Исключение, возникающее при попытке посчитать оценки вероятностей бит 1 и 0. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Calculators/CalculatorsExceptions.cs" line="28" column="16" bodyfile="Calculators/CalculatorsExceptions.cs" bodystart="28" bodyend="28"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Исключение, возникающее при попытке посчитать оценки вероятностей бит 1 и 0. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Exception</label>
+      </node>
+      <node id="1">
+        <label>MihStatLibrary.Calculators.BitFrequencyCalculatorException</label>
+        <link refid="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_exception"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Exception</label>
+      </node>
+      <node id="1">
+        <label>MihStatLibrary.Calculators.BitFrequencyCalculatorException</label>
+        <link refid="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_exception"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Calculators/CalculatorsExceptions.cs" line="23" column="11" bodyfile="Calculators/CalculatorsExceptions.cs" bodystart="24" bodyend="29"/>
+    <listofallmembers>
+      <member refid="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_exception_1a4e381ab142c8cf2c86bec28426850754" prot="public" virt="non-virtual"><scope>MihStatLibrary::Calculators::BitFrequencyCalculatorException</scope><name>BitFrequencyCalculatorException</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

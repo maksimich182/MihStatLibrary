@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.10.0" xml:lang="ru">
+  <compound refid="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator" kind="class"><name>MihStatLibrary::Calculators::BitFrequencyCalculator</name>
+    <member refid="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_1ac6cdf1b0b66d60deb7c2dad46e6d8259" kind="variable"><name>_frequencyOne</name></member>
+    <member refid="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_1ac97fa482198daab7342b758c3d797ebd" kind="variable"><name>_frequencyZero</name></member>
+    <member refid="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_1a826c1084202e57aaeed430801f6be3e4" kind="property"><name>FrequencyOne</name></member>
+    <member refid="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_1a7f5cd70e5770c57b4b0311d4d3f80583" kind="property"><name>FrequencyZero</name></member>
+    <member refid="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_1a0a57ebf76cf078810a498159c54d3dfa" kind="function"><name>BitFrequencyCalculator</name></member>
+    <member refid="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_1a00c9c159382735012eed7551ff88a556" kind="function"><name>CalculateAsync</name></member>
+    <member refid="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_1af32e3314776dd52d0e1339b2341ab513" kind="function"><name>Calculate</name></member>
+    <member refid="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_1ac196dd27bd7523e555f70cb57677e9c9" kind="function"><name>Calculate</name></member>
+    <member refid="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_1a9b5105dbc12a58d3bce111277f14cbae" kind="function"><name>Calculate</name></member>
+  </compound>
+  <compound refid="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_exception" kind="class"><name>MihStatLibrary::Calculators::BitFrequencyCalculatorException</name>
+    <member refid="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_exception_1a4e381ab142c8cf2c86bec28426850754" kind="function"><name>BitFrequencyCalculatorException</name></member>
+  </compound>
+  <compound refid="class_mih_stat_library_1_1_data_1_1_block_data" kind="class"><name>MihStatLibrary::Data::BlockData</name>
+    <member refid="class_mih_stat_library_1_1_data_1_1_block_data_1ac9b7d2b4c1d73ec761a5bae23d790a16" kind="variable"><name>_data</name></member>
+    <member refid="class_mih_stat_library_1_1_data_1_1_block_data_1a8126e8295198450cb37fe37b064219ed" kind="variable"><name>_szBLockData</name></member>
+    <member refid="class_mih_stat_library_1_1_data_1_1_block_data_1a20708b2fd0ed3c00ded09d28e313d51b" kind="variable"><name>_blockDataSource</name></member>
+    <member refid="class_mih_stat_library_1_1_data_1_1_block_data_1a6b24241a97524cd1cc42ba4e6eda1378" kind="property"><name>SzBlockData</name></member>
+    <member refid="class_mih_stat_library_1_1_data_1_1_block_data_1a766794485483c615732d4f7fc7dc06ec" kind="property"><name>Data</name></member>
+    <member refid="class_mih_stat_library_1_1_data_1_1_block_data_1aaaedc8cfd23a34e2d6688315e552a5bc" kind="function"><name>BlockData</name></member>
+    <member refid="class_mih_stat_library_1_1_data_1_1_block_data_1abec423eab4a7d6f83088472f627327dc" kind="function"><name>GetBlockData</name></member>
+    <member refid="class_mih_stat_library_1_1_data_1_1_block_data_1ace7a60c70cb4fd059db18dc423372ccf" kind="function"><name>Clone</name></member>
+  </compound>
+  <compound refid="class_mih_stat_library_1_1_data_1_1_block_data_file_source" kind="class"><name>MihStatLibrary::Data::BlockDataFileSource</name>
+    <member refid="class_mih_stat_library_1_1_data_1_1_block_data_file_source_1a2fadd306393aed787635349148f978c8" kind="variable"><name>_fStream</name></member>
+    <member refid="class_mih_stat_library_1_1_data_1_1_block_data_file_source_1ade7d2f5528d260b44a8efc51215ba193" kind="function"><name>BlockDataFileSource</name></member>
+    <member refid="class_mih_stat_library_1_1_data_1_1_block_data_file_source_1acfc35f26e4868eebcc0112b82995261a" kind="function"><name>GetBlockData</name></member>
+  </compound>
+  <compound refid="class_mih_stat_library_1_1_data_1_1_block_data_random_source" kind="class"><name>MihStatLibrary::Data::BlockDataRandomSource</name>
+    <member refid="class_mih_stat_library_1_1_data_1_1_block_data_random_source_1acb87e0429c4bb8e47eb6fc9160259cd7" kind="variable"><name>_rnd</name></member>
+    <member refid="class_mih_stat_library_1_1_data_1_1_block_data_random_source_1a0bbd7b0eb63ce3af9732fe27628df093" kind="variable"><name>_nmXor</name></member>
+    <member refid="class_mih_stat_library_1_1_data_1_1_block_data_random_source_1a58bbd174715732423661e2ee7f1dcd9a" kind="function"><name>BlockDataRandomSource</name></member>
+    <member refid="class_mih_stat_library_1_1_data_1_1_block_data_random_source_1a7881b8686223925ca1c945ad9b6656a6" kind="function"><name>GetBlockData</name></member>
+  </compound>
+  <compound refid="interface_mih_stat_library_1_1_data_1_1_i_block_data_source" kind="interface"><name>MihStatLibrary::Data::IBlockDataSource</name>
+    <member refid="interface_mih_stat_library_1_1_data_1_1_i_block_data_source_1af2eb27a45edbd4dfc94fc76b6328b4c7" kind="function"><name>GetBlockData</name></member>
+  </compound>
+  <compound refid="class_mih_stat_library_1_1_tables_1_1_invalid_shift_exception" kind="class"><name>MihStatLibrary::Tables::InvalidShiftException</name>
+    <member refid="class_mih_stat_library_1_1_tables_1_1_invalid_shift_exception_1a33de35e6fcfd1830a56f6916ad16fa18" kind="function"><name>InvalidShiftException</name></member>
+  </compound>
+  <compound refid="class_mih_stat_library_1_1_tables_1_1_mark_table" kind="class"><name>MihStatLibrary::Tables::MarkTable</name>
+    <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1af30521df8879f6830a1e1e4090024b0b" kind="variable"><name>_dimension</name></member>
+    <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1ab0b90b07b7228c4ce6463e0afc63ca92" kind="variable"><name>_szShift</name></member>
+    <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1aecda996d868b3abd4efca326353104c1" kind="variable"><name>_mask</name></member>
+    <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1a7caec7d39f8646bd2e3fee31f60371b9" kind="variable"><name>_table</name></member>
+    <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1ad819ad7c7a18d2423b06ef6c42a42efa" kind="variable"><name>_remain</name></member>
+    <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1ad888a7b36a25348a273da42315d63bb9" kind="variable"><name>_szRemain</name></member>
+    <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1a9b2071638681cc91bcb6f3adacf2d7b4" kind="variable"><name>_nmVectors</name></member>
+    <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1a00d83cb7a3bbd71830abeed35daee9ec" kind="variable"><name>_locker</name></member>
+    <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1acd0e989389d7767a743c15893e3847f0" kind="event"><name>ProcessChanged</name></member>
+    <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1a7fdbf6d0beb9937f96fbcdcc12fed266" kind="event"><name>ProgressChanged</name></member>
+    <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1a725f6b347e8c02f60dbe51e5dcb63f7f" kind="property"><name>Table</name></member>
+    <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1a6d58a2ea12471be935d4da80268c4438" kind="property"><name>Dimension</name></member>
+    <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1ae7060e7e7555b7cac43a7a8b314e8f03" kind="property"><name>NmVectors</name></member>
+    <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1ac5915c8920a73941b655293465d1264f" kind="property"><name>SzShift</name></member>
+    <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1aada6be9189577b1b257ae9ef75e0cbdf" kind="function"><name>MarkTable</name></member>
+    <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1a46b7ec33c3edf9a778052c0485c1753d" kind="function"><name>MarkTable</name></member>
+    <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1aa86ebfc7ac81f2ca32e80f1fe21bd052" kind="function"><name>Calculate</name></member>
+    <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1a727c4f62770dd09f5f052b9da39c2cb0" kind="function"><name>Clear</name></member>
+    <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1a5e7a4194287173a37a52729826e720f3" kind="function"><name>Calculate</name></member>
+    <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1ad93cc292848f833411d491d6aaaa0dcc" kind="function"><name>CalculateAsync</name></member>
+    <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1a51db56e57901578918c4dd1a4a9700da" kind="function"><name>Reduce</name></member>
+    <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1a20e856d740be976dc0df64714e3221a1" kind="function"><name>Reduce</name></member>
+    <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1ae4f97ee205be19d4a7491d59f3ef6a50" kind="function"><name>Equals</name></member>
+    <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1a71e4f50f7ce08f2160b5364e62fedf6b" kind="function"><name>GetHashCode</name></member>
+    <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1aaea53a79c3032b7eb7455019e6d07f8b" kind="function"><name>_calculateData</name></member>
+    <member refid="class_mih_stat_library_1_1_tables_1_1_mark_table_1a36bb6901c21d653b604b451ef8be5593" kind="function"><name>_getDataForCalculate</name></member>
+  </compound>
+  <compound refid="class_mih_stat_library_1_1_calculators_1_1_ones_calculator" kind="class"><name>MihStatLibrary::Calculators::OnesCalculator</name>
+    <member refid="class_mih_stat_library_1_1_calculators_1_1_ones_calculator_1acba5e30809fdd7983e7998226745f821" kind="function"><name>Calculate</name></member>
+    <member refid="class_mih_stat_library_1_1_calculators_1_1_ones_calculator_1a4e8eb582354a6068a8ece86e1cae394e" kind="function"><name>Calculate</name></member>
+    <member refid="class_mih_stat_library_1_1_calculators_1_1_ones_calculator_1afd4a0488d279dda1b637e24dbd9ef25f" kind="function"><name>Calculate</name></member>
+    <member refid="class_mih_stat_library_1_1_calculators_1_1_ones_calculator_1aefa2f6705ffc1c1c3a75338c64510041" kind="function"><name>Calculate</name></member>
+    <member refid="class_mih_stat_library_1_1_calculators_1_1_ones_calculator_1a01ad939d7269fac116cd4637d7e08f12" kind="function"><name>Calculate</name></member>
+    <member refid="class_mih_stat_library_1_1_calculators_1_1_ones_calculator_1a448a4b8149d42df8e22fa4ad8d0c76dc" kind="function"><name>Calculate</name></member>
+  </compound>
+  <compound refid="class_mih_stat_library_1_1_calculators_1_1_ones_calculator_exception" kind="class"><name>MihStatLibrary::Calculators::OnesCalculatorException</name>
+    <member refid="class_mih_stat_library_1_1_calculators_1_1_ones_calculator_exception_1affbad9ee2f18bc891ca5be5cb502988d" kind="function"><name>OnesCalculatorException</name></member>
+  </compound>
+  <compound refid="class_mih_stat_library_1_1_tables_1_1_reduce_exception" kind="class"><name>MihStatLibrary::Tables::ReduceException</name>
+    <member refid="class_mih_stat_library_1_1_tables_1_1_reduce_exception_1a95f7250a05cb0f836e73e5e27db3f53e" kind="function"><name>ReduceException</name></member>
+  </compound>
+  <compound refid="class_mih_stat_library_1_1_tools" kind="class"><name>MihStatLibrary::Tools</name>
+    <member refid="class_mih_stat_library_1_1_tools_1ab5ce1ec2e21fc4e2e73f416c6dbc812d" kind="variable"><name>BITS_IN_BYTE</name></member>
+    <member refid="class_mih_stat_library_1_1_tools_1af581cc676d4eb1d64e42591ac13171dc" kind="variable"><name>SIZE_BLOCK_BYTES</name></member>
+    <member refid="class_mih_stat_library_1_1_tools_1a81e94b37777111d3c16ce6cffc229067" kind="variable"><name>SIZE_BLOCK_BITS</name></member>
+    <member refid="class_mih_stat_library_1_1_tools_1a6a30c8e1e96659a0e7efd1a232aa54a9" kind="variable"><name>QUANTILE_1_A2</name></member>
+    <member refid="class_mih_stat_library_1_1_tools_1a7cb96720178d4646c6bca6b539da63c0" kind="variable"><name>ArNumberOne</name></member>
+    <member refid="class_mih_stat_library_1_1_tools_1a20acde215ea24549530596bd37ffae1a" kind="function"><name>GetPercent</name></member>
+    <member refid="class_mih_stat_library_1_1_tools_1a076abd74b7415b79fabf7dd6a360b29b" kind="function"><name>BigIntDevider</name></member>
+    <member refid="class_mih_stat_library_1_1_tools_1a5da4239ad8a209533a013f19ef64dab4" kind="function"><name>BigIntDevider</name></member>
+  </compound>
+  <compound refid="namespaceglobal_1_1_system" kind="namespace"><name>global::System</name>
+  </compound>
+  <compound refid="namespaceglobal_1_1_system_1_1_collections_1_1_generic" kind="namespace"><name>global::System::Collections::Generic</name>
+  </compound>
+  <compound refid="namespaceglobal_1_1_system_1_1_i_o" kind="namespace"><name>global::System::IO</name>
+  </compound>
+  <compound refid="namespaceglobal_1_1_system_1_1_linq" kind="namespace"><name>global::System::Linq</name>
+  </compound>
+  <compound refid="namespaceglobal_1_1_system_1_1_net_1_1_http" kind="namespace"><name>global::System::Net::Http</name>
+  </compound>
+  <compound refid="namespaceglobal_1_1_system_1_1_threading" kind="namespace"><name>global::System::Threading</name>
+  </compound>
+  <compound refid="namespaceglobal_1_1_system_1_1_threading_1_1_tasks" kind="namespace"><name>global::System::Threading::Tasks</name>
+  </compound>
+  <compound refid="namespace_mih_stat_library" kind="namespace"><name>MihStatLibrary</name>
+  </compound>
+  <compound refid="namespace_mih_stat_library_1_1_calculators" kind="namespace"><name>MihStatLibrary::Calculators</name>
+  </compound>
+  <compound refid="namespace_mih_stat_library_1_1_data" kind="namespace"><name>MihStatLibrary::Data</name>
+  </compound>
+  <compound refid="namespace_mih_stat_library_1_1_tables" kind="namespace"><name>MihStatLibrary::Tables</name>
+  </compound>
+  <compound refid="namespace_system" kind="namespace"><name>System</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections_1_1_generic" kind="namespace"><name>System::Collections::Generic</name>
+  </compound>
+  <compound refid="namespace_system_1_1_data" kind="namespace"><name>System::Data</name>
+  </compound>
+  <compound refid="namespace_system_1_1_i_o" kind="namespace"><name>System::IO</name>
+  </compound>
+  <compound refid="namespace_system_1_1_linq" kind="namespace"><name>System::Linq</name>
+  </compound>
+  <compound refid="namespace_system_1_1_numerics" kind="namespace"><name>System::Numerics</name>
+  </compound>
+  <compound refid="namespace_system_1_1_reflection" kind="namespace"><name>System::Reflection</name>
+  </compound>
+  <compound refid="namespace_system_1_1_text" kind="namespace"><name>System::Text</name>
+  </compound>
+  <compound refid="namespace_system_1_1_threading_1_1_tasks" kind="namespace"><name>System::Threading::Tasks</name>
+  </compound>
+  <compound refid="namespace_system_1_1_xml_1_1_linq" kind="namespace"><name>System::Xml::Linq</name>
+  </compound>
+  <compound refid="_bit_frequency_calculator_8cs" kind="file"><name>BitFrequencyCalculator.cs</name>
+  </compound>
+  <compound refid="_calculators_exceptions_8cs" kind="file"><name>CalculatorsExceptions.cs</name>
+  </compound>
+  <compound refid="_ones_calculator_8cs" kind="file"><name>OnesCalculator.cs</name>
+  </compound>
+  <compound refid="_block_data_8cs" kind="file"><name>BlockData.cs</name>
+  </compound>
+  <compound refid="_block_data_file_source_8cs" kind="file"><name>BlockDataFileSource.cs</name>
+  </compound>
+  <compound refid="_block_data_random_source_8cs" kind="file"><name>BlockDataRandomSource.cs</name>
+  </compound>
+  <compound refid="_i_block_data_source_8cs" kind="file"><name>IBlockDataSource.cs</name>
+  </compound>
+  <compound refid="_debug_2net8_80_2_8_n_e_t_core_app_00_version_0av8_80_8_assembly_attributes_8cs" kind="file"><name>.NETCoreApp,Version=v8.0.AssemblyAttributes.cs</name>
+  </compound>
+  <compound refid="_release_2net8_80_2_8_n_e_t_core_app_00_version_0av8_80_8_assembly_attributes_8cs" kind="file"><name>.NETCoreApp,Version=v8.0.AssemblyAttributes.cs</name>
+  </compound>
+  <compound refid="_debug_2net8_80_2_mih_stat_library_8_assembly_info_8cs" kind="file"><name>MihStatLibrary.AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_release_2net8_80_2_mih_stat_library_8_assembly_info_8cs" kind="file"><name>MihStatLibrary.AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_debug_2net8_80_2_mih_stat_library_8_global_usings_8g_8cs" kind="file"><name>MihStatLibrary.GlobalUsings.g.cs</name>
+  </compound>
+  <compound refid="_release_2net8_80_2_mih_stat_library_8_global_usings_8g_8cs" kind="file"><name>MihStatLibrary.GlobalUsings.g.cs</name>
+  </compound>
+  <compound refid="_mark_table_8cs" kind="file"><name>MarkTable.cs</name>
+  </compound>
+  <compound refid="_mark_table_exceptions_8cs" kind="file"><name>MarkTableExceptions.cs</name>
+  </compound>
+  <compound refid="_tools_8cs" kind="file"><name>Tools.cs</name>
+  </compound>
+  <compound refid="dir_ac3f7fb93686454dcf9f0844aa3c934a" kind="dir"><name>Calculators</name>
+  </compound>
+  <compound refid="dir_e3d743d0ec9b4013b28b5d69101bc7fb" kind="dir"><name>Data</name>
+  </compound>
+  <compound refid="dir_a71c3b2ad23b9ff58220dd012d201987" kind="dir"><name>obj/Debug</name>
+  </compound>
+  <compound refid="dir_4ad6c4ce518a9fa81f4ccf8af5f59991" kind="dir"><name>obj/Debug/net8.0</name>
+  </compound>
+  <compound refid="dir_462d10c84c8e86466b42283666d397ba" kind="dir"><name>obj/Release/net8.0</name>
+  </compound>
+  <compound refid="dir_43724e81dd40e09f32417973865cdd64" kind="dir"><name>obj</name>
+  </compound>
+  <compound refid="dir_9fe5cc214b8578ee5b8e153089aca810" kind="dir"><name>obj/Release</name>
+  </compound>
+  <compound refid="dir_f2f1bb816f6fbebcf17ce9c7a03bdd2b" kind="dir"><name>Tables</name>
+  </compound>
+</doxygenindex>

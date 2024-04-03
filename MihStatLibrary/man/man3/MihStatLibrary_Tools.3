@@ -14,6 +14,14 @@ MihStatLibrary.Tools \- Константы
 .RI "static int \fBGetPercent\fP (long number, long maxNumber)"
 .br
 .RI "Вычисление процента "
+.ti -1c
+.RI "static double \fBBigIntDevider\fP (BigInteger dividend, BigInteger divisor)"
+.br
+.RI "Функция для деления больших чисел BigInteger "
+.ti -1c
+.RI "static double \fBBigIntDevider\fP (double dividend, BigInteger divisor)"
+.br
+.RI "Функция для деления числа double на число BigInteger "
 .in -1c
 .SS "Статические открытые данные"
 
@@ -42,9 +50,49 @@ MihStatLibrary.Tools \- Константы
 .PP 
 Константы 
 .PP
-См\&. определение в файле \fBTools\&.cs\fP строка \fB12\fP
+См\&. определение в файле \fBTools\&.cs\fP строка \fB13\fP
 .SH "Методы"
 .PP 
+.SS "static double MihStatLibrary\&.Tools\&.BigIntDevider (BigInteger dividend, BigInteger divisor)\fR [static]\fP"
+
+.PP
+Функция для деления больших чисел BigInteger 
+.PP
+\fBАргументы\fP
+.RS 4
+\fIdividend\fP Делимое
+.br
+\fIdivisor\fP Дулитель
+.RE
+.PP
+\fBВозвращает\fP
+.RS 4
+Результат деления в double
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBTools\&.cs\fP строка \fB65\fP
+.SS "static double MihStatLibrary\&.Tools\&.BigIntDevider (double dividend, BigInteger divisor)\fR [static]\fP"
+
+.PP
+Функция для деления числа double на число BigInteger 
+.PP
+\fBАргументы\fP
+.RS 4
+\fIdividend\fP Делимое
+.br
+\fIdivisor\fP Дулитель
+.RE
+.PP
+\fBВозвращает\fP
+.RS 4
+Результат деления в double
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBTools\&.cs\fP строка \fB81\fP
 .SS "static int MihStatLibrary\&.Tools\&.GetPercent (long number, long maxNumber)\fR [static]\fP"
 
 .PP
@@ -64,7 +112,7 @@ MihStatLibrary.Tools \- Константы
 .PP
 
 .PP
-См\&. определение в файле \fBTools\&.cs\fP строка \fB53\fP
+См\&. определение в файле \fBTools\&.cs\fP строка \fB54\fP
 .SH "Данные класса"
 .PP 
 .SS "readonly int [] MihStatLibrary\&.Tools\&.ArNumberOne\fR [static]\fP"
@@ -86,29 +134,29 @@ MihStatLibrary.Tools \- Константы
 .PP
 Массив количества единиц в байтах 
 .PP
-См\&. определение в файле \fBTools\&.cs\fP строка \fB35\fP
+См\&. определение в файле \fBTools\&.cs\fP строка \fB36\fP
 .SS "readonly int MihStatLibrary\&.Tools\&.BITS_IN_BYTE = 8\fR [static]\fP"
 
 .PP
 Количество бит в байте 
 .PP
-См\&. определение в файле \fBTools\&.cs\fP строка \fB17\fP
+См\&. определение в файле \fBTools\&.cs\fP строка \fB18\fP
 .SS "readonly double MihStatLibrary\&.Tools\&.QUANTILE_1_A2 = 2\&.80703\fR [static]\fP"
 
 .PP
 Квантиль 
 .PP
-См\&. определение в файле \fBTools\&.cs\fP строка \fB30\fP
+См\&. определение в файле \fBTools\&.cs\fP строка \fB31\fP
 .SS "readonly int MihStatLibrary\&.Tools\&.SIZE_BLOCK_BITS = \fBBITS_IN_BYTE\fP * \fBSIZE_BLOCK_BYTES\fP\fR [static]\fP"
 
 .PP
-См\&. определение в файле \fBTools\&.cs\fP строка \fB25\fP
+См\&. определение в файле \fBTools\&.cs\fP строка \fB26\fP
 .SS "readonly int MihStatLibrary\&.Tools\&.SIZE_BLOCK_BYTES = 100000000\fR [static]\fP"
 
 .PP
 Количество байт в блоке данных 
 .PP
-См\&. определение в файле \fBTools\&.cs\fP строка \fB22\fP
+См\&. определение в файле \fBTools\&.cs\fP строка \fB23\fP
 
 .SH "Автор"
 .PP 

@@ -161,4 +161,8 @@
     <value>..\..\..\Resources\random_128MB</value>
     <comment>Файл со случайной последовательностью размером 128 МБ</comment>
   </data>
+  <data name="FileRandom1GB" xml:space="preserve">
+    <value>..\..\..\Resources\random_1GB</value>
+    <comment>Файл со случайной последовательностью размером 1 ГБ</comment>
+  </data>
 </root>

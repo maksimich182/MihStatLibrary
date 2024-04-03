@@ -4,7 +4,7 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{keyword}{namespace\ }MihStatLibrary.Data}
 \DoxyCodeLine{00002\ \{}
-\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }BlockData}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }BlockData\ :\ ICloneable}
 \DoxyCodeLine{00007\ \ \ \ \ \{}
 \DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{byte}[]?\ \_data;}
 \DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ \_szBLockData;}
@@ -24,7 +24,19 @@
 \DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \_data\ =\ \_blockDataSource.GetBlockData(szBlock);}
 \DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \_szBLockData\ =\ \_data.Length;}
 \DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00040\ \ \ \ \ \}}
-\DoxyCodeLine{00041\ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{object}\ Clone()}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ BlockData\ newBlockData\ =\ \textcolor{keyword}{new}\ BlockData(\_blockDataSource);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ newBlockData.\_szBLockData\ =\ this.\_szBLockData;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ newBlockData.\_data\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{byte}[newBlockData.\_szBLockData];}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \_szBLockData;\ i++)}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newBlockData.\_data[i]\ =\ this.\_data[i];}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ newBlockData;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00056\ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \}}
 
 \end{DoxyCode}

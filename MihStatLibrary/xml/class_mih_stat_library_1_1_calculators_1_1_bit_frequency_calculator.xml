@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="ru">
+  <compounddef id="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator" kind="class" language="C#" prot="public">
+    <compoundname>MihStatLibrary::Calculators::BitFrequencyCalculator</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_1ac6cdf1b0b66d60deb7c2dad46e6d8259" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MihStatLibrary.Calculators.BitFrequencyCalculator._frequencyOne</definition>
+        <argsstring></argsstring>
+        <name>_frequencyOne</name>
+        <qualifiedname>MihStatLibrary.Calculators.BitFrequencyCalculator._frequencyOne</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Calculators/BitFrequencyCalculator.cs" line="17" column="24" bodyfile="Calculators/BitFrequencyCalculator.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_1ac97fa482198daab7342b758c3d797ebd" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MihStatLibrary.Calculators.BitFrequencyCalculator._frequencyZero</definition>
+        <argsstring></argsstring>
+        <name>_frequencyZero</name>
+        <qualifiedname>MihStatLibrary.Calculators.BitFrequencyCalculator._frequencyZero</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Calculators/BitFrequencyCalculator.cs" line="18" column="24" bodyfile="Calculators/BitFrequencyCalculator.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_1a826c1084202e57aaeed430801f6be3e4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>double</type>
+        <definition>double MihStatLibrary.Calculators.BitFrequencyCalculator.FrequencyOne</definition>
+        <argsstring></argsstring>
+        <name>FrequencyOne</name>
+        <qualifiedname>MihStatLibrary.Calculators.BitFrequencyCalculator.FrequencyOne</qualifiedname>
+        <briefdescription>
+<para>Оценка вероятности бита 1 в данных </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Calculators/BitFrequencyCalculator.cs" line="23" column="23" bodyfile="Calculators/BitFrequencyCalculator.cs" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="property" id="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_1a7f5cd70e5770c57b4b0311d4d3f80583" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>double</type>
+        <definition>double MihStatLibrary.Calculators.BitFrequencyCalculator.FrequencyZero</definition>
+        <argsstring></argsstring>
+        <name>FrequencyZero</name>
+        <qualifiedname>MihStatLibrary.Calculators.BitFrequencyCalculator.FrequencyZero</qualifiedname>
+        <briefdescription>
+<para>Оценка вероятности 0 в данных </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Calculators/BitFrequencyCalculator.cs" line="28" column="23" bodyfile="Calculators/BitFrequencyCalculator.cs" bodystart="28" bodyend="28"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_1a0a57ebf76cf078810a498159c54d3dfa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MihStatLibrary.Calculators.BitFrequencyCalculator.BitFrequencyCalculator</definition>
+        <argsstring>()</argsstring>
+        <name>BitFrequencyCalculator</name>
+        <qualifiedname>MihStatLibrary.Calculators.BitFrequencyCalculator.BitFrequencyCalculator</qualifiedname>
+        <briefdescription>
+<para>Конструктор класса вычислителя вероятностей бит 1 и 0 в данных </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Calculators/BitFrequencyCalculator.cs" line="33" column="16" bodyfile="Calculators/BitFrequencyCalculator.cs" bodystart="33" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_1a00c9c159382735012eed7551ff88a556" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task MihStatLibrary.Calculators.BitFrequencyCalculator.CalculateAsync</definition>
+        <argsstring>(string fileName)</argsstring>
+        <name>CalculateAsync</name>
+        <qualifiedname>MihStatLibrary.Calculators.BitFrequencyCalculator.CalculateAsync</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+<para>Ассинхронная функция рассчета оценки вероятностей 1 и 0 в файле </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Имя файла</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Calculators/BitFrequencyCalculator.cs" line="69" column="27" bodyfile="Calculators/BitFrequencyCalculator.cs" bodystart="69" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_1af32e3314776dd52d0e1339b2341ab513" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MihStatLibrary.Calculators.BitFrequencyCalculator.Calculate</definition>
+        <argsstring>(string fileName)</argsstring>
+        <name>Calculate</name>
+        <qualifiedname>MihStatLibrary.Calculators.BitFrequencyCalculator.Calculate</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+<para>Функция рассчета оценки вероятностей 1 и 0 в файле </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Имя файла</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Calculators/BitFrequencyCalculator.cs" line="97" column="21" bodyfile="Calculators/BitFrequencyCalculator.cs" bodystart="97" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_1ac196dd27bd7523e555f70cb57677e9c9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MihStatLibrary.Calculators.BitFrequencyCalculator.Calculate</definition>
+        <argsstring>(MarkTable markTable)</argsstring>
+        <name>Calculate</name>
+        <qualifiedname>MihStatLibrary.Calculators.BitFrequencyCalculator.Calculate</qualifiedname>
+        <param>
+          <type><ref refid="class_mih_stat_library_1_1_tables_1_1_mark_table" kindref="compound">MarkTable</ref></type>
+          <declname>markTable</declname>
+        </param>
+        <briefdescription>
+<para>Функция рассчета оценки вероятностей 1 и 0 по маркировочной таблице. СМЕЩЕНИЕ ДОЛЖНО БЫТЬ РАВНО РАЗМЕРНОСТИ! ЕСЛИ РАЗМЕР ФАЙЛА В БИТАХ НЕ КРАТЕН РАЗМЕРНОСТИ МАРКИРОВОЧНОЙ ТАБЛИЦЫ, БИТЫ, НЕ ОБСЧИТАННЫЕ ТАБЛИЦЕЙ, НЕ УЧИТЫВАЮТСЯ! </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>markTable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Маркировочная таблица. СМЕЩЕНИЕ ДОЛЖНО БЫТЬ РАВНО РАЗМЕРНОСТИ!</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>BitFrequencyCalculatorException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Попытка посчитать количество единиц на таблице с разным значением размерности и смещения</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Calculators/BitFrequencyCalculator.cs" line="118" column="21" bodyfile="Calculators/BitFrequencyCalculator.cs" bodystart="118" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_1a9b5105dbc12a58d3bce111277f14cbae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MihStatLibrary.Calculators.BitFrequencyCalculator.Calculate</definition>
+        <argsstring>(BlockData blockData)</argsstring>
+        <name>Calculate</name>
+        <qualifiedname>MihStatLibrary.Calculators.BitFrequencyCalculator.Calculate</qualifiedname>
+        <param>
+          <type><ref refid="class_mih_stat_library_1_1_data_1_1_block_data" kindref="compound">BlockData</ref></type>
+          <declname>blockData</declname>
+        </param>
+        <briefdescription>
+<para>Функция рассчета оценки вероятностей 1 и 0 на блоке данных </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>blockData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Блок данных</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Calculators/BitFrequencyCalculator.cs" line="152" column="21" bodyfile="Calculators/BitFrequencyCalculator.cs" bodystart="152" bodyend="161"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Класс вычислителя оценки вероятностей бит 1 и 0 в данных </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Calculators/BitFrequencyCalculator.cs" line="15" column="11" bodyfile="Calculators/BitFrequencyCalculator.cs" bodystart="16" bodyend="162"/>
+    <listofallmembers>
+      <member refid="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_1ac6cdf1b0b66d60deb7c2dad46e6d8259" prot="private" virt="non-virtual"><scope>MihStatLibrary::Calculators::BitFrequencyCalculator</scope><name>_frequencyOne</name></member>
+      <member refid="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_1ac97fa482198daab7342b758c3d797ebd" prot="private" virt="non-virtual"><scope>MihStatLibrary::Calculators::BitFrequencyCalculator</scope><name>_frequencyZero</name></member>
+      <member refid="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_1a0a57ebf76cf078810a498159c54d3dfa" prot="public" virt="non-virtual"><scope>MihStatLibrary::Calculators::BitFrequencyCalculator</scope><name>BitFrequencyCalculator</name></member>
+      <member refid="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_1af32e3314776dd52d0e1339b2341ab513" prot="public" virt="non-virtual"><scope>MihStatLibrary::Calculators::BitFrequencyCalculator</scope><name>Calculate</name></member>
+      <member refid="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_1ac196dd27bd7523e555f70cb57677e9c9" prot="public" virt="non-virtual"><scope>MihStatLibrary::Calculators::BitFrequencyCalculator</scope><name>Calculate</name></member>
+      <member refid="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_1a9b5105dbc12a58d3bce111277f14cbae" prot="public" virt="non-virtual"><scope>MihStatLibrary::Calculators::BitFrequencyCalculator</scope><name>Calculate</name></member>
+      <member refid="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_1a00c9c159382735012eed7551ff88a556" prot="public" virt="non-virtual"><scope>MihStatLibrary::Calculators::BitFrequencyCalculator</scope><name>CalculateAsync</name></member>
+      <member refid="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_1a826c1084202e57aaeed430801f6be3e4" prot="public" virt="non-virtual"><scope>MihStatLibrary::Calculators::BitFrequencyCalculator</scope><name>FrequencyOne</name></member>
+      <member refid="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_1a7f5cd70e5770c57b4b0311d4d3f80583" prot="public" virt="non-virtual"><scope>MihStatLibrary::Calculators::BitFrequencyCalculator</scope><name>FrequencyZero</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

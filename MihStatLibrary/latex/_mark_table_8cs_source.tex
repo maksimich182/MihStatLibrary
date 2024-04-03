@@ -17,185 +17,218 @@
 \DoxyCodeLine{00016\ \ \ \ \ \{}
 \DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{comment}{//TODO:\ Сделать\ обработку\ недостаточного\ объема\ памяти}}
 \DoxyCodeLine{00018\ }
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ \_dimension;\ \ \textcolor{comment}{//TODO:\ сделать\ проверку\ на\ <\ 64,\ так\ как\ памяти\ вряд\ ли\ хватит\ на\ такой\ объем\ гистограммы}}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ \_dimension;\ \ \textcolor{comment}{//TODO:\ сделать\ проверку\ на\ <\ 64,\ так\ как\ памяти\ вряд\ ли\ хватит\ на\ такой\ объем\ таблицы}}
 \DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ \_szShift;}
 \DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{long}\ \_mask;}
 \DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{long}[]\ \_table;}
 \DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ BigInteger\ \_remain;}
 \DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ \_szRemain;}
 \DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{long}\ \_nmVectors;}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{event}\ EventHandler<string>?\ ProcessChanged\ =\ \textcolor{keyword}{null};}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{event}\ EventHandler<int>?\ ProgressChanged\ =\ \textcolor{keyword}{null};}
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{long}[]\ Table\ \{\ \textcolor{keyword}{get}\ \{\ \textcolor{keywordflow}{return}\ \_table;\ \}\ \}}
-\DoxyCodeLine{00041\ }
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ Dimension\ \{\ \textcolor{keyword}{get}\ \{\ \textcolor{keywordflow}{return}\ \_dimension;\ \}\ \}}
-\DoxyCodeLine{00046\ }
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{long}\ NmVectors\ \{\ \textcolor{keyword}{get}\ \{\ \textcolor{keywordflow}{return}\ \_nmVectors;\ \}\ \}}
-\DoxyCodeLine{00051\ }
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ SzShift\ \{\ \textcolor{keyword}{get}\ \{\ \textcolor{keywordflow}{return}\ \_szShift;\ \}\ \}}
-\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{object}\ \_locker;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{event}\ EventHandler<string>?\ ProcessChanged\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{event}\ EventHandler<int>?\ ProgressChanged\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{long}[]\ Table\ \{\ \textcolor{keyword}{get}\ \{\ \textcolor{keywordflow}{return}\ \_table;\ \}\ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ Dimension\ \{\ \textcolor{keyword}{get}\ \{\ \textcolor{keywordflow}{return}\ \_dimension;\ \}\ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{long}\ NmVectors\ \{\ \textcolor{keyword}{get}\ \{\ \textcolor{keywordflow}{return}\ \_nmVectors;\ \}\ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ SzShift\ \{\ \textcolor{keyword}{get}\ \{\ \textcolor{keywordflow}{return}\ \_szShift;\ \}\ \}}
 \DoxyCodeLine{00057\ }
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ MarkTable(\textcolor{keywordtype}{int}\ dimension)}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \_dimension\ =\ dimension;}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \_szShift\ =\ \_dimension;}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \_mask\ =\ (1\ <<\ \_dimension)\ -\/\ 1;}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \_table\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{long}[1\ <<\ \_dimension];}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \_remain\ =\ 0;}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \_szRemain\ =\ 0;}
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \_nmVectors\ =\ 0;}
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00072\ }
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ MarkTable(\textcolor{keywordtype}{int}\ dimension,\ \textcolor{keywordtype}{int}\ szShift)\ :\ this(dimension)}
-\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (szShift\ >\ dimension)}
-\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ InvalidShiftException(\textcolor{stringliteral}{"{}Смещение\ должно\ быть\ меньше\ размерности!"{}});}
-\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \_szShift\ =\ szShift;}
-\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00085\ }
-\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Calculate(BlockData\ data)}
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ BigInteger\ dataBuffer\ =\ 0;}
-\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ szBuffer\ =\ 0;}
-\DoxyCodeLine{00094\ }
-\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ countReadElements\ =\ 0;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ MarkTable(\textcolor{keywordtype}{int}\ dimension)}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \_dimension\ =\ dimension;}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \_szShift\ =\ \_dimension;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \_mask\ =\ (1\ <<\ \_dimension)\ -\/\ 1;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \_table\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{long}[1\ <<\ \_dimension];}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \_remain\ =\ 0;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \_szRemain\ =\ 0;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \_nmVectors\ =\ 0;}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \_locker\ =\ \textcolor{keyword}{new}\ object();}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ MarkTable(\textcolor{keywordtype}{int}\ dimension,\ \textcolor{keywordtype}{int}\ szShift)\ :\ this(dimension)}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (szShift\ >\ dimension)}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ InvalidShiftException(\textcolor{stringliteral}{"{}Смещение\ должно\ быть\ меньше\ размерности!"{}});}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \_szShift\ =\ szShift;}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Calculate(BlockData\ data)}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ BigInteger\ dataBuffer\ =\ 0;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ szBuffer\ =\ 0;}
 \DoxyCodeLine{00096\ }
-\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_szRemain\ !=\ 0)}
-\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dataBuffer\ =\ \_remain;}
-\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ szBuffer\ =\ \_szRemain;}
-\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00102\ }
-\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (countReadElements\ <\ data.SzBlockData)}
-\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_getDataForCalculate(data,\ ref\ dataBuffer,\ ref\ szBuffer,\ ref\ countReadElements);}
-\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_calculateData(ref\ dataBuffer,\ ref\ szBuffer);}
-\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this.ProgressChanged\ !=\ \textcolor{keyword}{null})}
-\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.ProgressChanged(\textcolor{keyword}{this},\ Tools.GetPercent(countReadElements,\ data.SzBlockData));}
-\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00110\ }
-\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \_remain\ =\ dataBuffer;}
-\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \_szRemain\ =\ szBuffer;}
-\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00114\ }
-\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Clear()}
-\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ Array.Clear(\_table,\ 0,\ \_table.Length);}
-\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \_remain\ =\ 0;}
-\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \_szRemain\ =\ 0;}
-\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \_nmVectors\ =\ 0;}
-\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00125\ }
-\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Calculate(\textcolor{keywordtype}{string}\ fileName)}
-\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ FileStream\ dataStream\ =\ \textcolor{keyword}{new}\ FileStream(fileName,\ FileMode.Open);}
-\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ BlockData\ blockData\ =\ \textcolor{keyword}{new}\ BlockData(\textcolor{keyword}{new}\ BlockDataFileSource(dataStream));}
-\DoxyCodeLine{00134\ }
-\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ nmBlocks\ =\ Math.Ceiling((\textcolor{keywordtype}{double})dataStream.Length\ /\ Tools.SIZE\_BLOCK\_BYTES);}
-\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ nmBlocks;\ i++)}
-\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ blockData.GetBlockData(Tools.SIZE\_BLOCK\_BYTES);}
-\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Calculate(blockData);}
-\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(this.ProcessChanged\ !=\ \textcolor{keyword}{null})}
-\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.ProcessChanged(\textcolor{keyword}{this},\ \$\textcolor{stringliteral}{"{}Маркировочная\ таблица:\ \{i\ +\ 1\}\ из\ \{nmBlocks\}"{}});}
-\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ dataStream.Close();}
-\DoxyCodeLine{00144\ }
-\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00146\ }
-\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Reduce(MarkTable\ destTable)}
-\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (destTable.Dimension\ >\ \textcolor{keyword}{this}.Dimension)}
-\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ReduceException(\textcolor{stringliteral}{"{}Размерность\ итоговой\ гистограммы\ больше\ размерности\ исходной!"{}});}
-\DoxyCodeLine{00156\ }
-\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (destTable.\_szShift\ !=\ 1\ ||\ \textcolor{keyword}{this}.\_szShift\ !=\ 1)}
-\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ReduceException(\textcolor{stringliteral}{"{}Значения\ смещений\ исходной\ и\ итоговой\ гистограммы\ должны\ совпадать!"{}});}
-\DoxyCodeLine{00159\ }
-\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ destTable.\_table\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{long}[1\ <<\ destTable.\_dimension];}
-\DoxyCodeLine{00161\ }
-\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ maskOffset\ =\ this.\_dimension\ -\/\ destTable.\_dimension;}
-\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ reduceMask\ =\ destTable.\_mask\ <<\ maskOffset;}
-\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this.\_table.Length;\ i++)}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ countReadElements\ =\ 0;}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_szRemain\ !=\ 0)}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dataBuffer\ =\ \_remain;}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ szBuffer\ =\ \_szRemain;}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (countReadElements\ <\ data.SzBlockData)}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lock\ (\_locker)}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_getDataForCalculate(data,\ ref\ dataBuffer,\ ref\ szBuffer,\ ref\ countReadElements);}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_calculateData(ref\ dataBuffer,\ ref\ szBuffer);}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.ProgressChanged?.Invoke(\textcolor{keyword}{this},\ Tools.GetPercent(countReadElements,\ data.SzBlockData));}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \_remain\ =\ dataBuffer;}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \_szRemain\ =\ szBuffer;}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Clear()}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ Array.Clear(\_table,\ 0,\ \_table.Length);}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \_remain\ =\ 0;}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \_szRemain\ =\ 0;}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \_nmVectors\ =\ 0;}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Calculate(\textcolor{keywordtype}{string}\ fileName)}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ FileStream\ dataStream\ =\ \textcolor{keyword}{new}\ FileStream(fileName,\ FileMode.Open);}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ BlockData\ blockData\ =\ \textcolor{keyword}{new}\ BlockData(\textcolor{keyword}{new}\ BlockDataFileSource(dataStream));}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ nmBlocks\ =\ Math.Ceiling((\textcolor{keywordtype}{double})dataStream.Length\ /\ Tools.SIZE\_BLOCK\_BYTES);}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ nmBlocks;\ i++)}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ blockData.GetBlockData(Tools.SIZE\_BLOCK\_BYTES);}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Calculate(blockData);}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.ProcessChanged?.Invoke(\textcolor{keyword}{this},\ \$\textcolor{stringliteral}{"{}Маркировочная\ таблица:\ \{i\ +\ 1\}\ из\ \{nmBlocks\}"{}});}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ dataStream.Close();}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ async\ Task\ CalculateAsync(\textcolor{keywordtype}{string}\ fileName,\ CancellationToken?\ token\ =\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ FileStream\ dataStream\ =\ \textcolor{keyword}{new}\ FileStream(fileName,\ FileMode.Open);}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ BlockData\ blockData\ =\ \textcolor{keyword}{new}\ BlockData(\textcolor{keyword}{new}\ BlockDataFileSource(dataStream));}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ szBlock\ =\ (int)(Math.Ceiling((\textcolor{keywordtype}{double})(Tools.SIZE\_BLOCK\_BYTES\ *\ Tools.BITS\_IN\_BYTE)\ /\ (\_dimension\ *\ Tools.BITS\_IN\_BYTE))}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\ (\_dimension\ *\ Tools.BITS\_IN\_BYTE))\ /\ Tools.BITS\_IN\_BYTE;}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ nmBlocks\ =\ Math.Ceiling((\textcolor{keywordtype}{double})dataStream.Length\ /\ szBlock);}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ List<Task>\ tasks\ =\ \textcolor{keyword}{new}\ List<Task>();}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ nmBlocks\ -\/\ 1;\ i++)}
 \DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ destTable.\_table[(i\ \&\ reduceMask)\ >>\ maskOffset]\ +=\ this.\_table[i];}
-\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00168\ }
-\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ destTable.\_nmVectors\ =\ this.\_nmVectors;}
-\DoxyCodeLine{00170\ }
-\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this.\_szRemain\ !=\ 0)}
-\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ destTable.\_remain\ =\ this.\_remain;}
-\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ destTable.\_szRemain\ =\ this.\_szRemain;}
-\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ destTable.\_calculateData(ref\ destTable.\_remain,\ ref\ destTable.\_szRemain);}
-\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00178\ }
-\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ MarkTable\ Reduce(\textcolor{keywordtype}{int}\ pDestDimension)}
-\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ MarkTable\ resultTable\ =\ \textcolor{keyword}{new}\ MarkTable(pDestDimension,\ this.\_szShift);}
-\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ this.Reduce(resultTable);}
-\DoxyCodeLine{00188\ }
-\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ resultTable;}
-\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00191\ }
-\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \_calculateData(ref\ BigInteger\ dataBuffer,\ ref\ \textcolor{keywordtype}{int}\ szBuffer)}
-\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ offsetMask\ =\ 0;}
-\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ maskRemain\ =\ 0;}
-\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (szBuffer\ >=\ \_dimension)}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Task\ task\ =\ \textcolor{keyword}{new}\ Task(()\ =>}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ blockData.GetBlockData(szBlock);}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ BlockData\ blockDataTask\ =\ (BlockData)blockData.Clone();}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Calculate(blockDataTask);}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \},\ token\ ??\ CancellationToken.None);}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tasks.Add(task);}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ task.Start();}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.ProcessChanged?.Invoke(\textcolor{keyword}{this},\ \$\textcolor{stringliteral}{"{}Маркировочная\ таблица:\ \{i\ +\ 1\}\ из\ \{nmBlocks\}"{}});\ \textcolor{comment}{//TODO}}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ await\ Task.WhenAll(tasks.ToArray());}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ blockData.GetBlockData(szBlock);}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ Calculate(blockData);}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ dataStream.Close();}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Reduce(MarkTable\ destTable)}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (destTable.Dimension\ >\ \textcolor{keyword}{this}.Dimension)}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ReduceException(\textcolor{stringliteral}{"{}Размерность\ итоговой\ таблицы\ больше\ размерности\ исходной!"{}});}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (destTable.\_szShift\ !=\ 1\ ||\ \textcolor{keyword}{this}.\_szShift\ !=\ 1)}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ReduceException(\textcolor{stringliteral}{"{}Значения\ смещений\ исходной\ и\ итоговой\ таблиц\ должны\ совпадать!"{}});}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ destTable.\_table\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{long}[1\ <<\ destTable.\_dimension];}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ maskOffset\ =\ this.\_dimension\ -\/\ destTable.\_dimension;}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ reduceMask\ =\ destTable.\_mask\ <<\ maskOffset;}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this.\_table.Length;\ i++)}
 \DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\_histogram[(long)dataBuffer\ \&\ \_mask]++;}}
-\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ offsetMask\ =\ szBuffer\ -\/\ \_dimension;}
-\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ maskRemain\ =\ (1\ <<\ (offsetMask\ +\ (\_dimension\ -\/\ \_szShift)))\ -\/\ 1;}
-\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_table[(long)((dataBuffer\ \&\ (\_mask\ <<\ offsetMask))\ >>\ offsetMask)]++;}
-\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_nmVectors++;}
-\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//dataBuffer\ >>=\ \_szShift;}}
-\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dataBuffer\ \&=\ maskRemain;\ }
-\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ szBuffer\ -\/=\ \_szShift;}
-\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00213\ }
-\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \_getDataForCalculate(BlockData\ blockData,\ ref\ BigInteger\ dataBuffer,\ ref\ \textcolor{keywordtype}{int}\ szBuffer,\ ref\ \textcolor{keywordtype}{int}\ countReadElements)}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ destTable.\_table[(i\ \&\ reduceMask)\ >>\ maskOffset]\ +=\ this.\_table[i];}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ destTable.\_nmVectors\ =\ this.\_nmVectors;}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this.\_szRemain\ !=\ 0)}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ destTable.\_remain\ =\ this.\_remain;}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ destTable.\_szRemain\ =\ this.\_szRemain;}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ destTable.\_calculateData(ref\ destTable.\_remain,\ ref\ destTable.\_szRemain);}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ MarkTable\ Reduce(\textcolor{keywordtype}{int}\ destDimension)}
 \DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (szBuffer\ <\ \_dimension)}
-\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//dataBuffer\ |=\ (BigInteger)blockData.Data[countReadElements++]\ <<\ szBuffer;}}
-\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dataBuffer\ =\ (dataBuffer\ <<\ Tools.BITS\_IN\_BYTE)\ |\ (BigInteger)blockData.Data[countReadElements++];}
-\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ szBuffer\ +=\ Tools.BITS\_IN\_BYTE;}
-\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (countReadElements\ ==\ blockData.Data.Length)}
-\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00234\ }
-\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{bool}\ Equals(\textcolor{keywordtype}{object}?\ obj)}
-\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ var\ other\ =\ obj\ as\ MarkTable;}
-\DoxyCodeLine{00243\ }
-\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(other\ ==\ \textcolor{keyword}{null})}
-\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00246\ }
-\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_dimension\ !=\ other.\_dimension\ ||\ \_szShift\ !=\ other.\_szShift\ ||\ \_mask\ !=\ other.\_mask}
-\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ||\ \_remain\ !=\ other.\_remain\ ||\ \_szRemain\ !=\ other.\_szRemain\ ||\ \_nmVectors\ !=\ other.\_nmVectors)}
-\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ MarkTable\ resultTable\ =\ \textcolor{keyword}{new}\ MarkTable(destDimension,\ this.\_szShift);}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ this.Reduce(resultTable);}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ resultTable;}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \_calculateData(ref\ BigInteger\ dataBuffer,\ ref\ \textcolor{keywordtype}{int}\ szBuffer)}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ offsetMask\ =\ 0;}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ maskRemain\ =\ 0;}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (szBuffer\ >=\ \_dimension)}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\_histogram[(long)dataBuffer\ \&\ \_mask]++;}}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ offsetMask\ =\ szBuffer\ -\/\ \_dimension;}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ maskRemain\ =\ (1\ <<\ (offsetMask\ +\ (\_dimension\ -\/\ \_szShift)))\ -\/\ 1;}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_table[(long)((dataBuffer\ \&\ (\_mask\ <<\ offsetMask))\ >>\ offsetMask)]++;}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_nmVectors++;}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//dataBuffer\ >>=\ \_szShift;}}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dataBuffer\ \&=\ maskRemain;}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ szBuffer\ -\/=\ \_szShift;}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00250\ }
-\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \_table.Length;\ i++)}
-\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_table[i]\ !=\ other.\_table[i])\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00255\ }
-\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00258\ }
-\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{int}\ GetHashCode()}
-\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ base.GetHashCode();}
-\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00267\ \ \ \ \ \}}
-\DoxyCodeLine{00268\ \}}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \_getDataForCalculate(BlockData\ blockData,\ ref\ BigInteger\ dataBuffer,\ ref\ \textcolor{keywordtype}{int}\ szBuffer,\ ref\ \textcolor{keywordtype}{int}\ countReadElements)}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (szBuffer\ <\ \_dimension)}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//dataBuffer\ |=\ (BigInteger)blockData.Data[countReadElements++]\ <<\ szBuffer;}}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dataBuffer\ =\ (dataBuffer\ <<\ Tools.BITS\_IN\_BYTE)\ |\ (BigInteger)blockData.Data[countReadElements++];}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ szBuffer\ +=\ Tools.BITS\_IN\_BYTE;}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (countReadElements\ ==\ blockData.Data.Length)}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00271\ }
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{bool}\ Equals(\textcolor{keywordtype}{object}?\ obj)}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ var\ other\ =\ obj\ as\ MarkTable;}
+\DoxyCodeLine{00280\ }
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (other\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00283\ }
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_dimension\ !=\ other.\_dimension\ ||\ \_szShift\ !=\ other.\_szShift\ ||\ \_mask\ !=\ other.\_mask}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ||\ \_remain\ !=\ other.\_remain\ ||\ \_szRemain\ !=\ other.\_szRemain\ ||\ \_nmVectors\ !=\ other.\_nmVectors)}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00287\ }
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \_table.Length;\ i++)}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_table[i]\ !=\ other.\_table[i])\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00292\ }
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00295\ }
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{int}\ GetHashCode()}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ base.GetHashCode();}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00304\ \ \ \ \ \}}
+\DoxyCodeLine{00305\ \}}
 
 \end{DoxyCode}

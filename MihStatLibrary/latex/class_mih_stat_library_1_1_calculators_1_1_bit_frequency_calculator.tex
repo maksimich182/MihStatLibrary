@@ -15,7 +15,7 @@ async Task \textbf{ Calculate\+Async} (string file\+Name)
 void \textbf{ Calculate} (string file\+Name)
 \begin{DoxyCompactList}\small\item\em Функция рассчета оценки вероятностей 1 и 0 в файле \end{DoxyCompactList}\item 
 void \textbf{ Calculate} (\textbf{ Mark\+Table} mark\+Table)
-\begin{DoxyCompactList}\small\item\em Функция рассчета оценки вероятностей 1 и 0 по маркировочной таблице. СМЕЩЕНИЕ ДОЛЖНО БЫТЬ РАВНО РАЗМЕРНОСТИ! ЕСЛИ РАЗМЕР ФАЙЛА В БИТАХ НЕ КРАТЕН РАЗМЕРНОСТИ ГИСТОГРАММЫ ЧАСТОТ, БИТЫ, НЕ ОБСЧИТАННЫЕ ГИСТОГРАММОЙ, НЕ УЧИТЫВАЮТСЯ! \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Функция рассчета оценки вероятностей 1 и 0 по маркировочной таблице. СМЕЩЕНИЕ ДОЛЖНО БЫТЬ РАВНО РАЗМЕРНОСТИ! ЕСЛИ РАЗМЕР ФАЙЛА В БИТАХ НЕ КРАТЕН РАЗМЕРНОСТИ МАРКИРОВОЧНОЙ ТАБЛИЦЫ, БИТЫ, НЕ ОБСЧИТАННЫЕ ТАБЛИЦЕЙ, НЕ УЧИТЫВАЮТСЯ! \end{DoxyCompactList}\item 
 void \textbf{ Calculate} (\textbf{ Block\+Data} block\+Data)
 \begin{DoxyCompactList}\small\item\em Функция рассчета оценки вероятностей 1 и 0 на блоке данных \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Свойства}
@@ -79,7 +79,7 @@ double \textbf{ Frequency\+Zero}\hspace{0.3cm}{\ttfamily  [get]}
 
 
 
-Функция рассчета оценки вероятностей 1 и 0 по маркировочной таблице. СМЕЩЕНИЕ ДОЛЖНО БЫТЬ РАВНО РАЗМЕРНОСТИ! ЕСЛИ РАЗМЕР ФАЙЛА В БИТАХ НЕ КРАТЕН РАЗМЕРНОСТИ ГИСТОГРАММЫ ЧАСТОТ, БИТЫ, НЕ ОБСЧИТАННЫЕ ГИСТОГРАММОЙ, НЕ УЧИТЫВАЮТСЯ! 
+Функция рассчета оценки вероятностей 1 и 0 по маркировочной таблице. СМЕЩЕНИЕ ДОЛЖНО БЫТЬ РАВНО РАЗМЕРНОСТИ! ЕСЛИ РАЗМЕР ФАЙЛА В БИТАХ НЕ КРАТЕН РАЗМЕРНОСТИ МАРКИРОВОЧНОЙ ТАБЛИЦЫ, БИТЫ, НЕ ОБСЧИТАННЫЕ ТАБЛИЦЕЙ, НЕ УЧИТЫВАЮТСЯ! 
 
 
 \begin{DoxyParams}{Аргументы}
@@ -88,7 +88,7 @@ double \textbf{ Frequency\+Zero}\hspace{0.3cm}{\ttfamily  [get]}
 \end{DoxyParams}
 
 \begin{DoxyExceptions}{Исключения}
-{\em Bit\+Frequency\+Calculator\+Exception} & Попытка посчитать количество единиц на гистограмме с разным значением размерности и смещения\\
+{\em Bit\+Frequency\+Calculator\+Exception} & Попытка посчитать количество единиц на таблице с разным значением размерности и смещения\\
 \hline
 \end{DoxyExceptions}
 

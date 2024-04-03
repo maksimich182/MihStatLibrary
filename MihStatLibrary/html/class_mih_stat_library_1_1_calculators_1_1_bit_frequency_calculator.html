@@ -115,7 +115,7 @@ $(function(){initNavTree('class_mih_stat_library_1_1_calculators_1_1_bit_frequen
 <tr class="memdesc:af32e3314776dd52d0e1339b2341ab513"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция рассчета оценки вероятностей 1 и 0 в файле  <br /></td></tr>
 <tr class="separator:af32e3314776dd52d0e1339b2341ab513"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac196dd27bd7523e555f70cb57677e9c9" id="r_ac196dd27bd7523e555f70cb57677e9c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac196dd27bd7523e555f70cb57677e9c9">Calculate</a> (<a class="el" href="class_mih_stat_library_1_1_tables_1_1_mark_table.html">MarkTable</a> markTable)</td></tr>
-<tr class="memdesc:ac196dd27bd7523e555f70cb57677e9c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция рассчета оценки вероятностей 1 и 0 по маркировочной таблице. СМЕЩЕНИЕ ДОЛЖНО БЫТЬ РАВНО РАЗМЕРНОСТИ! ЕСЛИ РАЗМЕР ФАЙЛА В БИТАХ НЕ КРАТЕН РАЗМЕРНОСТИ ГИСТОГРАММЫ ЧАСТОТ, БИТЫ, НЕ ОБСЧИТАННЫЕ ГИСТОГРАММОЙ, НЕ УЧИТЫВАЮТСЯ!  <br /></td></tr>
+<tr class="memdesc:ac196dd27bd7523e555f70cb57677e9c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция рассчета оценки вероятностей 1 и 0 по маркировочной таблице. СМЕЩЕНИЕ ДОЛЖНО БЫТЬ РАВНО РАЗМЕРНОСТИ! ЕСЛИ РАЗМЕР ФАЙЛА В БИТАХ НЕ КРАТЕН РАЗМЕРНОСТИ МАРКИРОВОЧНОЙ ТАБЛИЦЫ, БИТЫ, НЕ ОБСЧИТАННЫЕ ТАБЛИЦЕЙ, НЕ УЧИТЫВАЮТСЯ!  <br /></td></tr>
 <tr class="separator:ac196dd27bd7523e555f70cb57677e9c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b5105dbc12a58d3bce111277f14cbae" id="r_a9b5105dbc12a58d3bce111277f14cbae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b5105dbc12a58d3bce111277f14cbae">Calculate</a> (<a class="el" href="class_mih_stat_library_1_1_data_1_1_block_data.html">BlockData</a> blockData)</td></tr>
 <tr class="memdesc:a9b5105dbc12a58d3bce111277f14cbae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция рассчета оценки вероятностей 1 и 0 на блоке данных  <br /></td></tr>
@@ -199,7 +199,7 @@ $(function(){initNavTree('class_mih_stat_library_1_1_calculators_1_1_bit_frequen
       </table>
 </div><div class="memdoc">
 
-<p>Функция рассчета оценки вероятностей 1 и 0 по маркировочной таблице. СМЕЩЕНИЕ ДОЛЖНО БЫТЬ РАВНО РАЗМЕРНОСТИ! ЕСЛИ РАЗМЕР ФАЙЛА В БИТАХ НЕ КРАТЕН РАЗМЕРНОСТИ ГИСТОГРАММЫ ЧАСТОТ, БИТЫ, НЕ ОБСЧИТАННЫЕ ГИСТОГРАММОЙ, НЕ УЧИТЫВАЮТСЯ! </p>
+<p>Функция рассчета оценки вероятностей 1 и 0 по маркировочной таблице. СМЕЩЕНИЕ ДОЛЖНО БЫТЬ РАВНО РАЗМЕРНОСТИ! ЕСЛИ РАЗМЕР ФАЙЛА В БИТАХ НЕ КРАТЕН РАЗМЕРНОСТИ МАРКИРОВОЧНОЙ ТАБЛИЦЫ, БИТЫ, НЕ ОБСЧИТАННЫЕ ТАБЛИЦЕЙ, НЕ УЧИТЫВАЮТСЯ! </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">markTable</td><td>Маркировочная таблица. СМЕЩЕНИЕ ДОЛЖНО БЫТЬ РАВНО РАЗМЕРНОСТИ!</td></tr>
@@ -208,7 +208,7 @@ $(function(){initNavTree('class_mih_stat_library_1_1_calculators_1_1_bit_frequen
 </dl>
 <dl class="exception"><dt>Исключения</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">BitFrequencyCalculatorException</td><td>Попытка посчитать количество единиц на гистограмме с разным значением размерности и смещения</td></tr>
+    <tr><td class="paramname">BitFrequencyCalculatorException</td><td>Попытка посчитать количество единиц на таблице с разным значением размерности и смещения</td></tr>
   </table>
   </dd>
 </dl>

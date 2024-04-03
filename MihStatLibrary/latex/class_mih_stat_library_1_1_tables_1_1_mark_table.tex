@@ -9,7 +9,7 @@
 \begin{DoxyCompactItemize}
 \item 
 \textbf{ Mark\+Table} (int dimension)
-\begin{DoxyCompactList}\small\item\em Конструктор класса маркировочной таблицыт без зацепления \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Конструктор класса маркировочной таблицы без зацепления \end{DoxyCompactList}\item 
 \textbf{ Mark\+Table} (int dimension, int sz\+Shift)
 \begin{DoxyCompactList}\small\item\em Конструктор класса маркировочной таблицы с зацеплением \end{DoxyCompactList}\item 
 void \textbf{ Calculate} (\textbf{ Block\+Data} data)
@@ -18,9 +18,11 @@ void \textbf{ Clear} ()
 \begin{DoxyCompactList}\small\item\em Обнуление маркировочной таблицы \end{DoxyCompactList}\item 
 void \textbf{ Calculate} (string file\+Name)
 \begin{DoxyCompactList}\small\item\em Подсчет маркировочной таблицы по данным файла \end{DoxyCompactList}\item 
+async Task \textbf{ Calculate\+Async} (string file\+Name, Cancellation\+Token? token=null)
+\begin{DoxyCompactList}\small\item\em Подсчет маркировочной таблицы по данным файла \end{DoxyCompactList}\item 
 void \textbf{ Reduce} (\textbf{ Mark\+Table} dest\+Table)
 \begin{DoxyCompactList}\small\item\em Функция пересчета маркировочной таблицы в таблицу с меньшей размерностью векторов. ФУНКЦИЯ РАБОТАЕТ ТОЛЬКО СО СМЕЩЕНИЕМ 1! \end{DoxyCompactList}\item 
-\textbf{ Mark\+Table} \textbf{ Reduce} (int p\+Dest\+Dimension)
+\textbf{ Mark\+Table} \textbf{ Reduce} (int dest\+Dimension)
 \begin{DoxyCompactList}\small\item\em Функция создания маркировочной таблицы на основании маркировочной таблицы большей размерности. ФУНКЦИЯ РАБОТАЕТ ТОЛЬКО СО СМЕЩЕНИЕМ 1! \end{DoxyCompactList}\item 
 override bool \textbf{ Equals} (object? obj)
 \begin{DoxyCompactList}\small\item\em Глубокое сравнение двух экземпляров Mark\+Table \end{DoxyCompactList}\item 
@@ -62,7 +64,7 @@ Event\+Handler$<$ int $>$? \textbf{ Progress\+Changed} = null
 
 
 
-Конструктор класса маркировочной таблицыт без зацепления 
+Конструктор класса маркировочной таблицы без зацепления 
 
 
 \begin{DoxyParams}{Аргументы}
@@ -71,7 +73,7 @@ Event\+Handler$<$ int $>$? \textbf{ Progress\+Changed} = null
 \end{DoxyParams}
 
 
-См. определение в файле \textbf{ Mark\+Table.\+cs} строка \textbf{ 62}
+См. определение в файле \textbf{ Mark\+Table.\+cs} строка \textbf{ 63}
 
 \label{class_mih_stat_library_1_1_tables_1_1_mark_table_a46b7ec33c3edf9a778052c0485c1753d} 
 \index{MihStatLibrary.Tables.MarkTable@{MihStatLibrary.Tables.MarkTable}!MarkTable@{MarkTable}}
@@ -97,7 +99,7 @@ Event\+Handler$<$ int $>$? \textbf{ Progress\+Changed} = null
 \end{DoxyExceptions}
 
 
-См. определение в файле \textbf{ Mark\+Table.\+cs} строка \textbf{ 79}
+См. определение в файле \textbf{ Mark\+Table.\+cs} строка \textbf{ 81}
 
 
 
@@ -119,7 +121,7 @@ Event\+Handler$<$ int $>$? \textbf{ Progress\+Changed} = null
 \end{DoxyParams}
 
 
-См. определение в файле \textbf{ Mark\+Table.\+cs} строка \textbf{ 90}
+См. определение в файле \textbf{ Mark\+Table.\+cs} строка \textbf{ 92}
 
 \label{class_mih_stat_library_1_1_tables_1_1_mark_table_a5e7a4194287173a37a52729826e720f3} 
 \index{MihStatLibrary.Tables.MarkTable@{MihStatLibrary.Tables.MarkTable}!Calculate@{Calculate}}
@@ -138,7 +140,26 @@ Event\+Handler$<$ int $>$? \textbf{ Progress\+Changed} = null
 \end{DoxyParams}
 
 
-См. определение в файле \textbf{ Mark\+Table.\+cs} строка \textbf{ 130}
+См. определение в файле \textbf{ Mark\+Table.\+cs} строка \textbf{ 135}
+
+\label{class_mih_stat_library_1_1_tables_1_1_mark_table_ad93cc292848f833411d491d6aaaa0dcc} 
+\index{MihStatLibrary.Tables.MarkTable@{MihStatLibrary.Tables.MarkTable}!CalculateAsync@{CalculateAsync}}
+\index{CalculateAsync@{CalculateAsync}!MihStatLibrary.Tables.MarkTable@{MihStatLibrary.Tables.MarkTable}}
+\doxysubsubsection{CalculateAsync()}
+{\footnotesize\ttfamily async Task Mih\+Stat\+Library.\+Tables.\+Mark\+Table.\+Calculate\+Async (\begin{DoxyParamCaption}\item[{string}]{file\+Name,  }\item[{Cancellation\+Token?}]{token = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Подсчет маркировочной таблицы по данным файла 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em file\+Name} & Имя файла\\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \textbf{ Mark\+Table.\+cs} строка \textbf{ 154}
 
 \label{class_mih_stat_library_1_1_tables_1_1_mark_table_a727c4f62770dd09f5f052b9da39c2cb0} 
 \index{MihStatLibrary.Tables.MarkTable@{MihStatLibrary.Tables.MarkTable}!Clear@{Clear}}
@@ -152,7 +173,7 @@ Event\+Handler$<$ int $>$? \textbf{ Progress\+Changed} = null
 
 
 
-См. определение в файле \textbf{ Mark\+Table.\+cs} строка \textbf{ 118}
+См. определение в файле \textbf{ Mark\+Table.\+cs} строка \textbf{ 123}
 
 \label{class_mih_stat_library_1_1_tables_1_1_mark_table_ae4f97ee205be19d4a7491d59f3ef6a50} 
 \index{MihStatLibrary.Tables.MarkTable@{MihStatLibrary.Tables.MarkTable}!Equals@{Equals}}
@@ -174,7 +195,7 @@ Event\+Handler$<$ int $>$? \textbf{ Progress\+Changed} = null
 \end{DoxyReturn}
 
 
-См. определение в файле \textbf{ Mark\+Table.\+cs} строка \textbf{ 240}
+См. определение в файле \textbf{ Mark\+Table.\+cs} строка \textbf{ 277}
 
 \label{class_mih_stat_library_1_1_tables_1_1_mark_table_a71e4f50f7ce08f2160b5364e62fedf6b} 
 \index{MihStatLibrary.Tables.MarkTable@{MihStatLibrary.Tables.MarkTable}!GetHashCode@{GetHashCode}}
@@ -191,13 +212,13 @@ Hash объекта Mark\+Table
 \end{DoxyReturn}
 
 
-См. определение в файле \textbf{ Mark\+Table.\+cs} строка \textbf{ 263}
+См. определение в файле \textbf{ Mark\+Table.\+cs} строка \textbf{ 300}
 
-\label{class_mih_stat_library_1_1_tables_1_1_mark_table_a6af7d599b277193eb598afd920af3d6f} 
+\label{class_mih_stat_library_1_1_tables_1_1_mark_table_a20e856d740be976dc0df64714e3221a1} 
 \index{MihStatLibrary.Tables.MarkTable@{MihStatLibrary.Tables.MarkTable}!Reduce@{Reduce}}
 \index{Reduce@{Reduce}!MihStatLibrary.Tables.MarkTable@{MihStatLibrary.Tables.MarkTable}}
 \doxysubsubsection{Reduce()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \textbf{ Mark\+Table} Mih\+Stat\+Library.\+Tables.\+Mark\+Table.\+Reduce (\begin{DoxyParamCaption}\item[{int}]{p\+Dest\+Dimension }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \textbf{ Mark\+Table} Mih\+Stat\+Library.\+Tables.\+Mark\+Table.\+Reduce (\begin{DoxyParamCaption}\item[{int}]{dest\+Dimension }\end{DoxyParamCaption})}
 
 
 
@@ -205,7 +226,7 @@ Hash объекта Mark\+Table
 
 
 \begin{DoxyParams}{Аргументы}
-{\em p\+Dest\+Dimension} & Размерность новой маркировочной таблицы\\
+{\em dest\+Dimension} & Размерность новой маркировочной таблицы\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Возвращает}
@@ -213,7 +234,7 @@ Hash объекта Mark\+Table
 \end{DoxyReturn}
 
 
-См. определение в файле \textbf{ Mark\+Table.\+cs} строка \textbf{ 184}
+См. определение в файле \textbf{ Mark\+Table.\+cs} строка \textbf{ 221}
 
 \label{class_mih_stat_library_1_1_tables_1_1_mark_table_a51db56e57901578918c4dd1a4a9700da} 
 \index{MihStatLibrary.Tables.MarkTable@{MihStatLibrary.Tables.MarkTable}!Reduce@{Reduce}}
@@ -237,7 +258,7 @@ Hash объекта Mark\+Table
 \end{DoxyExceptions}
 
 
-См. определение в файле \textbf{ Mark\+Table.\+cs} строка \textbf{ 152}
+См. определение в файле \textbf{ Mark\+Table.\+cs} строка \textbf{ 189}
 
 
 
@@ -254,7 +275,7 @@ Hash объекта Mark\+Table
 
 
 
-См. определение в файле \textbf{ Mark\+Table.\+cs} строка \textbf{ 45}
+См. определение в файле \textbf{ Mark\+Table.\+cs} строка \textbf{ 46}
 
 \label{class_mih_stat_library_1_1_tables_1_1_mark_table_ae7060e7e7555b7cac43a7a8b314e8f03} 
 \index{MihStatLibrary.Tables.MarkTable@{MihStatLibrary.Tables.MarkTable}!NmVectors@{NmVectors}}
@@ -268,7 +289,7 @@ Hash объекта Mark\+Table
 
 
 
-См. определение в файле \textbf{ Mark\+Table.\+cs} строка \textbf{ 50}
+См. определение в файле \textbf{ Mark\+Table.\+cs} строка \textbf{ 51}
 
 \label{class_mih_stat_library_1_1_tables_1_1_mark_table_ac5915c8920a73941b655293465d1264f} 
 \index{MihStatLibrary.Tables.MarkTable@{MihStatLibrary.Tables.MarkTable}!SzShift@{SzShift}}
@@ -282,7 +303,7 @@ Hash объекта Mark\+Table
 
 
 
-См. определение в файле \textbf{ Mark\+Table.\+cs} строка \textbf{ 55}
+См. определение в файле \textbf{ Mark\+Table.\+cs} строка \textbf{ 56}
 
 \label{class_mih_stat_library_1_1_tables_1_1_mark_table_a725f6b347e8c02f60dbe51e5dcb63f7f} 
 \index{MihStatLibrary.Tables.MarkTable@{MihStatLibrary.Tables.MarkTable}!Table@{Table}}
@@ -296,7 +317,7 @@ Hash объекта Mark\+Table
 
 
 
-См. определение в файле \textbf{ Mark\+Table.\+cs} строка \textbf{ 40}
+См. определение в файле \textbf{ Mark\+Table.\+cs} строка \textbf{ 41}
 
 
 
@@ -313,7 +334,7 @@ Hash объекта Mark\+Table
 
 
 
-См. определение в файле \textbf{ Mark\+Table.\+cs} строка \textbf{ 30}
+См. определение в файле \textbf{ Mark\+Table.\+cs} строка \textbf{ 31}
 
 \label{class_mih_stat_library_1_1_tables_1_1_mark_table_a7fdbf6d0beb9937f96fbcdcc12fed266} 
 \index{MihStatLibrary.Tables.MarkTable@{MihStatLibrary.Tables.MarkTable}!ProgressChanged@{ProgressChanged}}
@@ -327,7 +348,7 @@ Hash объекта Mark\+Table
 
 
 
-См. определение в файле \textbf{ Mark\+Table.\+cs} строка \textbf{ 35}
+См. определение в файле \textbf{ Mark\+Table.\+cs} строка \textbf{ 36}
 
 
 

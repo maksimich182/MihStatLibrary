@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="ru">
+  <compounddef id="class_mih_stat_library_1_1_data_1_1_block_data_file_source" kind="class" language="C#" prot="public">
+    <compoundname>MihStatLibrary::Data::BlockDataFileSource</compoundname>
+    <basecompoundref refid="interface_mih_stat_library_1_1_data_1_1_i_block_data_source" prot="public" virt="non-virtual">MihStatLibrary.Data.IBlockDataSource</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_mih_stat_library_1_1_data_1_1_block_data_file_source_1a2fadd306393aed787635349148f978c8" prot="private" static="no" mutable="no">
+        <type>FileStream</type>
+        <definition>FileStream MihStatLibrary.Data.BlockDataFileSource._fStream</definition>
+        <argsstring></argsstring>
+        <name>_fStream</name>
+        <qualifiedname>MihStatLibrary.Data.BlockDataFileSource._fStream</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data/BlockDataFileSource.cs" line="14" column="28" bodyfile="Data/BlockDataFileSource.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_mih_stat_library_1_1_data_1_1_block_data_file_source_1ade7d2f5528d260b44a8efc51215ba193" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MihStatLibrary.Data.BlockDataFileSource.BlockDataFileSource</definition>
+        <argsstring>(FileStream fileStream)</argsstring>
+        <name>BlockDataFileSource</name>
+        <qualifiedname>MihStatLibrary.Data.BlockDataFileSource.BlockDataFileSource</qualifiedname>
+        <param>
+          <type>FileStream</type>
+          <declname>fileStream</declname>
+        </param>
+        <briefdescription>
+<para>Создает экземпляр класса для получения блоков данных из файла по экземпляру FileStream </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileStream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Дескриптор файла FileStream</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data/BlockDataFileSource.cs" line="20" column="16" bodyfile="Data/BlockDataFileSource.cs" bodystart="20" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mih_stat_library_1_1_data_1_1_block_data_file_source_1acfc35f26e4868eebcc0112b82995261a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>byte[]</type>
+        <definition>byte[] MihStatLibrary.Data.BlockDataFileSource.GetBlockData</definition>
+        <argsstring>(int szBlock)</argsstring>
+        <name>GetBlockData</name>
+        <qualifiedname>MihStatLibrary.Data.BlockDataFileSource.GetBlockData</qualifiedname>
+        <reimplements refid="interface_mih_stat_library_1_1_data_1_1_i_block_data_source_1af2eb27a45edbd4dfc94fc76b6328b4c7">GetBlockData</reimplements>
+        <param>
+          <type>int</type>
+          <declname>szBlock</declname>
+        </param>
+        <briefdescription>
+<para>Получает определенное количество данных из файла </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>szBlock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Размер получаемого блока данных в байтах</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Блок данных</para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data/BlockDataFileSource.cs" line="31" column="21" bodyfile="Data/BlockDataFileSource.cs" bodystart="31" bodyend="42"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Источник получения данных из файла </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>IBlockDataSource</label>
+        <link refid="interface_mih_stat_library_1_1_data_1_1_i_block_data_source"/>
+      </node>
+      <node id="1">
+        <label>MihStatLibrary.Data.BlockDataFileSource</label>
+        <link refid="class_mih_stat_library_1_1_data_1_1_block_data_file_source"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>IBlockDataSource</label>
+        <link refid="interface_mih_stat_library_1_1_data_1_1_i_block_data_source"/>
+      </node>
+      <node id="1">
+        <label>MihStatLibrary.Data.BlockDataFileSource</label>
+        <link refid="class_mih_stat_library_1_1_data_1_1_block_data_file_source"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Data/BlockDataFileSource.cs" line="12" column="11" bodyfile="Data/BlockDataFileSource.cs" bodystart="13" bodyend="43"/>
+    <listofallmembers>
+      <member refid="class_mih_stat_library_1_1_data_1_1_block_data_file_source_1a2fadd306393aed787635349148f978c8" prot="private" virt="non-virtual"><scope>MihStatLibrary::Data::BlockDataFileSource</scope><name>_fStream</name></member>
+      <member refid="class_mih_stat_library_1_1_data_1_1_block_data_file_source_1ade7d2f5528d260b44a8efc51215ba193" prot="public" virt="non-virtual"><scope>MihStatLibrary::Data::BlockDataFileSource</scope><name>BlockDataFileSource</name></member>
+      <member refid="class_mih_stat_library_1_1_data_1_1_block_data_file_source_1acfc35f26e4868eebcc0112b82995261a" prot="public" virt="non-virtual"><scope>MihStatLibrary::Data::BlockDataFileSource</scope><name>GetBlockData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

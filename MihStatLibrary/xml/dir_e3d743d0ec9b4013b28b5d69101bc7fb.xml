@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="ru">
+  <compounddef id="dir_e3d743d0ec9b4013b28b5d69101bc7fb" kind="dir">
+    <compoundname>Data</compoundname>
+    <innerfile refid="_block_data_8cs">BlockData.cs</innerfile>
+    <innerfile refid="_block_data_file_source_8cs">BlockDataFileSource.cs</innerfile>
+    <innerfile refid="_block_data_random_source_8cs">BlockDataRandomSource.cs</innerfile>
+    <innerfile refid="_i_block_data_source_8cs">IBlockDataSource.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Data/"/>
+  </compounddef>
+</doxygen>

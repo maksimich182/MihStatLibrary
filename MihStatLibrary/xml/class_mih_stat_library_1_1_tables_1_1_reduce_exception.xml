@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="ru">
+  <compounddef id="class_mih_stat_library_1_1_tables_1_1_reduce_exception" kind="class" language="C#" prot="public">
+    <compoundname>MihStatLibrary::Tables::ReduceException</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Exception</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_mih_stat_library_1_1_tables_1_1_reduce_exception_1a95f7250a05cb0f836e73e5e27db3f53e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MihStatLibrary.Tables.ReduceException.ReduceException</definition>
+        <argsstring>(string pMessage)</argsstring>
+        <name>ReduceException</name>
+        <qualifiedname>MihStatLibrary.Tables.ReduceException.ReduceException</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>pMessage</declname>
+        </param>
+        <briefdescription>
+<para>Исключение, возникающее при попытке задать сдвиг больше размерности </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tables/MarkTableExceptions.cs" line="17" column="16" bodyfile="Tables/MarkTableExceptions.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Исключение, возникающее при попытке пересчитать маркировочную таблицу на меньшую размерность </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Exception</label>
+      </node>
+      <node id="1">
+        <label>MihStatLibrary.Tables.ReduceException</label>
+        <link refid="class_mih_stat_library_1_1_tables_1_1_reduce_exception"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Exception</label>
+      </node>
+      <node id="1">
+        <label>MihStatLibrary.Tables.ReduceException</label>
+        <link refid="class_mih_stat_library_1_1_tables_1_1_reduce_exception"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Tables/MarkTableExceptions.cs" line="12" column="11" bodyfile="Tables/MarkTableExceptions.cs" bodystart="13" bodyend="18"/>
+    <listofallmembers>
+      <member refid="class_mih_stat_library_1_1_tables_1_1_reduce_exception_1a95f7250a05cb0f836e73e5e27db3f53e" prot="public" virt="non-virtual"><scope>MihStatLibrary::Tables::ReduceException</scope><name>ReduceException</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="ru">
+  <compounddef id="_calculators_exceptions_8cs" kind="file" language="C#">
+    <compoundname>CalculatorsExceptions.cs</compoundname>
+    <innerclass refid="class_mih_stat_library_1_1_calculators_1_1_ones_calculator_exception" prot="public">MihStatLibrary::Calculators::OnesCalculatorException</innerclass>
+    <innerclass refid="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_exception" prot="public">MihStatLibrary::Calculators::BitFrequencyCalculatorException</innerclass>
+    <innernamespace refid="namespace_mih_stat_library">MihStatLibrary</innernamespace>
+    <innernamespace refid="namespace_mih_stat_library_1_1_calculators">MihStatLibrary::Calculators</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using<sp/></highlight><highlight class="normal">System;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">System.Collections.Generic;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">System.Linq;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">System.Text;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">System.Threading.Tasks;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_mih_stat_library_1_1_calculators" kindref="compound">MihStatLibrary.Calculators</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12" refid="class_mih_stat_library_1_1_calculators_1_1_ones_calculator_exception" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_mih_stat_library_1_1_calculators_1_1_ones_calculator_exception" kindref="compound">OnesCalculatorException</ref><sp/>:<sp/>Exception</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="17" refid="class_mih_stat_library_1_1_calculators_1_1_ones_calculator_exception_1affbad9ee2f18bc891ca5be5cb502988d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_mih_stat_library_1_1_calculators_1_1_ones_calculator_exception_1affbad9ee2f18bc891ca5be5cb502988d" kindref="member">OnesCalculatorException</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>pMessage)<sp/>:<sp/>base(pMessage)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_exception" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_exception" kindref="compound">BitFrequencyCalculatorException</ref><sp/>:<sp/>Exception</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28" refid="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_exception_1a4e381ab142c8cf2c86bec28426850754" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_mih_stat_library_1_1_calculators_1_1_bit_frequency_calculator_exception_1a4e381ab142c8cf2c86bec28426850754" kindref="member">BitFrequencyCalculatorException</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>pMessage)<sp/>:<sp/>base(pMessage)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="Calculators/CalculatorsExceptions.cs"/>
+  </compounddef>
+</doxygen>

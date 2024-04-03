@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="ru">
+  <compounddef id="dir_ac3f7fb93686454dcf9f0844aa3c934a" kind="dir">
+    <compoundname>Calculators</compoundname>
+    <innerfile refid="_bit_frequency_calculator_8cs">BitFrequencyCalculator.cs</innerfile>
+    <innerfile refid="_calculators_exceptions_8cs">CalculatorsExceptions.cs</innerfile>
+    <innerfile refid="_ones_calculator_8cs">OnesCalculator.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Calculators/"/>
+  </compounddef>
+</doxygen>

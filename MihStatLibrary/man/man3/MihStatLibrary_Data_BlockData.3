@@ -7,6 +7,8 @@ MihStatLibrary.Data.BlockData \- Класс для получения данны
 .SH SYNOPSIS
 .br
 .PP
+.PP
+Базовые классы:ICloneable\&.
 .SS "Открытые члены"
 
 .in +1c
@@ -18,6 +20,10 @@ MihStatLibrary.Data.BlockData \- Класс для получения данны
 .RI "void \fBGetBlockData\fP (int szBlock)"
 .br
 .RI "Заполняет блок данными из источника "
+.ti -1c
+.RI "object \fBClone\fP ()"
+.br
+.RI "Функция клонирования блока данных "
 .in -1c
 .SS "Свойства"
 
@@ -53,6 +59,19 @@ MihStatLibrary.Data.BlockData \- Класс для получения данны
 См\&. определение в файле \fBBlockData\&.cs\fP строка \fB26\fP
 .SH "Методы"
 .PP 
+.SS "object MihStatLibrary\&.Data\&.BlockData\&.Clone ()"
+
+.PP
+Функция клонирования блока данных 
+.PP
+\fBВозвращает\fP
+.RS 4
+Клон блока данных
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBBlockData\&.cs\fP строка \fB45\fP
 .SS "void MihStatLibrary\&.Data\&.BlockData\&.GetBlockData (int szBlock)"
 
 .PP
