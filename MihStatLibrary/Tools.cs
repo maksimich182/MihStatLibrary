@@ -53,7 +53,7 @@ namespace MihStatLibrary
         /// <returns>Процент</returns>
         public static int GetPercent(long number, long maxNumber)
         {
-            return (int)((double)number / maxNumber) * 100;
+            return (int)(((double)number / maxNumber) * 100);
         }
 
         /// <summary>

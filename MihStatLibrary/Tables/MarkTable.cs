@@ -136,21 +136,21 @@ namespace MihStatLibrary.Tables
         /// <param name="token">Токен отмены рассчета маркировочной таблицы. При срабатывании выполнение завершается перед получением очередного болока данных</param>
         public void Calculate(string fileName, CancellationToken? token = null)
         {
-            FileStream dataStream = new FileStream(fileName, FileMode.Open);
+            FileStream dataStream = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.Read);
             BlockData blockData = new BlockData(new BlockDataFileSource(dataStream));
 
             double nmBlocks = Math.Ceiling((double)dataStream.Length / Tools.SIZE_BLOCK_BYTES);
             for (int i = 0; i < nmBlocks; i++)
             {
-                if (token?.IsCancellationRequested ?? false)
+                if (token?.IsCancellationRequested ?? false) //ToTest
                 {
                     dataStream.Close();
                     return;
                 }
 
+                this.ProcessChanged?.Invoke(this, $"Маркировочная таблица: {i + 1} из {nmBlocks}");
                 blockData.GetBlockData(Tools.SIZE_BLOCK_BYTES);
                 Calculate(blockData);
-                this.ProcessChanged?.Invoke(this, $"Маркировочная таблица: {i + 1} из {nmBlocks}");
             }
             dataStream.Close();
         }
@@ -200,7 +200,7 @@ namespace MihStatLibrary.Tables
                 throw new ReduceException("Размерность итоговой таблицы больше размерности исходной!");
 
             if (destTable._szShift != 1 || this._szShift != 1)
-                throw new ReduceException("Значения смещений исходной и итоговой таблиц должны совпадать!");
+                throw new ReduceException("Значения смещений исходной и итоговой таблиц должны быть равны 1!");
 
             destTable._table = new long[1 << destTable._dimension];
 
